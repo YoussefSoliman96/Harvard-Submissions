@@ -6,7 +6,7 @@ int main(void)
     // TODO: Prompt for start size
     int n;
     do {
-        n = get_int("Number of starting llamas: ")
+        n = get_int("Number of starting llamas: ");
     }
     while (n < 9);
     // TODO: Prompt for end size
