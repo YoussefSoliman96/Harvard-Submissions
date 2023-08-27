@@ -19,8 +19,11 @@ int main(void)
     // Calculate gain and loss, we gain n/3 llamas and lose n/4, so current count should be n = n + n/3 - n/4
     // Year count is the number of iterations i
 
-    int n = n + n/3 - n/4
+    n = n + n/3 - n/4;
+    do {
 
+    }
+    while (n < e)
 
     // TODO: Print number of years
 }
