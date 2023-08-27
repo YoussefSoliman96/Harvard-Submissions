@@ -16,7 +16,7 @@ int main(void)
     }
     while (e < n);
     // TODO: Calculate number of years until we reach threshold
-    // Calculate gain
+    // Calculate gain, we gain n/3 llamas and lose n/4, so current count should be n = n + n/3 - n/4
     int g = n/3;
 
 
