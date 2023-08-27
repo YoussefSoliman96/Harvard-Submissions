@@ -21,11 +21,11 @@ int main(void)
 
     int y = 0;
 
-    do {
+    while (n < e) {
         n = n + (n/3) - (n/4);
         y++;
     }
-    while (n < e);
+
 
     // TODO: Print number of years
 
