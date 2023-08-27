@@ -5,13 +5,15 @@ int main(void)
 {
     // TODO: Prompt for start size
     int n;
-    do {
+    do
+    {
         n = get_int("Number of starting llamas: ");
     }
     while (n < 9);
     // TODO: Prompt for end size
     int e;
-    do {
+    do
+    {
         e = get_int("Number of ending llamas: ");
     }
     while (e < n);
@@ -21,11 +23,11 @@ int main(void)
 
     int y = 0;
 
-    while (n < e) {
-        n = n + (n/3) - (n/4);
+    while (n < e)
+    {
+        n = n + (n / 3) - (n / 4);
         y++;
     }
-
 
     // TODO: Print number of years
 
