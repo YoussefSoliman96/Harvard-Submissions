@@ -12,7 +12,7 @@ int main(void)
     // TODO: Prompt for end size
     int e;
     do {
-        e = get_int("Number of starting llamas: ");
+        e = get_int("Number of ending llamas: ");
     }
     while (e < n);
     // TODO: Calculate number of years until we reach threshold
@@ -20,14 +20,14 @@ int main(void)
     // Year count is the number of iterations i
 
     int y = 0;
-    n = n + n/3 - n/4;
 
     do {
+        n = n + (n/3) - (n/4);
         y++;
     }
     while (n < e);
 
     // TODO: Print number of years
 
-    printf("years: %i\n", n);
+    printf("years: %i\n", y);
 }
