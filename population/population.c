@@ -4,20 +4,20 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int s;
+    int n;
     do {
-        s = get_int("Number of starting llamas: ");
+        n = get_int("Number of starting llamas: ");
     }
-    while (s < 9);
+    while (n < 9);
     // TODO: Prompt for end size
     int e;
     do {
         e = get_int("Number of starting llamas: ");
     }
-    while (e < s);
+    while (e < n);
     // TODO: Calculate number of years until we reach threshold
     // Calculate gain
-    int n = s + s / 3;
+    int g = n/3;
 
 
     // TODO: Print number of years
