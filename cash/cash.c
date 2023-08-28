@@ -45,20 +45,23 @@ int get_cents(void)
     }
     while(cents < 0);
 
-    return 0;
+    return cents;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
     int quarters;
-    int Q = cents % 25;
-    if (Q >=1)
+    if (cents % 25 >= 1)
     {
-        quarters = Q;
+        quarters = cents / 25;
     }
-    printf("quarters = %i", quarters);
-    return 0;
+    else
+    {
+        quarters = 0;
+    }
+    printf("%i quarters", quarters);
+    return quarters;
 }
 
 int calculate_dimes(int cents)
