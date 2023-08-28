@@ -11,18 +11,16 @@ int main(void)
     // TODO
     string text = get_string("Text: ");
 
-    int binary[] = {0,0,0,0,0,0,0,0};
     for (int i = 0, l = strlen(text); i < l; i++)
     {
+        int binary[] = {0,0,0,0,0,0,0,0};
         // Convert to ASCII
         int decimal = text [i];
         // Convert ASCII to Binary
-        int j = 0;
-        while (decimal > 0)
+        for (int j = 0; decimal > 0; j++)
         {
             binary [j] = decimal % 2;
             decimal = decimal / 2;
-            j++;
         }
         //Reverse the Binary output
         for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
