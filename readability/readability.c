@@ -67,7 +67,7 @@ int sentence_count (string text)
     int l = strlen(text);
     int count = 0;
     for (int i = 0; i < l; i++){
-        if(ispunct(text[i]))
+        if((text[i] == '.'))
         {
             count++;
         }
