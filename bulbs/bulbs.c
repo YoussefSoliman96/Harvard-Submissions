@@ -17,10 +17,12 @@ int main(void)
         // Convert to ASCII
         int decimal = text [i];
         // Convert ASCII to Binary
-        for (int j = 0; decimal > 0; j++)
+        int j = 0;
+        while (decimal > 0)
         {
             binary [j] = decimal % 2;
             decimal = decimal / 2;
+            j++;
         }
         //Reverse the Binary output
         for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
