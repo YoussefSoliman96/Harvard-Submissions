@@ -41,9 +41,9 @@ int get_cents(void)
     int cents;
     do
     {
-         cents = get_int("Cents owed: ");
+        cents = get_int("Cents owed: ");
     }
-    while(cents < 0);
+    while (cents < 0);
 
     return cents;
 }
@@ -53,7 +53,6 @@ int calculate_quarters(int cents)
     // TODO
 
     return cents / 25;
-
 }
 
 int calculate_dimes(int cents)
