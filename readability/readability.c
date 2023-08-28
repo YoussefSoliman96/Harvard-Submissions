@@ -22,7 +22,7 @@ int index = round((0.0588 * L) - (0.296 * S) - 15.8);
 
 if (index < 1)
 {
-    printf("before Grade 1\n");
+    printf("Before Grade 1\n");
 }
 else if (index > 16)
 {
