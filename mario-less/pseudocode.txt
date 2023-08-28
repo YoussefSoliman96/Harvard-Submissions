@@ -1,3 +1,5 @@
 take user input
 make sure input is from 1 to 8
-loop for 1 to given hight and print #s
+loop for 1 to given hight and print #'s
+reverse the pyramid
+spaces = h - rows
