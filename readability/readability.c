@@ -3,7 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int letter_count (string *text);
+int letter_count (string text);
+int word_count (string text);
+
 int main(void)
 {
 
@@ -26,7 +28,7 @@ printf("%i letters\n", letters);
 return 0;
 }
 
-int letter_count (char *text)
+int letter_count (string text)
 {
 int l = strlen(text);
 int count = 0;
@@ -39,4 +41,13 @@ for (int i = 0; i < l; i++ )
 
 }
 return count;
+}
+
+int word_count (string text)
+{
+    int l = strlen(text):
+    int count = 0;
+    for (int i = 0; i < l; i++){
+        if()
+    }
 }
