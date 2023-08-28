@@ -10,7 +10,7 @@ int main(void)
 
 //take user input
 string text = get_string("The sentence is: ");
-
+printf("%i letters", letters);
 
 
 
@@ -36,6 +36,6 @@ for (int i = 0; i < strlen(text); i++ )
     }
 
 }
-printf("%i letters", letters);
+
 return letters;
 }
