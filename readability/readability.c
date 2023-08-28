@@ -49,28 +49,30 @@ int letter_count(string text)
     return count;
 }
 
-    int word_count (string text)
+int word_count(string text)
+{
+    int l = strlen(text);
+    int count = 1;
+    for (int i = 0; i < l; i++)
     {
-        int l = strlen(text);
-        int count = 1;
-        for (int i = 0; i < l; i++){
-            if(isblank(text[i]))
-            {
-                count++;
-            }
+        if (isblank(text[i]))
+        {
+            count++;
         }
-        return count;
     }
+    return count;
+}
 
-    int sentence_count (string text)
+int sentence_count(string text)
+{
+    int l = strlen(text);
+    int count = 0;
+    for (int i = 0; i < l; i++)
     {
-        int l = strlen(text);
-        int count = 0;
-        for (int i = 0; i < l; i++){
-            if(text[i] == '.' || text[i] == '!' || text[i] == '?')
-            {
-                count++;
-            }
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        {
+            count++;
         }
-        return count;
     }
+    return count;
+}submit50 cs50/problems/2023/x/readability
