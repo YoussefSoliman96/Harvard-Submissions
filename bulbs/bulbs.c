@@ -6,12 +6,17 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int word_to_bits(string text);
 int main(void)
 {
     // TODO
     string text = get_string("Text: ");
 
+    for (int i = 0; int l = strlen(text); i < l; i++)
+    {
+        int decimal = text [i];
+        printf("%i\n", decimal);
+        
+    }
 }
 
 void print_bulb(int bit)
@@ -28,14 +33,3 @@ void print_bulb(int bit)
     }
 }
 
-int word_to_bits(string text)
-{
-    int l = strlen(text);
-    for (int i = 0; i < l; i++)
-    {
-        int decimal = text [i];
-        printf("%i\n", decimal);
-        return decimal;
-    }
-
-}
