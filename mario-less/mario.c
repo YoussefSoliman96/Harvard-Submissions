@@ -10,9 +10,10 @@ int h;
     }
     while (h < 1 || h > 8);
 
-    for(int i = 0; i < h; i++)
+    for (int i = 0; i < h; i++)
     {
-        for(int j = 0; j <= i; j++ )
+        for (int k = h; k )
+        for (int j = 0; j <= i; j++ )
         {
             printf("#");
         }
