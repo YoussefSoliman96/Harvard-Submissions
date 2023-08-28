@@ -16,11 +16,11 @@ int main(void)
         {
             printf(" ");
         }
-        for (int j = 0; j <= i; j++ )
+        for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
 
-    printf("\n");
+        printf("\n");
     }
 }
