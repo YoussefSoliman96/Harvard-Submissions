@@ -3,14 +3,15 @@
 #include <string.h>
 #include <ctype.h>
 
-int letter_count (char *text);
+int letter_count (string *text);
 int main(void)
 {
 
 
 //take user input
 string text = get_string("The sentence is: ");
-printf("%i letters", letters);
+int letters = letter_count(text);
+printf("%i letters\n", letters);
 
 
 
@@ -28,15 +29,14 @@ return 0;
 int letter_count (char *text)
 {
 int l = strlen(text);
-int letters = 0;
+int count = 0;
 for (int i = 0; i < l; i++ )
 {
     if (isalpha(text[i]))
     {
-        letters++;
+        count++;
     }
 
 }
-
-return letters;
+return count;
 }
