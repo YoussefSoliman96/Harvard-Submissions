@@ -11,11 +11,11 @@ int main(void)
     // TODO
     string text = get_string("Text: ");
 
-    for (int i = 0; int l = strlen(text); i < l; i++)
+    for (int i = 0; l = strlen(text); i < l; i++)
     {
         int decimal = text [i];
         printf("%i\n", decimal);
-        
+
     }
 }
 
