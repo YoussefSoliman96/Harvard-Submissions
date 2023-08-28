@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int 
+int word_to_bits(text);
 int main(void)
 {
     // TODO
@@ -24,4 +24,12 @@ void print_bulb(int bit)
         // Light emoji
         printf("\U0001F7E1");
     }
+}
+
+
+int word_to_bits(text);
+int l = strlen(text);
+for (i = 0; i < l; i++)
+{
+    
 }
