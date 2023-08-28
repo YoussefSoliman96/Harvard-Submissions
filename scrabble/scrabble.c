@@ -35,10 +35,10 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
-    int l;
+    // TODO: Compute and return score for sint l;tring
     int score = 0;
-    for (int i = 0; l = strlen(word); i < l; i++)
+
+    for (int i = 0, l = strlen(word); i < l; i++)
     {
         if (isupper(word[i]))
         {
@@ -49,5 +49,5 @@ int compute_score(string word)
             score += POINTS[word[i] - 'a'];
         }
     }
-    return 1;
+    return score;
 }
