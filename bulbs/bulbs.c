@@ -11,13 +11,18 @@ int main(void)
     // TODO
     string text = get_string("Text: ");
 
-    int binary[] = {0,0,0,0,0,0,0,0}
+    int binary[] = {0,0,0,0,0,0,0,0};
     for (int i = 0, l = strlen(text); i < l; i++)
     {
         // Convert to ASCII
         int decimal = text [i];
         // Convert ASCII to Binary
-        for 
+        for (int j = 0; decimal > 0; j++)
+        {
+            binary [j] = decimal % 2;
+            decimal = decimal / 2;
+            printf("%s\n", binary);
+        }
 
     }
 }
