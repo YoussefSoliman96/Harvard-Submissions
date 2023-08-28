@@ -35,6 +35,7 @@ int word_to_bits(string text)
     {
         int decimal = text [i];
         printf("%i\n", decimal);
+        return decimal;
     }
-    return decimal;
+
 }
