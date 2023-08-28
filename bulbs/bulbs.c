@@ -25,8 +25,9 @@ int main(void)
         //Reverse the Binary output
         for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
         {
-            printf("%d\n",binary[k] );
+           print_bulb(binary[k]);
         }
+        printf("\n");
     }
 }
 
