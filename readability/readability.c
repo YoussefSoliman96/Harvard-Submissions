@@ -75,4 +75,4 @@ int sentence_count(string text)
         }
     }
     return count;
-}submit50 cs50/problems/2023/x/readability
+}
