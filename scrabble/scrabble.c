@@ -29,7 +29,7 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            POINTS[i] = POINTS[word[i]] -
+            POINTS[i] = POINTS[word[i]] - 'A'
         }
     }
 }
