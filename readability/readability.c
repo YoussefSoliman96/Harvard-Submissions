@@ -10,36 +10,28 @@ int sentence_count (string text);
 
 int main(void)
 {
-
-
 //take user input
 string text = get_string("The sentence is: ");
 int letters = letter_count(text);
-printf("%i letters\n", letters);
-
 int words = word_count(text);
-printf("%i words\n", words);
-
 int sentences = sentence_count(text);
-printf("%i sentences\n", sentences);
 
 float L = (float) letters / (float) words * 100;
 float S = (float) sentences / (float) words * 100;
-float index = 0.0588 * L - 0.296 * S - 15.8;
+int index = round((0.0588 * L) - (0.296 * S) - 15.8);
 
-printf("Grade %f", index);
-
-
-
-
-
-
-
-
-
-
-
-
+if (index < 1)
+{
+    printf("before Grade 1\n");
+}
+else if (index > 16)
+{
+    printf("Grade 16+\n");
+}
+else
+{
+printf("Grade %i\n", index);
+}
 return 0;
 }
 
