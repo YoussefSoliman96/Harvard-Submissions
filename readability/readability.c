@@ -32,5 +32,5 @@ for (int i = 0; i < strlen("text"); i++ )
     }
     return letters;
 }
-printf("%s letters", letters);
+printf("%c letters", letters);
 }
