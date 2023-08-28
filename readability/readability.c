@@ -52,7 +52,7 @@ return count;
 int word_count (string text)
 {
     int l = strlen(text);
-    int count = 0;
+    int count = 1;
     for (int i = 0; i < l; i++){
         if(isblank(text[i]))
         {
