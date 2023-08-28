@@ -31,5 +31,5 @@ int word_to_bits(text);
 int l = strlen(text);
 for (i = 0; i < l; i++)
 {
-    
+    int decimal = message [i];
 }
