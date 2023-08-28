@@ -5,10 +5,11 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-
+int 
 int main(void)
 {
     // TODO
+    string text = get_string("Text: ");
 }
 
 void print_bulb(int bit)
