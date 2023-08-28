@@ -21,13 +21,9 @@ string text = get_string("The sentence is: ");
 
 
 
-return 0;
-}
-
-
 int letter_count (string text);
 int letters = 0;
-for (int i = 0; i < strlen("text"); i++ )
+for (int i = 0; i < strlen(text); i++ )
 {
     if (isalpha(text[i]))
     {
@@ -36,3 +32,6 @@ for (int i = 0; i < strlen("text"); i++ )
     return letters;
 }
 printf("%c letters", letters);
+}
+
+
