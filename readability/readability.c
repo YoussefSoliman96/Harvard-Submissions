@@ -21,7 +21,7 @@ string text = get_string("The sentence is: ");
 
 
 
-int letter_count (string text);
+int letter_count (char *text);
 int letters = 0;
 for (int i = 0; i < strlen(text); i++ )
 {
