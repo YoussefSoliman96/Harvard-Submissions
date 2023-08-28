@@ -57,7 +57,7 @@ int calculate_quarters(int cents)
     {
         quarters = Q;
     }
-    printf("quarters = %i", Q);
+    printf("quarters = %i", quarters);
     return 0;
 }
 
