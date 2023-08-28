@@ -51,6 +51,12 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
+    int Q = cents % 25;
+    if (Q >=1)
+    {
+        quarters = Q;
+    }
+    printf("quarters = %i", Q);
     return 0;
 }
 
