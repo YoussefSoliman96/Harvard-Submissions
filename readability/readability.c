@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int letter_count (string text);
+int letter_count (char text);
 int main(void)
 {
 
