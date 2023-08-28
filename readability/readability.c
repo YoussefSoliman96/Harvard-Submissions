@@ -23,8 +23,8 @@ printf("%i words\n", words);
 int sentences = sentence_count(text);
 printf("%i sentences\n", sentences);
 
-float L = letters / words * 100;
-float S = sentences / words * 100;
+float L = (float) letters / (float) words * 100;
+float S = (float) sentences / (float) words * 100;
 float index = 0.0588 * L - 0.296 * S - 15.8;
 
 printf("Grade %f", index);
