@@ -12,15 +12,15 @@ int main(void)
 
     for (int i = 0; i < h; i++)
     {
-        for (int k = 1submit50 cs50/problems/2023/x/mario/less; k < h - i; k++)
+        for (int k = 1; k < h - i; k++)
         {
             printf(" ");
         }
-        for (int j = 0; j <= i; j++)
+        for (int j = 0; j <= i; j++ )
         {
             printf("#");
         }
 
-        printf("\n");
+    printf("\n");
     }
 }
