@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -44,7 +44,7 @@ int compute_score(string word)
         {
             score += POINTS[word[i] - 'A'];
         }
-        else if(islower(word[i]))
+        else if (islower(word[i]))
         {
             score += POINTS[word[i] - 'a'];
         }
