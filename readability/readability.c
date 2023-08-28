@@ -24,6 +24,9 @@ string sentence = get_string("The sentence is: ");
 int letter_count (string text)
 for (int i = 0; i < strlen("text"); i++ )
 {
-    if ()
+    if (isaplha(text[i]))
+    {
+        
+    }
 }
 }
