@@ -21,9 +21,8 @@ int main(void)
         {
             binary [j] = decimal % 2;
             decimal = decimal / 2;
-            printf("%s\n", binary);
         }
-
+        //Reverse the Binary output
     }
 }
 
