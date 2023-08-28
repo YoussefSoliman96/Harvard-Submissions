@@ -51,23 +51,15 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
-    int quarters;
-    if (cents % 25 >= 1)
-    {
-        quarters = cents / 25;
-    }
-    else
-    {
-        quarters = 0;
-    }
-    printf("%i quarters", quarters);
-    return quarters;
+
+    return cents / 25;
+
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    return cents / 10;
 }
 
 int calculate_nickels(int cents)
