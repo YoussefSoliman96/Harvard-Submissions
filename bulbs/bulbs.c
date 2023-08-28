@@ -11,6 +11,12 @@ int main(void)
 {
     // TODO
     string text = get_string("Text: ");
+    int l = strlen(text);
+    for (int i = 0; i < l; i++)
+    {
+        int decimal = text [i];
+        printf("%i", decimal);
+    }
 }
 
 void print_bulb(int bit)
@@ -28,9 +34,4 @@ void print_bulb(int bit)
 }
 
 
-int word_to_bits(string text);
-int l = strlen(text);
-for (i = 0; i < l; i++)
-{
-    int decimal = message [i];
-}
+
