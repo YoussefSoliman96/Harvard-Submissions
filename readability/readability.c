@@ -3,9 +3,10 @@
 #include <string.h>
 #include <ctype.h>
 
+int letter_count (string text);
 int main(void)
 {
-int letter_count (string text);
+
 
 //take user input
 string text = get_string("The sentence is: ");
@@ -21,7 +22,11 @@ string text = get_string("The sentence is: ");
 
 
 
-int letter_count (char *text);
+return 0;
+}
+
+int letter_count (char *text)
+{
 int letters = 0;
 for (int i = 0; i < strlen(text); i++ )
 {
@@ -29,9 +34,8 @@ for (int i = 0; i < strlen(text); i++ )
     {
         letters++;
     }
-    return letters;
-}
-printf("%c letters", letters);
-}
 
-
+}
+printf("%i letters", letters);
+return letters;
+}
