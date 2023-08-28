@@ -12,11 +12,15 @@ int h;
 
     for (int i = 0; i < h; i++)
     {
-        for (int k = h; k )
+        for (int k = 0; k <=> h - i;k++ )
+        {
+            printf(" ");
+        }
         for (int j = 0; j <= i; j++ )
         {
             printf("#");
         }
+
     printf("\n");
     }
 }
