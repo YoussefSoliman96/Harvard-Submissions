@@ -12,7 +12,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             float Blue = image[i][j].rgbtBlue;
             float Green = image[i][j].rgbtGreen;
             // grayscale pixels are made by taking the average color of all color bits in that pixel
-            int average = round (Red + Blue + Green / 3);
+            int average = round ((Red + Blue + Green) / 3);
             image[i][j].rgbtRed = image[i][j].rgbtBlue = image[i][j].rgbtGreen = average;
         }
     }
