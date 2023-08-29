@@ -15,8 +15,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -152,8 +151,8 @@ void tabulate(void)
             // Every voter votes for their top-preferred candidate who has not already been eliminated
             if (candidates[preferences[i][j]].eliminated == false)
             {
-            candidates[preferences[i][j]].votes++;
-            break;
+                candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
@@ -166,7 +165,7 @@ bool print_winner(void)
     // If any candidate has more than half of the votes, they win
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes > (voter_count / 2))
+        if (candidates[i].votes > (voter_count / 2))
         {
             printf("%s", candidates[i].name);
             return true;
@@ -186,7 +185,6 @@ int find_min(void)
         {
             min = candidates[i].votes;
         }
-
     }
     return min;
 }
@@ -221,7 +219,7 @@ void eliminate(int min)
     // Check if any of the current candidates has the min number of votes, if true, eliminate them.
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes == min)
+        if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
         }
