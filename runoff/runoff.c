@@ -133,6 +133,7 @@ bool vote(int voter, int rank, string name)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
+            // store the index of the candidate who is the jth ranked preference for the ith voter.
             preferences[voter][rank] = i;
         }
     }
