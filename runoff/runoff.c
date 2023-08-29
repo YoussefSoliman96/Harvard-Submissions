@@ -144,9 +144,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // Update the number of votes each candidate has at this stage in the runoff
-    for(int i = 0; i < voter_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        for(int j = 0; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             // Every voter votes for their top-preferred candidate who has not already been eliminated
             if (candidates[preferences[i][j].eliminated]) == false)
@@ -163,7 +163,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // If any candidate has more than half of the votes, they win
-    for(i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if(candidates.votes[i] >= (voter_count / 2))
         {
@@ -178,6 +178,20 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    int min = voter_count;
+    for(int j = 0; i < candidate_count; j++)
+    {
+        if (candidates[i].votes < min)
+        {
+            
+        }
+    }
+
+    for (int i = 0; i < voter_count; i++)
+    {
+
+    }
+
     return 0;
 }
 
