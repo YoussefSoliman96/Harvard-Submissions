@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int y = -1; y < 2; y++)
                 {
                     int currentx = x + i;
-                    int currenty = y + j:
+                    int currenty = y + j;
                     //Check if current X & current Y are valid
                     if (currentx < 0 || currentx > height - 1 || currenty < 0 || currenty > width - 1)
                     {
