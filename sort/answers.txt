@@ -1,0 +1,23 @@
+sort1 uses: Bubble sort
+
+How do you know?: The time it took to sort sorted numbers is much less than the time it took to sort random numbers.
+
+sort2 uses: Merge sort
+
+How do you know?: The time it took to sort sorted numbers is much close to the time it took to sort random numbers and it's the fastest of all the 3 sorting programs.
+
+sort3 uses: Selection sort
+
+How do you know?: The time it took to sort sorted numbers is close the time it took to sort random numbers and it's slow compared to sort2.
+
+
+
+
+sort 1 time on random 5000 / 10000 = 0.107s / 0.218s
+sort 1 time on sorted 5000 / 10000 = 0.034s / 0.182s
+
+sort 2 time on random 5000 / 10000 = 0.023s / 0.072s
+sort 2 time on sorted 5000 / 10000 = 0.044s / 0.086s
+
+sort 3 time on random 5000 / 10000 = 0.043s / 0.108s
+sort 3 time on sorted 5000 / 10000 = 0.036s / 0.115s

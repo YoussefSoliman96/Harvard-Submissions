@@ -1,0 +1,8 @@
+sort 1 time on random 5000 / 10000 = 0.107s / 0.218s
+sort 1 time on sorted 5000 / 10000 = 0.034s / 0.182s
+
+sort 2 time on random 5000 / 10000 = 0.023s / 0.072s
+sort 2 time on sorted 5000 / 10000 = 0.044s / 0.086s
+
+sort 3 time on random 5000 / 10000 = 0.043s / 0.108s
+sort 3 time on sorted 5000 / 10000 = 0.036s / 0.115s
