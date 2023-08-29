@@ -150,7 +150,7 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
             // Every voter votes for their top-preferred candidate who has not already been eliminated
-            if (candidates[preferences[i][j].eliminated]) == false)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
             candidates[preferences[i][j]].votes++;
             break;
@@ -166,7 +166,7 @@ bool print_winner(void)
     // If any candidate has more than half of the votes, they win
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates.votes[i] >= (voter_count / 2))
+        if(candidates[i].votes >= (voter_count / 2))
         {
             printf("%s", candidates[i].name);
             return true;
@@ -182,20 +182,20 @@ int find_min(void)
     // Loop through the candidates to find the one who is both still in the election and has the fewest number of votes.
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[preferences[i].eliminated] == false && candidates[i].votes < min )
+        if (candidates[i].eliminated == false && candidates[i].votes < min)
         {
             min = candidates[i].votes;
         }
 
-    return min;
     }
+    return min;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    int not_eliminated;
-    int lowest_votes;
+    int not_eliminated = 0;
+    int lowest_votes = 0;
     // Loop through all the remaining candidates and check whether they all have the same (min) number of votes
     for (int i = 0; i < candidate_count; i++)
     {
@@ -223,7 +223,7 @@ void eliminate(int min)
     {
         if(candidates[i].votes == min)
         {
-            candidates[i].eliminated == true;
+            candidates[i].eliminated = true;
         }
     }
     return;
