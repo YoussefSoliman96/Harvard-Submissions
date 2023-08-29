@@ -177,11 +177,11 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
     int min = voter_count;
+    // Loop through the candidates to find the one who is both still in the election and has the fewest number of votes.
     for(int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < min && candidates[preferences[i].eliminated] == false)
+        if (candidates[preferences[i].eliminated] == false && candidates[i].votes < min )
         {
             min = candidates[i].votes;
         }
