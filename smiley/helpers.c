@@ -6,5 +6,8 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     for (row = 0; row < width; row++)
     {
         for(column = 0; column < height; column++)
+        {
+            if ()
+        }
     }
 }
