@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
-            // store the index of the candidate who is the jth ranked preference for the ith voter.
+            // store the index of the candidate who is the jth ranked preference for the ith voter
             preferences[voter][rank] = i;
         }
     }
@@ -143,12 +143,12 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // Update the number of votes each candidate has at this stage in the runoff.
+    // Update the number of votes each candidate has at this stage in the runoff
     for(int i = 0; i < voter_count; i++)
     {
         for(int j = 0; j < candidate_count; j++)
         {
-            // Every voter votes for their top-preferred candidate who has not already been eliminated.
+            // Every voter votes for their top-preferred candidate who has not already been eliminated
             if (candidates[preferences[i][j].eliminated]) == false)
             {
             candidates[preferences[i][j]].votes++;
@@ -162,7 +162,15 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    // If any candidate has more than half of the votes, they win
+    for(i = 0; i < candidate_count; i++)
+    {
+        if(candidates.votes[i] >= (voter_count / 2))
+        {
+            printf("%s", candidates.name[i]);
+            return true;
+        }
+    }
     return false;
 }
 
