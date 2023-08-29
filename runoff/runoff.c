@@ -179,7 +179,7 @@ int find_min(void)
 {
     int min = voter_count;
     // Loop through the candidates to find the one who is both still in the election and has the fewest number of votes.
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[preferences[i].eliminated] == false && candidates[i].votes < min )
         {
@@ -187,6 +187,7 @@ int find_min(void)
         }
 
     return min;
+    }
 }
 
 // Return true if the election is tied between all candidates, false otherwise
