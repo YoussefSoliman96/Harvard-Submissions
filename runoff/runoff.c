@@ -194,10 +194,10 @@ bool is_tie(int min)
 {
     int not_eliminated;
     int lowest_votes;
-    // TODO
+    // Loop through all the remaining candidates and check whether they all have the same (min) number of votes
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminate == false)
+        if (candidates[i].eliminated == false)
         {
             not_eliminated++;
         }
@@ -216,6 +216,13 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
+    // Check if any of the current candidates has the min number of votes, if true, eliminate them.
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if(candidates[i].votes == min)
+        {
+            candidates[i].eliminated == true;
+        }
+    }
     return;
 }
