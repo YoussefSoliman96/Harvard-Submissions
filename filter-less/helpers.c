@@ -11,7 +11,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             float Red = image[i][j].rgbtRed;
             float Blue = image[i][j].rgbtBlue;
             float Green = image[i][j].rgbtGreen;
-            // grayscale pixels are made by taking the average of all pixels
+            // grayscale pixels are made by taking the average color of all color bits in that pixel
             int average = round (Red + Blue + Green / 3);
             image[i][j].rgbtRed = image[i][j].rgbtBlue = image[i][j].rgbtGreen = average;
         }
@@ -30,8 +30,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             float OBlue = image[i][j].rgbtBlue;
             float OGreen = image[i][j].rgbtGreen;
 
-            int average = round (Red + Blue + Green / 3);
-            image[i][j].rgbtRed = image[i][j].rgbtBlue = image[i][j].rgbtGreen = average;
+            float SRed = image[i][j].rgbtRed;
+            float SBlue = image[i][j].rgbtBlue;
+            float SGreen = image[i][j].rgbtGreen;
         }
     }
     return;
