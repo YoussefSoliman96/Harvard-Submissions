@@ -135,6 +135,7 @@ bool vote(int voter, int rank, string name)
         {
             // store the index of the candidate who is the jth ranked preference for the ith voter
             preferences[voter][rank] = i;
+            return true;
         }
     }
     return false;
