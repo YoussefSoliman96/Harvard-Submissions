@@ -3,6 +3,16 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (i = 0; i < width; i++)
+    {
+        for(j = 0; j < height; j++)
+        {
+            if(image[j][i] == )
+            {
+                
+            }
+        }
+    }
     return;
 }
 
