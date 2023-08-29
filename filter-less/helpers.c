@@ -57,7 +57,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-
+    // Each pixel in the array is swapped with the last pixel in that row
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width / 2; j++)
@@ -73,5 +73,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
