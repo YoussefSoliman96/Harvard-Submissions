@@ -58,10 +58,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int temp = arr[i];
-    
+
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height; j++)
+        for (int j = 0; j < width / 2; j++)
         {
 
         }
