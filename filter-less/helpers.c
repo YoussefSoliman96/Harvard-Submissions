@@ -73,6 +73,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    //Create temporary array to change current pixel values there
     RGBTRIPLE temp[height][width];
     for (int i = 0; i < height; i++)
     {
@@ -85,10 +86,44 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-        //Valid neighbouring pixels
-        int totalRed, totalGreen, totalBlue;
-        totalRed = totalGreen = totalBlue = 0;
-        float counter = 0;
+            //Valid neighbouring pixels
+            int totalRed, totalGreen, totalBlue;
+            totalRed = totalGreen = totalBlue = 0;
+            float counter = 0;
+
+            //Neighbouring pixels
+            for (int x = -1; x < 2; x++)
+            {
+                for (int y = -1; y < 2; y++)
+                {
+                    int currentx = x + i;
+                    int currenty = y + j:
+                    //Check if current X & current Y are valid
+                    if (currentx < 0 || currentx > height - 1 || currenty < 0 || currenty > width - 1)
+                    {
+                        continue;
+                    }
+                    //Image value
+                    totalRed += image[currentx][currenty].rgbtRed;
+                    totalGreen += image[currentx][currenty].rgbtGreen;
+                    totalBlue += image[currentx][currenty].rgbtBlue;
+                    counter++;
+                }
+                //Average of neighboring pixels
+                temp[i][j].rgbtRed = round(totalRed / counter);
+                temp[i][j].rgbtGreen = round(totalGreen / counter);
+                temp[i][j].rgbtBlue = round(totalBlue / counter);
+            }
+        }
+    }
+    //Copy temp values back to original array
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = temp[i][j].rgbtRed;
+            image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
+            image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
         }
     }
     return;
