@@ -33,12 +33,11 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] && 0xf0) == 0xe0)
         {
-                    printf("file is JPEG");
-                    // Make a new JPEG file
-                    sprintf(filename, "%03i.jpg", 2)
+                    // Write new file name
+                    sprintf(filename, "%03i.jpg", image_count);
                     // Open a new file with the new file name and write the data to it
-                    FILE *img = fopen(filename, "w");
-                    fwrite (data, size, number, outputr)
+                    output_file = fopen(filename, "w");
+                    image_count++;
         }
     }
 
