@@ -33,6 +33,10 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+                    if (image_count > 0)
+                    {
+                        fclose(output_file);
+                    }
                     // Write new file name
                     sprintf(file_name, "%03i.jpg", image_count);
                     // Open a new file with the new file name and write the data to it
