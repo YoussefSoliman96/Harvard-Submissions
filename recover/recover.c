@@ -17,14 +17,16 @@ if (buffer[0] == 0xff)
     {
         if (buffer[2] == 0xff)
         {
-            for (int i = 0; i < 16; i++)
-            {
-                if (buffer[3] == 0xe(i))
-                
-            }
+           if ((buffer[3] && 0xf0) == 0xe0)
+           {
+            printf("file is JPEG");
+            
+
+           }
         }
     }
 }
 
+return 1;
 
 }
