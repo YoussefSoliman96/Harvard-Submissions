@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <strings.h>
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -42,14 +44,29 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    unsigned long total = 0;
+    for (int i - 0; i < strlen(word; i++))
+    {
+        total += tolower(word [i]);
+    }
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    return false;
+    FILE *file = fopen(dictionary, r);
+    if (file == NULL)
+    {
+        printf("Unable to load file");
+        return false;
+    }
+    char word[LENGTH + 1];
+    while (fscanf(file, "%s", word) != EOF)
+    {
+        node *n = malloc(sizeof(node));
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
