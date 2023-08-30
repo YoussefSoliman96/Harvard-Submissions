@@ -20,7 +20,8 @@ if (buffer[0] == 0xff)
            if ((buffer[3] && 0xf0) == 0xe0)
            {
             printf("file is JPEG");
-            
+            // Make a new JPEG file
+            sprintf(filename, "%03i.jpg", 2);
 
            }
         }
