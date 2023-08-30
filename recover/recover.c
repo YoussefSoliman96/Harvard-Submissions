@@ -3,7 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    
+    // Check if argument count > 2
+    if (argc < 2)
+    {
+        printf(")
+    }
     // Open memory card
     FILE *f = fopen (card.raw, "r");
 
