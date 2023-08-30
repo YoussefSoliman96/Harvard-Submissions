@@ -22,7 +22,9 @@ if (buffer[0] == 0xff)
             printf("file is JPEG");
             // Make a new JPEG file
             sprintf(filename, "%03i.jpg", 2);
-
+            // Open a new file with the new file name and write the data to it
+            FILE *img = fopen(filename, "w");
+            fwrite (data, size, number, outputr)
            }
         }
     }
