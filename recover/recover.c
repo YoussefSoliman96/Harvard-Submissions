@@ -11,12 +11,17 @@ int main(int argc, char *argv[])
     }
     // Open memory card
     FILE *f = fopen (argv[1], "r");
-
-    // Read data from the memory card
-    fread (data, size, number, inptr);
+    // Check if input file is valid
+    if (f == NULL)
+    {
+        printf("Couldn't open file");
+        return 2;
+    }
 
     // Check if file is JPEG
-    int buffer[];
+    unsigner char buffer[512];
+    // Number of images
+    int image_count = 0;
     if (buffer[0] == 0xff)
     {
         if (buffer[1] == 0xd8)
@@ -35,6 +40,7 @@ int main(int argc, char *argv[])
             }
         }
     }
-
+    // Read data from the memory card
+    fread (data, size, number, inptr);
 
 }
