@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stddef>
 
 // Each person has two parents and two alleles
 typedef struct person
