@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     // Open memory card
-    FILE *input_file = fopen (argv[1], "r");
+    FILE *input_file = fopen(argv[1], "r");
     // Check if input file is valid
     if (input_file == NULL)
     {
@@ -27,30 +27,29 @@ int main(int argc, char *argv[])
     // Pointer for recovered images
     FILE *output_file = NULL;
     // File name
-    char *file_name = malloc (8 * sizeof(char));
+    char *file_name = malloc(8 * sizeof(char));
     // Read data from the memory card
-    while (fread (buffer, sizeof(char), 512, input_file ))
+    while (fread(buffer, sizeof(char), 512, input_file))
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-                    if (image_count > 0)
-                    {
-                        fclose(output_file);
-                    }
-                    // Write new file name
-                    sprintf(file_name, "%03i.jpg", image_count);
-                    // Open a new file with the new file name and write the data to it
-                    output_file = fopen(file_name, "w");
-                    image_count++;
+            if (image_count > 0)
+            {
+                fclose(output_file);
+            }
+            // Write new file name
+            sprintf(file_name, "%03i.jpg", image_count);
+            // Open a new file with the new file name and write the data to it
+            output_file = fopen(file_name, "w");
+            image_count++;
         }
         if (output_file != NULL)
         {
-            fwrite (buffer, sizeof(char), 512, output_file);
+            fwrite(buffer, sizeof(char), 512, output_file);
         }
     }
     free(file_name);
     fclose(input_file);
     fclose(output_file);
     return 0;
-
 }
