@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -10,9 +12,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     // Open memory card
-    FILE *f = fopen (argv[1], "r");
+    FILE *input_file = fopen (argv[1], "r");
     // Check if input file is valid
-    if (f == NULL)
+    if (input_file == NULL)
     {
         printf("Couldn't open file");
         return 2;
@@ -22,6 +24,10 @@ int main(int argc, char *argv[])
     unsigner char buffer[512];
     // Number of images
     int image_count = 0;
+    // Pointer for recovered images
+    FILE *output_file = NULL;
+    // File name
+    char *file_name = malloc (8 * sizeof(char));
     if (buffer[0] == 0xff)
     {
         if (buffer[1] == 0xd8)
