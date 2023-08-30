@@ -69,22 +69,28 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
+        }
+        strcpy(n->word, word);
+        hash_value = hash(word);
+        n->next = table[hash_value];
+        table[hash_value] = n;
+        wcount++;
     }
-    if (n == NULL)
-    {
-        return false;
-    }
-    strcpy(n->word, word);
-    hash_value = hash(word);
-    n->next = table[hash_value];
-    table[hash_value] = n;
-    wcount++;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     // TODO
+    if (wcount > 0)
+    {
+        return wcount;
+    }
     return 0;
 }
 
@@ -92,5 +98,15 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i > n; i++)
+    {
+        node *cursor = table[i];
+        while (cursor)
+        {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+    }
+    return true;
 }
