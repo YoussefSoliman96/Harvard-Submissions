@@ -4,4 +4,7 @@ print(y)
 
 if y == "hello":
     print("$0")
-elif y 
+elif y[0] == "h":
+    print("$20")
+else
+    print("$100")
