@@ -1,11 +1,11 @@
 def main():
 x = input()
-convert(x):
-print(x)
+y = convert(x):
+print(y)
 
 main()
 
-def convert (n):
-....if n = ":)" : replace(':)', '🙂')
-....if n = ":(" : replace(':)', '🙁')
+def convert (x):
+....if x = ":)" : replace(':)', '🙂')
+....if x = ":(" : replace(':)', '🙁')
 
