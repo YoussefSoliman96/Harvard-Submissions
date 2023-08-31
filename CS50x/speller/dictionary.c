@@ -83,7 +83,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
+    // Return word count
     if (wcount > 0)
     {
         return wcount;
@@ -94,7 +94,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // Create temporary variable pointing to the first node then free the pointer after moving
     for (int i = 0; i < N; i++)
     {
         node *cursor = table[i];
