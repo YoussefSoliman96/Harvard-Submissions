@@ -4,4 +4,18 @@ extension = y[1]
 print(extension)
 match extension:
     case gif:
-        print(f"image/ + {extension}")
+        print("image/" + extension)
+    case jpg:
+        print("image/" + extension)
+    case jpeg:
+        print("image/" + extension)
+    case png:
+        print("image/" + extension)
+    case pdf:
+        print("image/" + extension)
+    case txt:
+        print("image/" + extension)
+    case zip:
+        print("image/" + extension)
+    case _:
+        print("You forgot the file extension:")
