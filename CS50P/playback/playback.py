@@ -1,2 +1,2 @@
-x = input()
-x = x.replace(' ', '....')
+x = input().replace(' ', '....')
+print(x)
