@@ -1,1 +1,2 @@
-x = input(" ")
+y = str.casefold(input())
+print (y)
