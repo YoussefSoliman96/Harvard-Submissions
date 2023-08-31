@@ -1,6 +1,7 @@
 x = str.casefold(input("File name: "))
 y = x.split(".", 1)
 extension = y[1]
+name = y[0]
 match extension:
     case "gif":
         print("image/" + extension)
@@ -13,7 +14,7 @@ match extension:
     case "pdf":
         print("application/" + extension)
     case "txt":
-        print("text/" + extension)
+        print("text/" + name)
     case "zip":
         print("application/" + extension)
     case _:
