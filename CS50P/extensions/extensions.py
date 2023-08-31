@@ -1,2 +1,6 @@
 x = str.casefold(input("File name: "))
-print(x)
+y = x.split(".", 1)
+extension = y[1]
+print(extension)
+match extension:
+    case jpg
