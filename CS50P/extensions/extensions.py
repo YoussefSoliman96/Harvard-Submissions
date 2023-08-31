@@ -3,19 +3,17 @@ y = x.split(".", 1)
 extension = y[1]
 print(extension)
 match extension:
-    case gif:
+    case "gif":
         print("image/" + extension)
-    case jpg:
+    case "jpg":
         print("image/" + extension)
-    case jpeg:
+    case "jpeg":
         print("image/" + extension)
-    case png:
+    case "png":
         print("image/" + extension)
-    case pdf:
+    case "pdf":
         print("image/" + extension)
-    case txt:
+    case "txt":
         print("image/" + extension)
-    case zip:
+    case "zip":
         print("image/" + extension)
-    case _:
-        print("You forgot the file extension:")
