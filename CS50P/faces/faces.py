@@ -10,4 +10,5 @@ def convert (x):
     x2 = x1.replace(':(', '🙁')
     return x2
 
-main()
+main()def convert (x)
+....
