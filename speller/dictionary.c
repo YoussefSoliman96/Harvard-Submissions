@@ -1,12 +1,11 @@
 // Implements a dictionary's functionality
-
+#include "dictionary.h"
 #include <ctype.h>
 #include <stdbool.h>
-#include <string.h>
-#include <strings.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "dictionary.h"
+#include <string.h>
+#include <strings.h>
 
 // Represents a node in a hash table
 typedef struct node
