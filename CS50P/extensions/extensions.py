@@ -16,3 +16,5 @@ match extension:
         print("image/" + extension)
     case "zip":
         print("image/" + extension)
+    case _:
+        print("application/octet-stream")
