@@ -1,2 +1,2 @@
-def convert (x)
-....
+def convert (n)
+....if (n = :)) 
