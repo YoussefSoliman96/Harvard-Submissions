@@ -14,7 +14,7 @@ def percent_to_float(p):
     # Remove % and return the amount as a float
     p1 = p.replace('%', '')
     p2 = float(p1) / 100
-    return float(p2)
+    return p2
 
 
 
