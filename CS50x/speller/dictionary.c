@@ -26,7 +26,7 @@ unsigned int wcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    // Take input and output the number to the bucket related to it
     hash_value = hash(word);
     node *cursor = table[hash_value];
     while (cursor != 0)
