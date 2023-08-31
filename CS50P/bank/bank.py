@@ -1,3 +1,3 @@
-x = input("Greeting: ")
-match x:
-    case 
+x = input("Greeting: ").strip()
+
+print(x)
