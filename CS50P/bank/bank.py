@@ -1,10 +1,11 @@
 x = input("Greeting: ").strip().split()
 y = x[0].replace(',', '')
+z = str.casefold(y)
 print(y)
 
-if y == "hello":
+if z == "hello":
     print("$0")
-elif y[0] == "h":
+elif z[0] == "h":
     print("$20")
 else:
     print("$100")
