@@ -11,10 +11,10 @@ match extension:
     case "png":
         print("image/" + extension)
     case "pdf":
-        print("image/" + extension)
+        print("application/" + extension)
     case "txt":
-        print("image/" + extension)
+        print("text/" + extension)
     case "zip":
-        print("image/" + extension)
+        print("application/" + extension)
     case _:
         print("application/octet-stream")
