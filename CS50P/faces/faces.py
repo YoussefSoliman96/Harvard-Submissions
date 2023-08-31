@@ -1,2 +1,3 @@
 def convert (n)
-....if (n = :)) 
+....if n = :) : replace(':)', '🙂')
+....if n = :() : replace(':)', '🙁')
