@@ -1,1 +1,2 @@
-x = input("File name: ")
+x = str.casefold(input("File name: "))
+print(x)
