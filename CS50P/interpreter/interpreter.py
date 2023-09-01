@@ -1,14 +1,15 @@
 input = input("Expression: ")
-x, y, z = input.split(" ")
+x, y, z = input.split()
 nx = float(x)
 nz = float(z)
-if y == "+":
-    output = nx + nz
-elif y == "-":
-    output = nx - nz
-elif y == "*":
-    output = nx * nz
-elif y == "/":
-    output = nx / nz
-    print(output)
+match y:
+    case "+":
+        output = nx + nz
+    case "-":
+        output = nx - nz
+    case "*":
+        output = nx * nz
+    case "/":
+        output = nx / nz
+print(output)
 
