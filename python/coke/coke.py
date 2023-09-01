@@ -1,20 +1,12 @@
-def main():
-    print("Amount Due: 50")
-    # Calculate change
-    change = calculate_change(x)
-    print("Change Owed = 0")
 
+print("Amount Due: 50")
+x = input("Insert Coin: ")
+y = calculate_change(x)
 
-def calculate_change(x):
-    x = input("Insert Coin: ")
-    if int(x) < 50:
-        due = 50 - int(x)
-        print(f"Amount Due: {due}")
-        calculate_change(x)
-    else:
-
-
-
-
-
-main()
+while int(x) < 50:
+    due = 50 - int(x)
+    print(f"Amount Due: {due}")
+else:
+    change = int(x) - 50
+    print("Change Owed: {change}")
+    return change
