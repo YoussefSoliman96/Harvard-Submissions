@@ -16,6 +16,8 @@ def is_valid(s):
                 index = s.index(c)
                 if s[index:].isdigit() and c != 0:
                     return True
+                else:
+                    return False
 
     # No periods, spaces, or punctuation marks are allowed
     for c in s:
