@@ -1,12 +1,12 @@
 
 print("Amount Due: 50")
 x = input("Insert Coin: ")
-y = calculate_change(x)
 
 while int(x) < 50:
-    due = 50 - int(x)
+    y = input("Insert Coin: ")
+    due = 50 - int(y)
     print(f"Amount Due: {due}")
-else:
+    if 
     change = int(x) - 50
     print("Change Owed: {change}")
     return change
