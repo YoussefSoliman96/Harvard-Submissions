@@ -8,12 +8,10 @@ def main():
 
 
 def calculate_change(x):
-    if int(x) >= 50:
-        change = x - 50
-        return change
-    else:
+    if int(x) < 50:
         due = 50 - int(x)
-        print(f"Amount Due: {due}")
+        print(f"Amount Due: {due})
+        
 
 
 
