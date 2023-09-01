@@ -1,2 +1,2 @@
 x, y = input("What time is it: ").split(":")
-if x = 7
+if x = 7 or 
