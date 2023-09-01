@@ -7,7 +7,7 @@ while due > 0:
         due = due - x
         if due <= 0:
             change = abs(due)
-            print(f"Change Owed:{change}")
+            print(f"Change Owed: {change}")
             break
 
 
