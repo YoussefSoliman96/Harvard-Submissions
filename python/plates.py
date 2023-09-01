@@ -1,5 +1,8 @@
 def main():
     plate = input("Plate: ")
+    letters = plate[0:i/2]
+    numbers = plate[i/2:i]
+    print(letters)
     if is_valid(plate):
         print("Valid")
     else:
@@ -7,9 +10,8 @@ def main():
 
 
 def is_valid(s):
-    for i in plate[i]:
-        letters = plate[0:i/2]
-        numbers = plate[i/2:i]
+
+
 
 
 main()
