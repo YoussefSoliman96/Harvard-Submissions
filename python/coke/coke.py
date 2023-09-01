@@ -1,9 +1,11 @@
 due = 50
 
-if due > 0:
+while due > 0:
     print(f"Amount Due: {due}")
     x = input("Insert Coin: ")
-    due -= int(x)
+    if x in [5, 10, 25]:
+        due -= int(x)
+
 else:
     change = abs(due)
     print(f"Change Owed: {change}")
