@@ -14,8 +14,7 @@ def calculate_change(x):
     else:
         due = 50 - int(x)
         print(f"Amount Due: {due}")
-        x = input("Insert Coin: ")
-    return due
+
 
 
 
