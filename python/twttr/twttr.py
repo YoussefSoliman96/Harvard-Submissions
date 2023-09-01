@@ -1,5 +1,5 @@
 x = input("Input: ")
 for c in x:
-    match c:
-        case a or e or i or o or u:
-            
+    if c == "a" or c == "e" or c == "i" or c == "o" or c == "u":
+        y = x.replace("c", "")
+        print(y)
