@@ -1,5 +1,4 @@
 x = input("Filename: ").lower().strip()
-print(x)
 if ".gif" in x:
     print("images/gif")
 elif ".jpg" in x:
