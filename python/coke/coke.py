@@ -7,13 +7,15 @@ def main():
     print("Change Owed = 0")
 
 
-def calculate_change(change):
-    if x >= 50:
+def calculate_change(x):
+    if int(x) >= 50:
         change = x - 50
+        return change
     else:
-        due = 50 - x
+        due = 50 - int(x)
         print(f"Amount Due: {due}")
-    return change
+        x = input("Insert Coin: ")
+    return due
 
 
 
