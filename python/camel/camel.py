@@ -1,5 +1,5 @@
 x = input("camelCase: ")
 for c in x:
-    print(c)
-    if c.isupper() = True
-        
+    if c.isupper() == True:
+        y = "_" + c.lower()
+        print(y)
