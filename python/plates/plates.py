@@ -6,12 +6,11 @@ def main():
         print("Invalid")
 
 
-def is_valid(s):
+def is_valid(plate):
     x = len(plate)
-    print(x)
     letters = plate[0 : int(x/2)]
     numbers = plate[int(x/2) : x]
-    print(letters, numbers)
+    if letters > 2 and letters + numbers 
 
 
 
