@@ -1,5 +1,5 @@
 plate = input("Plate: ")
-for i in plate:
-    letters = plate[0:int(i)/2]
-    numbers = plate[int(i)/2:i]
-    print(letters, numbers)
+x = int(len(plate))
+letters = plate[0:x/2]
+numbers = plate[x/2/x]
+print(letters, numbers)
