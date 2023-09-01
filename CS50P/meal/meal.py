@@ -9,10 +9,8 @@ def main():
         print("dinner time")
 
 def convert(n):
-    x, y = n.split()
-    x = float(x)
-    y = float(y)
-    ny = y / 60
+    x, y = n.split(":")
+    ny = float(y) / 60
     return x + ny
 
 if __name__ == "__main__":
