@@ -5,5 +5,5 @@ while due > 0:
     x = input("Insert Coin: ")
     due = due - int(x)
 
-change = int(x) - due
+change = due
 print(f"Change Owed: {change}")
