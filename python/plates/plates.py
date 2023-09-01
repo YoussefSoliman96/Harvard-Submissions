@@ -13,7 +13,7 @@ def is_valid(s):
         return False
     # Numbers cannot be used in the middle of a plate; they must come at the end
     i = 0
-    for i in range(len(s)):
+    while i < len(s):
         if s[i].isalpha() == False:
             if s[i] == "0":
                 return False
