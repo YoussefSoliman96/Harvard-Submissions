@@ -1,7 +1,4 @@
 
-@austins.219
-6 months ago (edited)
-This one was kinda interesting. Hopefully someone finds my solution useful:
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
