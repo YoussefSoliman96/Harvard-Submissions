@@ -1,16 +1,16 @@
 x = input("Filename: ").lower().strip()
 if ".gif" in x:
-    print("images/gif")
+    print("image/gif")
 elif ".jpg" in x:
-    print("images/jpg")
+    print("image/jpeg")
 elif ".jpeg" in x:
-    print("images/jpeg")
+    print("image/jpeg")
 elif ".png" in x:
-    print("images/png")
+    print("image/png")
 elif ".pdf" in x:
     print("application/pdf")
 elif ".txt" in x:
-    print("text/txt")
+    print("text/plain")
 elif ".zip" in x:
     print("application/zip")
 
