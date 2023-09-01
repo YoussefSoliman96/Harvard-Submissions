@@ -6,4 +6,4 @@ for c in x:
         print(y, end="")
     else:
         print(c, end="")
-print()
+print()x = input("camelCase: ")
