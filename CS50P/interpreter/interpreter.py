@@ -11,8 +11,4 @@ match y:
         output = nx * nz
     case "/":
         output = nx / nz
-print(output)
-
-x, y, z = input.split()
-nx = float(x)
-nz = float(z)
+        print(round(output, 1))
