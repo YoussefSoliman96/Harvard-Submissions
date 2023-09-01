@@ -4,11 +4,11 @@ nx = float(x)
 nz = float(z)
 match y:
     case "+":
-    output = nx + nz
+        output = nx + nz
     case "-":
-    output = nx - nz
+        output = nx - nz
     case "*":
-    output = nx * nz
+        output = nx * nz
     case "/":
-    output = nx / nz
-    print(output)
+        output = nx / nz
+        print(output)
