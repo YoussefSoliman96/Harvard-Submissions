@@ -13,3 +13,5 @@ match y:
         output = nx / nz
 print(output)
 
+x, y, z = input.split()
+output = (x + y + z)
