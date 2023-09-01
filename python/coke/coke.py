@@ -7,9 +7,10 @@ x = input("Insert Coin: ")
 
 def calculate_change(coins):
     change = x - 50
-    if change > 0
+    if change > 0:
         return change
-    
+    else:
+        
 
 
 
