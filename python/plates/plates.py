@@ -19,6 +19,7 @@ def is_valid(s):
                 return False
             else:
                 break
+        i += 1
 
     # No periods, spaces, or punctuation marks are allowed
     for c in s:
