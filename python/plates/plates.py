@@ -12,12 +12,12 @@ def is_valid(s):
     if len(s) < 2 and x > 6 or s[0].isalpha() == False or s[1].isalpha == False:
         return False
     # Numbers cannot be used in the middle of a plate; they must come at the end
+    i = 0
     for i in range(len(s)):
         if s[i].isalpha() == False:
             if s[i] == "0":
                 return False
-        else:
-            break
+
     # No periods, spaces, or punctuation marks are allowed
     for c in s:
         if c in [' ', '.', '!', '?']:
