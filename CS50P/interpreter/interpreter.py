@@ -11,4 +11,4 @@ match y:
         output = nx * nz
     case "/":
         output = nx / nz
-        print(output)
+        print(round(output, 1))
