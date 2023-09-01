@@ -8,10 +8,11 @@ def main():
     elif n >= 18 and n <=19:
         print("dinner time")
 
-def convert(n):
-    x, y = n.split(":")
+def convert():
+    x, y = time.split(":")
+    nx = float(x)
     ny = float(y) / 60
-    return x + ny
+    return nx + ny
 
 if __name__ == "__main__":
     main()
