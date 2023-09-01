@@ -17,8 +17,15 @@ def is_valid(s):
         if s[i].isalpha() == False:
             if s[i] == "0":
                 return False
-            elif s[i] != "0":
-                return True
+            else:
+                 break
+
+    digit_count = 0
+    for c in s:
+        if(c.isdigit()):
+                digit_count += 1
+        if(digit_count > 1 and c.isalpha()):
+                return False
 
     # No periods, spaces, or punctuation marks are allowed
     for c in s:
