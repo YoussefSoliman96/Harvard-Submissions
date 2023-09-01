@@ -22,3 +22,6 @@ while count < 3:
             count += 1
         except ValueError:
             print("Input is not an integer ")
+students = ["me", "you", "us"]
+for i in range(len(students)):
+    print(i, students[i])
