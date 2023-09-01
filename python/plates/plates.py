@@ -13,6 +13,9 @@ def is_valid(s):
         if s[i].isalpha() == Flase:
             if s[i] == "0":
                 return False
+        else:
+            break
+        
 
 
 
