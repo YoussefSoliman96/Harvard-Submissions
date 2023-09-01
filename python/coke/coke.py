@@ -3,9 +3,10 @@ print("Amount Due: 50")
 x = input("Insert Coin: ")
 
 while int(x) < 50:
-    y = input("Insert Coin: ")
-    due = 50 - int(y)
+    x = 50 - int(x)
+    x =
     print(f"Amount Due: {due}")
+    y = input("Insert Coin: ")
     if int(x) >= 50:
         change = int(x) - 50
         print("Change Owed: {change}")
