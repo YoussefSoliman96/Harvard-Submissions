@@ -6,12 +6,9 @@ def main():
         print("Invalid")
 
 
-def is_valid(plate):
-    x = len(plate)
-    letters = plate[0 : int(x/2)]
-    numbers = plate[int(x/2) : x]
-    if len(letters) >= 2 and x <=6 and letters.isalpha() == True and numbers[0] != "0":
-        return True
+def is_valid(s):
+    if len(s) < 2 and x > 6 or s[0].isalpha() == False or s[1].isalpha == False:
+        return False
     else:
         return False
 
