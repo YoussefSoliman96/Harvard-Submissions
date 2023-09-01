@@ -1,3 +1,7 @@
+
+@austins.219
+6 months ago (edited)
+This one was kinda interesting. Hopefully someone finds my solution useful:
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
@@ -5,28 +9,36 @@ def main():
     else:
         print("Invalid")
 
-
 def is_valid(s):
-    # All vanity plates must start with at least two letters
-    # Vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters
-    if len(s) < 2 or len(s) > 6 or s[0].isalpha() == False or s[1].isalpha == False:
-        return False
-    # Numbers cannot be used in the middle of a plate; they must come at the end
-    i = 0
-    for i in range(len(s)):
-        if s[i].isalpha() == False:
-            if s[i] == "0":
-                return False
-            elif s[i] != "0":
-                return True
-
-    # No periods, spaces, or punctuation marks are allowed
-    for c in s:
-        if c in [' ', '.', '!', '?']:
-            return False
-    return True
-
-
-
+    # Set the flag to True
+    valid_check = True
+    # Count the number of digits in the string
+    digit_count = 0
+    # Check the length of the string
+    if(len(s) < 2 or len(s) > 6 ):
+        valid_check = False
+        return valid_check
+    # Makes sure the first two characters are not numbers
+    if(s[0].isdigit() or s[1].isdigit()):
+        valid_check = False
+        return valid_check
+    for char in s:
+        # Make sure only valid characters are in the string, no special characters or spaces
+        if( not char.isalnum()):
+            valid_check = False
+            return valid_check
+        # Check to see if digits are in the middle of the string
+        if(digit_count > 1 and char.isalpha()):
+            valid_check = False
+            return valid_check
+        # Count for the number of digits in the string
+        if(char.isdigit()):
+            digit_count += 1
+        # Make certain the first instance of the digit is not 0
+        if(digit_count == 1 and char == "0"):
+            valid_check = False
+            return valid_check
+    # final return
+    return valid_check
 
 main()
