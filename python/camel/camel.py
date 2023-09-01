@@ -3,8 +3,7 @@ print("snake_case: ", end="")
 for c in x:
     if c.isupper():
         y = "_" + c.lower()
-        print(y, end="")
+        c = y
+        print(c, end = "")
     else:
-        print(c, end="")
-print()
-x = input("camelCase: ")
+        print(c, end = "")
