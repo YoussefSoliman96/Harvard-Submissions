@@ -1,17 +1,20 @@
 def main():
-print("Amount Due: 50")
-change = calculate_change(coins)
-x = input("Insert Coin: ")
+    print("Amount Due: 50")
+    # Take user input
+    x = input("Insert Coin: ")
+    # Calculate change
+    change = calculate_change(x)
+    print("Change Owed = 0")
 
 
-
-def calculate_change(coins):
-    change = x - 50
-    if change > 0:
-        return change
+def calculate_change(change):
+    if x >= 50:
+        change = x - 50
     else:
-        
+        x = input("Insert Coin: ")
+    return change
 
 
 
-    main()
+
+main()
