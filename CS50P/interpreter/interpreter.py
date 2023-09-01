@@ -1,5 +1,5 @@
 input = input("Expression: ")
-x, y, z = input.split(" ")
+x, y, z = input.split()
 nx = float(x)
 nz = float(z)
 match y:
