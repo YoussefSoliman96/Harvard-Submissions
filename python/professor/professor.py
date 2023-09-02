@@ -3,4 +3,5 @@ while True:
     level = input("Level: ")
         try:
 
-        except:
+        except ValueError:
+            
