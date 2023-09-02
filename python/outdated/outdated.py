@@ -31,17 +31,17 @@ while True:
         try:
             # Split the date by spaces
             y = date.split(" ")
-            day = y[1]
-            month = y[0]
-            year = y[2]
+            nday = y[1]
+            nmonth = y[0]
+            nyear = y[2]
             # Remove comma from date
-            day = day.replace(",", " ")
+            day = nday.replace(",", " ")
             # Identify the month
             for i in range(len(months)):
-                if month == months[i]:
-                    month = i + 1
+                if nmonth == months[i]:
+                    nmonth = i + 1
             # Check validity of date based on count
-            if 1 <= int(day) >= 31 and 1 <= int(month) >= 12:
+            if 1 <= int(nday) >= 31 and 1 <= int(nmonth) >= 12:
                 break
 
         except:
