@@ -13,6 +13,8 @@ else:
 input = ("Input: ")
 # Import fonts
 figlet.getFonts()
+# Set the font after importing it and setting it's name to f
+if random == False:
+    figlet.setFont(font=sys.argv[2])
+    print(figlet.renderText(input))
 
-figlet.setFont(font=f)
-print(figlet.renderText(s))
