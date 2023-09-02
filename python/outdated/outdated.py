@@ -18,14 +18,16 @@ while True:
     try:
         # Prompt the user for input
         date = input("Date: ")
+        # Split the date by (/)
         x = str.split(date, "/")
         day = x[1]
         month = x[0]
         year = x[2]
         print (day, month, year)
         try:
+        
 
         except:
-            
+
     except ValueError:
         break
