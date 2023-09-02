@@ -5,7 +5,6 @@ while True:
     try:
         if int(n) > 0:
             level = int(random.randint(1, int(n)))
-
             try:
                 guess = input("Guess: ")
                 if int(guess) < level:
@@ -15,7 +14,7 @@ while True:
                 else:
                     print("Just right!")
                     break
-            except ValueError:
+            except:
                 break
     except ValueError:
         print("Input is not a number")
