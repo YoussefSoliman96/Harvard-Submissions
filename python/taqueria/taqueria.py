@@ -18,3 +18,4 @@ while True:
             print(f"Total: ${menu[item]}")
     except EOFError:
             print("")
+            break
