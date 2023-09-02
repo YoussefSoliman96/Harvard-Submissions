@@ -6,7 +6,7 @@ elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font"):
 else:
     sys.exit(1)
 
-
+input = ("Input: ")
 
 
 
@@ -17,7 +17,7 @@ from pyfiglet import Figlet
 
 
 
-input = ("Input: ")
+
 figlet = Figlet()
 figlet.getFonts()
 figlet.setFont(font=f)
