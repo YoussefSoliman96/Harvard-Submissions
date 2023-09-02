@@ -19,11 +19,11 @@ if random == False:
         figlet.setFont(font=sys.argv[2])
     except:
         print("Wrong command line argument")
-        sys.exit()
+        sys.exit(1)
 else:
     font = random.choice(figlet.getFonts())
 
 # Take user input
 input = input("Input: ")
 
-print(figlet.renderText(input))
+print(f"Output: {figlet.renderText(input)}")
