@@ -1,3 +1,4 @@
+import inflict
 # Make a list to keep all user inputs
 names = []
 # Take user input
