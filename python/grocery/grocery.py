@@ -14,5 +14,5 @@ while True:
         # Print items in order
         for key in list:
             print(key)
-            break
+        break
 
