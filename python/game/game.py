@@ -4,12 +4,13 @@ while True:
     n = input("Level: ")
     try:
         if int(n) > 0:
-            level = random.randint(1, int(n))
+            level = int(random.randint(1, int(n)))
+
             try:
                 guess = input("Guess: ")
-                if int(guess) < int(level):
+                if int(guess) < level:
                     print("Too small!")
-                elif int(guess) > int(level):
+                elif int(guess) > level:
                     print("Too large!")
                 else:
                     print("Just right!")
