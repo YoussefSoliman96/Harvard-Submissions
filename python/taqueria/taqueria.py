@@ -1,5 +1,4 @@
-menu =
-{
+menu = {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -16,6 +15,6 @@ while True:
     try:
         item = input("Item: ")
         if item in menu:
-            print("Total: ")
+            print(f"Total: {menu[item]}")
     except EOFError:
         print("")
