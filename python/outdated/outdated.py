@@ -23,6 +23,7 @@ while True:
         day = x[1]
         month = x[0]
         year = x[2]
+        # Check validity of date based on count
         if 1 <= int(day) and int(day) >= 31 and 1 <= int(month) >= 12:
             break
 
@@ -33,8 +34,19 @@ while True:
             day = x[1]
             month = x[0]
             year = x[2]
-            day = str.replace(",", " ")
+            # Remove comma from date
+            day = day.replace(",", " ")
+            # Identify the month
+            for i in range(len(months)):
+                if month == months[i]:
+                    month = i + 1
+            # Check validity of date based on count
+            if 1 <= int(day) and int(day) >= 31 and 1 <= int(month) >= 12:
+            break
+
         except:
+            print()
+            pass
 
 
 
