@@ -5,5 +5,15 @@ while True:
     try:
         # Prompt the user for input
         item = input("")
+        # If the item is already in the list, increase item count
+        if item in list:
+            list[item] += 1
+        else:
+            list[item] = 1
     except EOFError:
-        break
+        # Print items in order
+        for key in list:
+            print("")
+            print(key)
+            break
+
