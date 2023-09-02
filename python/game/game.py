@@ -8,7 +8,7 @@ while True:
             break
     except ValueError:
         print("Input is not a number")
-        break
+        
 
 print(level)
 
