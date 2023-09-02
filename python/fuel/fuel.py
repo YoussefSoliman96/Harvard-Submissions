@@ -13,7 +13,7 @@ while True:
         pass
 
 # Calculate the percentage
-p = result * 100
+p = int(result * 100)
 # If percentage < 1%, print E
 if p <= 1:
     print("E")
