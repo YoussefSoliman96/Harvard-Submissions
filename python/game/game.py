@@ -2,10 +2,10 @@ import random
 # Loop forever until the user prompts a positive level
 while True:
     n = input("Level: ")
+    guess = input("Guess: ")
     try:
         if int(n) > 0:
             level = random.randint(1, int(n))
-            guess = input("Guess: ")
             if int(guess) < int(level):
                 print("Too small!")
             elif int(guess) > int(level):
