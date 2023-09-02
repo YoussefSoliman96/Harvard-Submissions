@@ -26,4 +26,4 @@ else:
 # Take user input
 input = input("Input: ")
 
-print(f"Output: {figlet.renderText(input)}")
+print(f"Output:\n {figlet.renderText(input)}")
