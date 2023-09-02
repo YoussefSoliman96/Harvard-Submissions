@@ -1,13 +1,16 @@
 # Take user input
 # Loop forever until user input is in the right format (True)
 while True:
+    fraction = input("Fraction: ")
     try:
-        fraction = input("Fraction: ")
+        x = fraction.split("/")
+        
+
     except ValueError:
         pass
     except ZeroDivisionError:
         pass
 
-    x = fraction.split("/")
+
     result = (int(x[0]) / int(x[1]))*100
     print(f"%{result}")
