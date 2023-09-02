@@ -12,7 +12,7 @@ while True:
             list[item] = 1
     except EOFError:
         # Print items in order
-        for key in sorted(list.keys()):
+        for key in sorted(list):
             print(list[key], key)
         break
 
