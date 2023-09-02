@@ -13,7 +13,6 @@ while True:
     except EOFError:
         # Print items in order
         for key in list:
-            print("")
             print(key)
             break
 
