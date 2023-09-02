@@ -5,7 +5,9 @@ while True:
     try:
         if int(n) > 0:
             level = random.randint(1, n)
+            break
     except:
         pass
-    print(level)
+
+print(level)
 
