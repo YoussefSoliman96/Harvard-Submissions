@@ -19,17 +19,17 @@ while True:
         # Prompt the user for input
         date = input("Date: ")
         # Split the date by (/)
-        x = str.split(date, "/")
+        x = date.split("/")
         day = x[1]
         month = x[0]
         year = x[2]
         if 1 <= day => 31 and 1 <= month => 12:
-
+            break
 
     except:
         try:
             # Split the date by spaces
-            x = str.split(date, " ")
+            x = date.split(" ")
             day = x[1]
             month = x[0]
             year = x[2]
