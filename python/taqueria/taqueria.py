@@ -15,6 +15,6 @@ while True:
     try:
         item = input("Item: ")
         if item in menu:
-            print(f"Total: {menu[item]}")
+            print(f"Total: ${menu[item]}")
     except EOFError:
-        print("")
+            print("")
