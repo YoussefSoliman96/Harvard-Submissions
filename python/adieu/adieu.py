@@ -1,4 +1,4 @@
-import inflict
+import inflect
 p = inflect.engine()
 # Make a list to keep all user inputs
 names = []
@@ -9,10 +9,10 @@ while True:
         name = input("Name: ")
         names.append(name)
 # When user clicks ctrl-d, print an empty space and break
-    except EOFERROR:
+    except EOFError:
         print("")
         break
 
 # print the output starting with Adieu, adieu, to
 output = p.join(names)
-print(f"Adieu, adieu, to {output} ")
+print(f"Adieu, adieu, to {output}")
