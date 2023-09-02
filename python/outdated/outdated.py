@@ -39,9 +39,9 @@ while True:
             # Identify the month
             for i in range(len(months)):
                 if nmonth == months[i]:
-                    nmonth = i + 1
+                    month = i + 1
             # Check validity of date based on count
-            if 1 <= int(nday) >= 31 and 1 <= int(nmonth) >= 12:
+            if 1 <= int(day) >= 31 and 1 <= int(month) >= 12:
                 break
 
         except:
