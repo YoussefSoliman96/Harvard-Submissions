@@ -7,13 +7,14 @@ while True:
             level = int(random.randint(1, int(n)))
             try:
                 guess = input("Guess: ")
-                if int(guess) < level:
-                    print("Too small!")
+                if int(guess) == level:
+                    print("Just right!")
+                    break
                 elif int(guess) > level:
                     print("Too large!")
                 else:
-                    print("Just right!")
-                    break
+                    print("Too small!")
+
             except:
                 break
     except ValueError:
