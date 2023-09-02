@@ -35,6 +35,8 @@ while True:
             month = x[0]
             year = x[2]
             # Remove comma from date
+            if not day.endswith(","):
+                continue
             day = day.replace(",", " ")
             # Identify the month
             for i in range(len(months)):
@@ -49,5 +51,5 @@ while True:
             break
 
 # Check if months or days are less than 10 to add 0 and print the output
-x = (f"{year}-{int(month):02}-{int(day):02}").strip()
+x = (f"{year}-{int(month):02}-{int(day):02}").replace(" ", "")
 print(x)
