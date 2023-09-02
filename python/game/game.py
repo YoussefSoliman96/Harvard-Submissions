@@ -10,16 +10,18 @@ while True:
         print("Input is not a number")
 
 while True:
+    guess = int(input("Guess: "))
     try:
-        guess = input("Guess: ")
-        if int(guess) == level:
-            print("Just right!")
-            break
-        elif int(guess) > level:
-            print("Too large!")
-        else:
-            print("Too small!")
+        if guess > 0:
+            if int(guess) == level:
+                print("Just right!")
+                break
+            elif int(guess) > level:
+                print("Too large!")
+            else:
+                print("Too small!")
 
     except ValueError:
-        break
+        print("Input is not a number")
+
 print(guess)
