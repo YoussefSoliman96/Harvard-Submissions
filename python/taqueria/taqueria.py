@@ -14,7 +14,7 @@ menu = {
 price = 0
 while True:
     try:
-        item = input("Item: ").capitalize()
+        item = input("Item: ").title()
         if item in menu:
             price += menu[item]
             print(f"Total: ${price}")
