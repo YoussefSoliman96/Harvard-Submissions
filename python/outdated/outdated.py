@@ -49,4 +49,4 @@ while True:
             break
 
 # Check if months or days are less than 10 to add 0 and print the output
-print (f"{year}-{int(month):02}-{int(day):02}")
+print (f"{year}-{int(month):02}-{int(day):02}").strip()
