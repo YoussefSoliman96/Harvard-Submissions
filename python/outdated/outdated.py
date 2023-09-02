@@ -22,6 +22,6 @@ while True:
         day = x[1]
         month = x[0]
         year = x[2]
+        print (day, month, year)
     except ValueError:
         break
-print (day, month, year)
