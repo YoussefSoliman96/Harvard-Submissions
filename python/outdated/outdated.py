@@ -33,7 +33,7 @@ while True:
             day = x[1]
             month = x[0]
             year = x[2]
-            day = replace(",", " ")
+            day = str.replace(",", " ")
         except:
 
 
