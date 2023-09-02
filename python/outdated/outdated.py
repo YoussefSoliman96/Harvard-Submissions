@@ -23,11 +23,19 @@ while True:
         day = x[1]
         month = x[0]
         year = x[2]
-        print (day, month, year)
+        if 1 <= day => 31 and 1 <= month => 12:
+
 
     except:
-
         try:
-
+            # Split the date by spaces
+            x = str.split(date, " ")
+            day = x[1]
+            month = x[0]
+            year = x[2]
+            day = replace(",", " ")
         except:
 
+
+
+    print (day, month, year)
