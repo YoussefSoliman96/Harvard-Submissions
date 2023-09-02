@@ -46,7 +46,7 @@ while True:
 
         except:
             print()
-            pass
+            break
 
 # Check if months or days are less than 10 to add 0
 print (day, month, year)
