@@ -1,8 +1,10 @@
 import sys
 if len(sys.argv) == 1:
     random = True
-elif len(sys.argv) == 3:
+elif len(sys.argv) == 3 and (sys.argv[1] != "-f" or sys.argv[1] != "--font"):
     random = False
+    break
+
 
 
 
