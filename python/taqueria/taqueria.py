@@ -16,8 +16,9 @@ while True:
     try:
         item = input("Item: ").title()
         if item in menu:
+            # Increase the price each time the user inputs and item
             price += menu[item]
-            print(f"Total: ${price}")
+            print("Total: ${:.2f}".format(price))
     except EOFError:
             print("")
             break
