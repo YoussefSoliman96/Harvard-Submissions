@@ -1,5 +1,5 @@
 # Make an empty dict to store the user's inputs
-list = { }
+list = {}
 # Loop forever until the user inputs ctrl-d
 while True:
     try:
