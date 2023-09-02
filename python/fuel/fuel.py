@@ -4,7 +4,7 @@ while True:
     fraction = input("Fraction: ")
     try:
         x = fraction.split("/")
-        result = (round(int(x[0]) / int(x[1])))*100
+        result = (int(x[0]) / int(x[1]))
         if result <= 1:
             break
     except ValueError:
@@ -12,4 +12,12 @@ while True:
     except ZeroDivisionError:
         pass
 
-    print(f"%{result}")
+# Calculate the percentage
+p = result * 100
+# If percentage < 1%, print E
+if p <= 1:
+    print("E")
+elif p >=99:
+    print("F")
+else:
+    print(f"%{p}")
