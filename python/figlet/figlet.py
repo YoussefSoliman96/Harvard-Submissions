@@ -15,9 +15,8 @@ input = input("Input: ")
 figlet.getFonts()
 # Set the font after importing it and setting it's name to f
 if random == False:
-    figlet.setFont(font=sys.argv[2])
-    print(figlet.renderText(input))
-
-else:
-    figlet.setFont(font=sys.argv[2])
-    print(figlet.renderText(input))
+    try:
+        figlet.setFont(font=sys.argv[2])
+        print(figlet.renderText(input))
+    except:
+        print("Wrong command line argument")
