@@ -1,4 +1,5 @@
 import sys
+import random
 from pyfiglet import Figlet
 
 figlet = Figlet()
@@ -19,6 +20,8 @@ if random == False:
     except:
         print("Wrong command line argument")
         sys.exit()
+else:
+    font = random.choice(figlet.getFonts())
 
 # Take user input
 input = input("Input: ")
