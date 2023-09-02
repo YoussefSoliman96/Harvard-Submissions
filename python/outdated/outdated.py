@@ -48,7 +48,7 @@ while True:
 
         except:
             print()
-            break
+            pass
 
 # Check if months or days are less than 10 to add 0 and print the output
 x = (f"{year}-{int(month):02}-{int(day):02}").replace(" ", "")
