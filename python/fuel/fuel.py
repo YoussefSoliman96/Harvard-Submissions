@@ -7,3 +7,5 @@ except ValueError:
 except ZeroDivisionError:
     print("")
 x = fraction.split("/")
+result = (int(x[0]) / int(x[1]))*100
+print(result)
