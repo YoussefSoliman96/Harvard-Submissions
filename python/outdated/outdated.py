@@ -15,9 +15,9 @@ months = [
 
 # Loop forever until user prompts a valid input
 while True:
+    # Prompt the user for input
+    date = input("Date: ")
     try:
-        # Prompt the user for input
-        date = input("Date: ")
         # Split the date by (/)
         x = date.split("/")
         day = x[1]
@@ -31,17 +31,17 @@ while True:
         try:
             # Split the date by spaces
             y = date.split(" ")
-            nday = y[1]
-            nmonth = y[0]
-            nyear = y[2]
+            day = y[1]
+            month = y[0]
+            year = y[2]
             # Remove comma from date
-            day = nday.replace(",", " ")
+            day = day.replace(",", " ")
             # Identify the month
             for i in range(len(months)):
-                if nmonth == months[i]:
-                    nmonth = i + 1
+                if month == months[i]:
+                    month = i + 1
             # Check validity of date based on count
-            if 1 <= int(nday) >= 31 and 1 <= int(nmonth) >= 12:
+            if 1 <= int(day) >= 31 and 1 <= int(month) >= 12:
                 break
 
         except:
