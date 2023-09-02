@@ -11,11 +11,13 @@ menu = {
 }
 
 # Loop forever until the user inputs ctrl-d
+price = 0
 while True:
     try:
         item = input("Item: ").capitalize()
         if item in menu:
-            print(f"Total: ${menu[item]}")
+            price += menu[item]
+            print(f"Total: ${price}")
     except EOFError:
             print("")
             break
