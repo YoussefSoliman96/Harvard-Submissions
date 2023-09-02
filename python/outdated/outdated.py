@@ -24,7 +24,7 @@ while True:
         month = x[0]
         year = x[2]
         # Check validity of date based on count
-        if 1 <= int(day) and int(day) >= 31 and 1 <= int(month) >= 12:
+        if 1 <= int(day) >= 31 and 1 <= int(month) >= 12:
             break
 
     except:
@@ -41,13 +41,12 @@ while True:
                 if month == months[i]:
                     month = i + 1
             # Check validity of date based on count
-            if 1 <= int(day) and int(day) >= 31 and 1 <= int(month) >= 12:
-            break
+            if 1 <= int(day) >= 31 and 1 <= int(month) >= 12:
+                break
 
         except:
             print()
             pass
 
-
-
-    print (day, month, year)
+# Check if months or days are less than 10 to add 0
+print (day, month, year)
