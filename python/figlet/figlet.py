@@ -9,14 +9,18 @@ elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font"):
     random = False
 else:
     sys.exit(1)
-# Take user input
-input = input("Input: ")
+
 # Import fonts
 figlet.getFonts()
 # Set the font after importing it and setting it's name to f
 if random == False:
     try:
         figlet.setFont(font=sys.argv[2])
-        print(figlet.renderText(input))
     except:
         print("Wrong command line argument")
+        sys.exit()
+
+# Take user input
+input = input("Input: ")
+
+print(figlet.renderText(input))
