@@ -13,7 +13,7 @@ menu = {
 # Loop forever until the user inputs ctrl-d
 while True:
     try:
-        item = input("Item: ")
+        item = input("Item: ").lower()
         if item in menu:
             print(f"Total: ${menu[item]}")
     except EOFError:
