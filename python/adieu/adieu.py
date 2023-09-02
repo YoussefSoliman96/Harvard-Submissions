@@ -1,4 +1,5 @@
 import inflict
+p = inflect.engine()
 # Make a list to keep all user inputs
 names = []
 # Take user input
@@ -13,4 +14,5 @@ while True:
         break
 
 # print the output starting with Adieu, adieu, to
-print("Adieu, adieu, to ")
+output = p.join(names)
+print(f"Adieu, adieu, to {output} ")
