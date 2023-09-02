@@ -4,7 +4,7 @@ while True:
     fraction = input("Fraction: ")
     try:
         x = fraction.split("/")
-        result = round((int(x[0]) / int(x[1]))*100)
+        result = (round(int(x[0]) / int(x[1])))*100
         if result <= 1:
             break
     except ValueError:
