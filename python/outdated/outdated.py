@@ -23,7 +23,7 @@ while True:
         day = x[1]
         month = x[0]
         year = x[2]
-        if 1 <= int(day) => 31 and 1 <= int(month) => 12:
+        if 1 <= int(day) and int(day) >= 31 and 1 <= int(month) >= 12:
             break
 
     except:
