@@ -24,10 +24,10 @@ while True:
         month = x[0]
         year = x[2]
         print (day, month, year)
+
+    except:
+
         try:
-        
 
         except:
 
-    except ValueError:
-        break
