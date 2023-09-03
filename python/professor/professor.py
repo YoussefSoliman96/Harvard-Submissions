@@ -31,9 +31,15 @@ def generate_integer(level):
 
 def equation():
     count = 1
+    result = x + y
     while count <= 3:
         try:
-            answer = input("")
+            answer = int(input(f"{x} + {y} ="))
+            if answer == result:
+                return True
+            else:
+                print("EEE")
+                count += 1
         except:
 
 

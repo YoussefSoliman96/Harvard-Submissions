@@ -2,7 +2,7 @@ import random
 n = int(input("Level: "))
 count = 0
 wrong_count = 0
-while count < 3
+while count < 3:
         x = random.randint(1, 10)
         y = random.randint(1,10)
         result = x + y
