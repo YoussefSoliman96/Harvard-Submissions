@@ -1,8 +1,8 @@
 import random
 def main():
     level = get_level()
-    get_level()
-    equation()
+    score = count_score(level)
+    print("Score: ", score)
 
 
 def get_level():
@@ -17,8 +17,6 @@ def get_level():
 
 
 def generate_integer(level):
-    i = 0
-    while i <= 10:
         if level == 1:
             x = random.randint(1, 9)
             y = random.randint(1, 9)
@@ -30,7 +28,7 @@ def generate_integer(level):
             y = random.randint(100, 999)
         return x,y
 
-def equation(x, y):
+def round(x, y):
     count = 1
     result = x + y
     while count <= 3:
@@ -47,10 +45,16 @@ def equation(x, y):
     print(f"x + y = {result}")
     return False
 
-def count_score():
+def count_score(n):
     count2 = 1
     score = 0
-    while count2 <=
+    while count2 <= 10:
+        x, y = generate_integer(n)
+        if round(x, y) == True:
+            score += 1
+        count2 += 1
+    return score
+
 
 
 if __name__ == "__main__":
