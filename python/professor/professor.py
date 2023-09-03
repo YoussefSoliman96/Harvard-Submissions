@@ -29,6 +29,9 @@ def generate_integer(level):
             y = random.randint(100, 999)
         return x,y
 
+def equation():
+    count = 1
+
 
 if __name__ == "__main__":
     main()
