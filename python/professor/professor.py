@@ -10,7 +10,7 @@ def get_level():
     # Loop forever until user inputs a valid level (1 -> 3)
     while True:
         try:
-            level = input("Level: ")
+            level = int(input("Level: "))
             if level == 1 or level == 2 or level == 3:
                 break
         except:
