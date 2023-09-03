@@ -32,7 +32,9 @@ def generate_integer(level):
 def equation():
     count = 1
     while count <= 3:
-        
+        try:
+            
+        except:
 
 
 if __name__ == "__main__":
