@@ -9,7 +9,7 @@ while True:
                 print(f"{x} + {y} = ",end=" ")
                 answer = int(input(""))
                 if answer == result:
-                     
+                     break
                 try:
 
                 except ValueError:
