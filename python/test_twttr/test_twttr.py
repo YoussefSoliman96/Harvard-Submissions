@@ -5,6 +5,7 @@ def main():
 
 def test_shorten():
     assert shorten("twitter") == "twttr"
+    assert shorten("TWITTER") == "twttr"
 
 
 
