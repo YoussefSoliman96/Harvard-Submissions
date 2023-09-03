@@ -6,7 +6,7 @@ def main():
 def shorten(word):
     for c in word:
         print(c)
-    return c
+    return word
 
 
 
