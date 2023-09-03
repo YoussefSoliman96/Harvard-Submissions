@@ -1,7 +1,7 @@
 import random
 def main():
     level = get_level()
-    get_level(level)
+    get_level()
     equation()
 
 
@@ -44,7 +44,8 @@ def equation(x, y):
         except:
             count += 1
             print("EEE")
-    print(result)
+    print(f"x + y = {result}")
+    return False
 
 if __name__ == "__main__":
     main()
