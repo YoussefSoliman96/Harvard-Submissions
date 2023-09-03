@@ -1,11 +1,12 @@
 def main():
-    word =  input("Input: ")
+    word =  input("Input: ").lower()
     shorten(word)
 
 
 def shorten(word):
     for c in word:
-        print(c)
+        if c == "a" or c == "e" or c == "i" or c == "o" or c == "u":
+            word = c.replace("c", "")
     return word
 
 
