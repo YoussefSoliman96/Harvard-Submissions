@@ -10,11 +10,9 @@ while True:
                 break
         except ValueError:
             print("Input is not an integer ")
-print(n)
-
 
 while True:
-    answer = int(input(""))
+        answer = int(input(""))
         try:
             if answer == result:
                  break
