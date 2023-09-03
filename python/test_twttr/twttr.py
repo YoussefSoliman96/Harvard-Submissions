@@ -1,5 +1,5 @@
 def main():
-    word =  input("Input: ").lower()
+    word =  input("Input: ")
     new_message = shorten(word)
     print("Output: " + new_message)
 
