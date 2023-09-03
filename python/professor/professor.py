@@ -1,6 +1,6 @@
 import random
 def main():
-    level = get_level(n)
+    level = get_level()
     get_level(level)
 
 
