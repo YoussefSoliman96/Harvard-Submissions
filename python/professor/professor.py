@@ -8,8 +8,8 @@ def main():
 def get_level():
     # Loop forever until user inputs a valid level (1 -> 3)
     while True:
-        level = input("Level: ")
         try:
+            level = input("Level: ")
             if level == 1 or level == 2 or level == 3:
                 break
         except ValueError:
