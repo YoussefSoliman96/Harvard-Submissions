@@ -8,6 +8,8 @@ def shorten(word):
     for c in word:
         if c == "a" or c == "e" or c == "i" or c == "o" or c == "u":
             word = c.replace("c", "")
+        else:
+            
     return word
 
 
