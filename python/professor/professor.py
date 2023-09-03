@@ -1,6 +1,7 @@
 import random
 def main():
-    get_level()
+    level = get_level(n)
+    get_level(level)
 
 
 def get_level():
@@ -11,7 +12,7 @@ def get_level():
                 break
         except:
             pass
-        return n
+    return n
 
 
 def generate_integer(level):
