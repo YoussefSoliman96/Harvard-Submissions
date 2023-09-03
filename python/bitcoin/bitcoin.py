@@ -1,6 +1,9 @@
 import requests
+import sys
 
-try:
-    ...
-except requests.RequestException:
-    ...
+for arg in sys.argv[]
+
+    try:
+        ...
+    except requests.RequestException:
+        ...
