@@ -33,7 +33,7 @@ def equation():
     count = 1
     while count <= 3:
         try:
-            
+            answer = input("")
         except:
 
 
