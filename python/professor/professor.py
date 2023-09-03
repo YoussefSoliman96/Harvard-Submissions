@@ -44,6 +44,7 @@ def equation(x, y):
         except:
             count += 1
             print("EEE")
+    print(result)
 
 if __name__ == "__main__":
     main()
