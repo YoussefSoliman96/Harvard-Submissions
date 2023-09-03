@@ -4,10 +4,10 @@ def main():
     print("Output: " + new_message)
 
 
-
 def shorten(word):
     new_word = ""
     for c in word:
+        # If current 
         if c == "a" or c == "e" or c == "i" or c == "o" or c == "u":
             v = c.replace(c, "")
             new_word += v
