@@ -20,6 +20,5 @@ while True:
                  break
             elif answer != result:
                  print("EEE")
-                 
         except ValueError:
-                print("Input should be a positive integer")
+            print("Input should be a positive integer")
