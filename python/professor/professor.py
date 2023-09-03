@@ -5,8 +5,7 @@ def main():
     count = 0
     wrong_count = 0
     while count < 10:
-            x = random.randint(1, 10)
-            y = random.randint(1,10)
+            generate_integer()
             result = x + y
             print(f"{x} + {y} = ",end=" ")
             try:
@@ -27,16 +26,23 @@ def get_level():
     while True:
             n = input("Level: ")
             try:
-                if int(n) > 0:
+                if int(n) > 0 and int(n) < 4:
                     break
             except ValueError:
                 print("Input is not an integer ")
                 pass
 
 def generate_integer(n):
-    digits = n
-    x = random.randint(1, d)
-    y = random.randint(1, d)
+    if n == 1:
+        x = random.randint(1, 9)
+        y = random.randint(1, 9)
+    elif n == 2:
+        x = random.randint(10, 99)
+        y = random.randint(10, 99)
+    else:
+        x = random.randint(100, 999)
+        y = random.randint(10, 999)
+        return x, y
 
 
 if __name__ == "__main__":
