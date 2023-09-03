@@ -6,8 +6,15 @@ while True:
                 x = random.randint(1, 10)
                 y = random.randint(1,10)
                 result = x + y
-                print(x, y, result)
-                break
+                print(f"{x} + {y} = ",end=" ")
+                answer = int(input(""))
+                if answer == result:
+                     
+                try:
+
+                except ValueError:
+                     print("Input should be a positive integer")
+                     break
         except ValueError:
             print("Input is not an integer ")
 print(n)
