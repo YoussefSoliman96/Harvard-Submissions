@@ -1,6 +1,6 @@
-
+import random
 while True:
-        n = input("Level: ")
+        n = int(input("Level: "))
         try:
             if n >= 1 and n < 4:
                 break
