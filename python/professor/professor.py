@@ -20,14 +20,14 @@ def get_level():
 def generate_integer(level):
         # Determine the number of digits in comparison depending on the level
         if level == 1:
-            x = random.randint(1, 9)
-            y = random.randint(1, 9)
+            x = random.randint(0,9)
+            y = random.randint(0,9)
         elif level == 2:
-            x = random.randint(10, 99)
-            y = random.randint(10, 99)
+            x = random.randint(10,99)
+            y = random.randint(10,99)
         else:
-            x = random.randint(100, 999)
-            y = random.randint(100, 999)
+            x = random.randint(100,999)
+            y = random.randint(100,999)
         return x,y
 
 def round(x, y):
