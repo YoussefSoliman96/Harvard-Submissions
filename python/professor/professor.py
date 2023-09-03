@@ -36,7 +36,7 @@ def round(x, y):
     result = x + y
     while count <= 3:
         try:
-            answer = int(input(f"{x} + {y} ="))
+            answer = int(input(f"{x} + {y} = "))
             # Break out of the loop if user's answer is right
             if answer == result:
                 return True
