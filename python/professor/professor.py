@@ -8,13 +8,13 @@ def main():
 def get_level():
     # Loop forever until user inputs a valid level (1 -> 3)
     while True:
-        n = input("Level: ")
+        level = input("Level: ")
         try:
-            if n == 1 or n == 2 or n == 3:
+            if level == 1 or level == 2 or level == 3:
                 break
         except ValueError:
             pass
-    return n
+    return level
 
 
 def generate_integer(level):
