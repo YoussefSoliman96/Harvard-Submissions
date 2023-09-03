@@ -1,7 +1,7 @@
 import random
 
 def main():
-    get_level()
+    level = get_level()
     count = 0
     wrong_count = 0
     while count < 10:
