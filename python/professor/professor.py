@@ -30,20 +30,20 @@ def generate_integer(n):
                 x = random.randint(100, 999)
                 y = random.randint(10, 999)
 
-            result = x + y
-            print(f"{x} + {y} = ",end=" ")
-            try:
-                while True:
-                    answer = int(input(""))
-                    if answer == result or wrong_count == 2:
-                        break
-                    elif answer != result:
-                        print("EEE")
-                        print(f"{x} + {y} = ",end=" ")
-                        wrong_count += 1
-                count += 1
-            except ValueError:
-                print("Input is not an integer ")
+        result = x + y
+        print(f"{x} + {y} = ",end=" ")
+        try:
+            while True:
+                answer = int(input(""))
+                if answer == result or wrong_count == 2:
+                    break
+                elif answer != result:
+                    print("EEE")
+                    print(f"{x} + {y} = ",end=" ")
+                    wrong_count += 1
+            count += 1
+        except ValueError:
+            print("Input is not an integer ")
 
 
 if __name__ == "__main__":
