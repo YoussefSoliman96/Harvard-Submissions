@@ -7,10 +7,11 @@ while True:
                 y = random.randint(1,10)
                 result = x + y
                 print(f"{x} + {y} = ",end=" ")
-                answer = int(input(""))
-                if answer == result:
-                    break
-                elif answer != result:
-                    print("EEE")
+                while True:
+                    answer = int(input(""))
+                    if answer == result:
+                        break
+                    elif answer != result:
+                        print("EEE")
         except ValueError:
             print("Input is not an integer ")
