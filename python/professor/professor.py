@@ -6,6 +6,7 @@ def main():
 
 
 def get_level():
+    # Loop forever until user inputs a valid level (1 -> 3)
     while True:
         n = int(input("Level: "))
         try:
@@ -17,6 +18,7 @@ def get_level():
 
 
 def generate_integer(level):
+        # Determine the number of digits in comparison depending on the level
         if level == 1:
             x = random.randint(1, 9)
             y = random.randint(1, 9)
@@ -29,6 +31,7 @@ def generate_integer(level):
         return x,y
 
 def round(x, y):
+    # Each round, compare user's answer to the actual result
     count = 1
     result = x + y
     while count <= 3:
