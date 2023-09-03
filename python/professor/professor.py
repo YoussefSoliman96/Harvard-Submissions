@@ -18,7 +18,7 @@ def get_level():
 
 def generate_integer(level):
     i = 0
-    while i < 10:
+    while i <= 10:
         if level == 1:
             x = random.randint(1, 9)
             y = random.randint(1, 9)
@@ -46,6 +46,12 @@ def equation(x, y):
             print("EEE")
     print(f"x + y = {result}")
     return False
+
+def count_score():
+    count2 = 1
+    score = 0
+    while count2 <=
+
 
 if __name__ == "__main__":
     main()
