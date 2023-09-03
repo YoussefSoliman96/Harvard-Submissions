@@ -7,7 +7,7 @@ def main():
 def shorten(word):
     new_word = ""
     for c in word:
-        # If current 
+        # If current character is a vowel, remove it
         if c == "a" or c == "e" or c == "i" or c == "o" or c == "u":
             v = c.replace(c, "")
             new_word += v
