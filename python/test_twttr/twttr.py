@@ -1,9 +1,13 @@
 def main():
-    word = input("Input: ")
+    shorten(word)
 
 
 def shorten(word):
-    ...
+    word =  input("Input: ")
+    for c in word:
+        print(c)
+    return word
+
 
 
 if __name__ == "__main__":
