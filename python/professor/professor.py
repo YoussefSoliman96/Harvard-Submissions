@@ -5,7 +5,7 @@ def main():
     count = 0
     wrong_count = 0
     while count < 10:
-            generate_integer()
+            generate_integer(level)
             result = x + y
             print(f"{x} + {y} = ",end=" ")
             try:
