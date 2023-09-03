@@ -12,7 +12,7 @@ def get_level():
             level = input("Level: ")
             if level == 1 or level == 2 or level == 3:
                 break
-        except ValueError:
+        except:
             pass
     return level
 
@@ -48,15 +48,15 @@ def round(x, y):
             # Print "EEE" if user inputs an answer that is not a positive integer
             count += 1
             print("EEE")
-    print(f"x + y = {result}")
+    print(f"{x} + {y} = {result}")
     return False
 
-def count_score(n):
+def count_score(level):
     # Calculate the score and return it only when all the 10 rounds are over
     count2 = 1
     score = 0
     while count2 <= 10:
-        x, y = generate_integer(n)
+        x, y = generate_integer(level)
         if round(x, y) == True:
             score += 1
         count2 += 1
