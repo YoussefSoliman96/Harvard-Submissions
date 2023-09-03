@@ -1,11 +1,11 @@
 import random
 
 def main():
-    level = get_level()
+    n = get_level()
     count = 0
     wrong_count = 0
     while count < 10:
-            generate_integer(level)
+            generate_integer(n)
             result = x + y
             print(f"{x} + {y} = ",end=" ")
             try:
@@ -42,7 +42,7 @@ def generate_integer(n):
     else:
         x = random.randint(100, 999)
         y = random.randint(10, 999)
-    return x, y
+    return x,y
 
 
 if __name__ == "__main__":
