@@ -2,6 +2,7 @@ import random
 def main():
     level = get_level()
     get_level(level)
+    equation()
 
 
 def get_level():
