@@ -8,6 +8,6 @@ if len(sys.argv) > 2:
 else:
     r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     try:
-        print(r.json())
+        print(r.json()["bpi"]["USD"]["rate_float"])
     except requests.RequestException:
         sys.exit(1)
