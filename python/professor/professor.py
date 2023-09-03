@@ -31,24 +31,28 @@ def generate_integer(level):
         return x,y
 
 def round(x, y):
-    # Each round, compare user's answer to the actual result
+    # Each round, compare user's answer to the actual result and give the user 3 tries
     count = 1
     result = x + y
     while count <= 3:
         try:
             answer = int(input(f"{x} + {y} ="))
+            # Break out of the loop if user's answer is right
             if answer == result:
                 return True
             else:
+                # Print "EEE" if answer is wrong and consume 1 of 3 tries
                 print("EEE")
                 count += 1
         except:
+            # Print "EEE" if user inputs an answer that is not a positive integer
             count += 1
             print("EEE")
     print(f"x + y = {result}")
     return False
 
 def count_score(n):
+    # Calculate the score and return it only when all the 10 rounds are over
     count2 = 1
     score = 0
     while count2 <= 10:
