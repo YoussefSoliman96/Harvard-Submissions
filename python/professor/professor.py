@@ -12,7 +12,7 @@ def get_level():
         try:
             if n == 1 or n == 2 or n == 3:
                 break
-        except:
+        except ValueError:
             pass
     return n
 
@@ -44,7 +44,7 @@ def round(x, y):
                 # Print "EEE" if answer is wrong and consume 1 of 3 tries
                 print("EEE")
                 count += 1
-        except:
+        except ValueError:
             # Print "EEE" if user inputs an answer that is not a positive integer
             count += 1
             print("EEE")
