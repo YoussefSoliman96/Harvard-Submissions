@@ -1,9 +1,10 @@
 import requests
 import sys
 
-for arg in sys.argv[]
-
+if len(sys.argv) < 2:
+    sys.exit(print("Too few arguments"))
+else:
     try:
-        ...
+        
     except requests.RequestException:
-        ...
+
