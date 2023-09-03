@@ -2,9 +2,11 @@ import requests
 import sys
 
 if len(sys.argv) < 2:
-    sys.exit(print("Too few arguments"))
+    print("Too few arguments")
+    sys.exit(1)
 if len(sys.argv) > 2:
-    sys.exit(print("Too many arguments"))
+    print("Too many arguments")
+    sys.exit(1)
 else:
     try:
         # Convert the user input to float
