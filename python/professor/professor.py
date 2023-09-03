@@ -42,7 +42,7 @@ def generate_integer(n):
     else:
         x = random.randint(100, 999)
         y = random.randint(10, 999)
-        return x, y
+    return x, y
 
 
 if __name__ == "__main__":
