@@ -13,9 +13,9 @@ while count < 3:
                     answer = int(input(""))
                     if answer == result or wrong_count == 2:
                         break
-                    elif answer != result:y
+                    elif answer != result:
                         print("EEE")
-
+                        print(f"{x} + {y} = ",end=" ")
                         wrong_count += 1
 
 
