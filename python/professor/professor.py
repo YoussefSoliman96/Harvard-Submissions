@@ -20,11 +20,14 @@ def generate_integer(level):
     while i < 10:
         if level == 1:
             x = random.randint(1, 9)
+            y = random.randint(1, 9)
         elif level == 2:
             x = random.randint(10, 99)
+            y = random.randint(10, 99)
         else:
             x = random.randint(100, 999)
-        
+            y = random.randint(100, 999)
+        return x,y
 
 
 if __name__ == "__main__":
