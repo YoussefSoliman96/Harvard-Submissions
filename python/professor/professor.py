@@ -1,8 +1,8 @@
 import random
 
 def main():
-    n = get_level()
-    generate_integer(n)
+    level = get_level()
+    generate_integer(level)
 
 
 
