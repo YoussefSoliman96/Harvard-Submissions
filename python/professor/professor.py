@@ -8,7 +8,7 @@ def main():
 def get_level():
     # Loop forever until user inputs a valid level (1 -> 3)
     while True:
-        n = int(input("Level: "))
+        n = input("Level: ")
         try:
             if n == 1 or n == 2 or n == 3:
                 break
