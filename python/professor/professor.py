@@ -1,6 +1,8 @@
 import random
 n = int(input("Level: "))
-while True:
+count = 0
+wrong_count = 0
+while count < 3:
         x = random.randint(1, 10)
         y = random.randint(1,10)
         result = x + y
@@ -9,9 +11,13 @@ while True:
             if n >= 1 and n < 4:
                 while True:
                     answer = int(input(""))
-                    if answer == result:
+                    if answer == result or wrong_count >= 3:
                         break
                     elif answer != result:
                         print("EEE")
+                        wrong_count += 1
+
+
+            count += 1
         except ValueError:
             print("Input is not an integer ")
