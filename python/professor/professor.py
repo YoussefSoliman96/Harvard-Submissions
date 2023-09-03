@@ -34,7 +34,7 @@ def get_level():
                 pass
 
 def generate_integer(level):
-    while count < 10:
+    while True:
             x = random.randint(1, 10)
             y = random.randint(1,10)
             result = x + y
