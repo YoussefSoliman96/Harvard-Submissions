@@ -29,7 +29,7 @@ def generate_integer(level):
             y = random.randint(100, 999)
         return x,y
 
-def equation():
+def equation(x, y):
     count = 1
     result = x + y
     while count <= 3:
@@ -41,7 +41,8 @@ def equation():
                 print("EEE")
                 count += 1
         except:
-
+            count += 1
+            print("EEE")
 
 if __name__ == "__main__":
     main()
