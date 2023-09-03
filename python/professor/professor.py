@@ -1,4 +1,5 @@
 import random
+
 def main():
     level = get_level()
     score = count_score(level)
