@@ -11,9 +11,9 @@ def test_convert():
     assert convert("1/2") == 50
 
 def test_gauge():
-    assert gauge(1/100) == "E"
-    assert gauge(99/100) == "F"
-    assert gauge(5/100) == "%5"
+    assert gauge(1) == "E"
+    assert gauge(99) == "F"
+    assert gauge(5) == "%5"
 
 
 def test_division():

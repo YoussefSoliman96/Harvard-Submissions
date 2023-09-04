@@ -31,7 +31,7 @@ def gauge(p):
     elif p >= 99:
         return "F"
     else:
-        return (f"{p}%")
+        return (f"%{p}")
 
 if __name__ == "__main__":
     main()
