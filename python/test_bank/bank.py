@@ -4,7 +4,9 @@ def main():
 
 
 def value(greeting):
-    if greeting == "hello":
+    words = greeting.split(" ")
+    first = words[0]
+    if first == "hello":
         print("Output: $0")
     elif greeting[0] == "h":
         print("Output: $20")
