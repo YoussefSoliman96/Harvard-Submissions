@@ -1,11 +1,12 @@
 def main():
-    greeting = input("Input: ").lower().strip()
+    greeting = input("Input: ")
     greeting = value(greeting)
     print(f"Output: ${greeting}")
 
 
 def value(greeting):
-    words = greeting.split(" ")
+    words = greeting.lower().strip()
+    words = words.split(" ")
     first = words[0].replace(",", "")
     if first == "hello":
         return 0
