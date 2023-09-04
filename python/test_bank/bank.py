@@ -4,8 +4,8 @@ def main():
 
 
 def value(greeting):
-    words = remove_greeting.split(" ")
-    first = words[0]
+    words = greeting.split(" ")
+    first = words[0].replace(",", "")
     if first == "hello":
         print("Output: $0")
     elif greeting[0] == "h":
