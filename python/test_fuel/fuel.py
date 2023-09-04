@@ -23,7 +23,7 @@ def gauge(result):
     # If percentage < 1%, print E
     if p <= 1:
         return "E"
-    elif p >=99:
+    elif p >= 99:
         return "F"
     else:
         return (f"{p}%")
