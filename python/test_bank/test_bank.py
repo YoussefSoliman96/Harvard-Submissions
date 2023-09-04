@@ -4,6 +4,7 @@ def main():
     test_value()
 
 def test_value():
+    assert value("Hello") == "$0"
 
 
 
@@ -13,5 +14,5 @@ def test_value():
 
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
