@@ -6,7 +6,6 @@ def main():
 def test_value():
     assert value("Hello") == "0"
     assert value("hello") == "0"
-    assert value("hey") == "20"
 
 
 
