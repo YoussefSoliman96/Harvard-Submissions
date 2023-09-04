@@ -1,7 +1,6 @@
 def main():
-    number = input("Fraction: ")
-    fraction = convert(number)
-    output = gauge(fraction)
+    new_fraction = convert(fraction)
+    output = gauge(new_fraction)
     print(output)
 
 
@@ -9,17 +8,23 @@ def main():
 def convert(fraction):
     while True:
         try:
-            x = fraction.split("/")
-            result = int((int(x[0]) / int(x[1])))
+            x, y = fraction.split("/")
+            x = int(x)
+            y = int(y)
+            result =  x / y
             if result <= 1:
-                return result
+                p = round(result * 100)
+                return p
+            else:
+                fraction = input("Fraction: ")
+                pass
         except ValueError:
             raise
         except ZeroDivisionError:
             raise
 
-def gauge(result):
-    p = round(result * 100)
+def gauge(p):
+
     # If percentage < 1%, print E
     if p <= 1:
         return "E"
