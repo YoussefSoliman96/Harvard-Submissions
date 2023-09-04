@@ -4,7 +4,7 @@ from fuel import gauge
 def main():
 
 def test_convert():
-    a
+    assert convert("1/2") == 
 
 
 
