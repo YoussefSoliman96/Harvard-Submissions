@@ -1,6 +1,8 @@
 def main():
-    fraction = input("Fraction: ")
-    fraction = convert(fraction)
+    number = input("Fraction: ")
+    fraction = convert(number)
+    output = gauge(fraction)
+    print(output)
 
 
 
@@ -16,15 +18,15 @@ def convert(fraction):
         except ZeroDivisionError:
             pass
 
-def gauge(percentage):
+def gauge(result):
     p = round(result * 100)
     # If percentage < 1%, print E
     if p <= 1:
-        print("E")
+        return "E"
     elif p >=99:
-        print("F")
+        return "F"
     else:
-        print(f"{p}%")
+        return (f"{p}%")
 
 if __name__ == "__main__":
     main()
