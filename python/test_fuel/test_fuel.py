@@ -1,8 +1,10 @@
-from fuel import convert()
-from fuel import gauge()
+from fuel import convert
+from fuel import gauge
 
 def main():
 
+def test_convert():
+    a
 
 
 
@@ -10,6 +12,5 @@ def main():
 
 
 
-
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
