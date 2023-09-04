@@ -9,6 +9,9 @@ def main():
 
 def test_convert():
     assert convert("1/2") == 50
+    assert convert("1/100") == 1
+    assert convert("99/100") == 99
+
 
 def test_gauge():
     assert gauge(1) == "E"
