@@ -1,6 +1,7 @@
 def main():
-    new_fraction = convert(fraction)
-    output = gauge(new_fraction)
+    fraction = input("Fraction: ")
+    number = convert(fraction)
+    output = gauge(number)
     print(output)
 
 
