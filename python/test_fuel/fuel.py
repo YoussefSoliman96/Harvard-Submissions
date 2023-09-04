@@ -19,11 +19,11 @@ def convert(fraction):
             pass
 
 def gauge(result):
-    p = round(result * 100)
+    p = int(result * 100)
     # If percentage < 1%, print E
     if p <= 1:
         return "E"
-    elif p >=99:
+    elif p >= 99:
         return "F"
     else:
         return (f"{p}%")
