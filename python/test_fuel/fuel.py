@@ -24,7 +24,7 @@ def gauge(result):
     if p <= "1":
         return p
     elif p >= "99":
-        return "F"
+        return p
     else:
         return (f"{p}%")
 
