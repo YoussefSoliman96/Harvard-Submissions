@@ -6,8 +6,11 @@ def main():
 
 def test_convert():
     assert convert("1/2") == 1/2
-    assert convert("2/1") == 
 
+def test_gauge():
+    assert gauge("1/100") == "E"
+    assert gauge("99/100") == "F"
+    assert gauge("5/100") == "%5"
 
 
 
