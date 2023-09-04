@@ -9,8 +9,8 @@ def main():
 def convert(fraction):
     while True:
         try:
-            x = fraction.split("/")
-            result = (int(x[0]) / int(x[1]))
+            x, y = fraction.split("/")
+            result = (int(x) / int(y))
             if result <= 1:
                 return result
         except ValueError:
@@ -21,9 +21,9 @@ def convert(fraction):
 def gauge(result):
     p = int(result * 100)
     # If percentage < 1%, print E
-    if p <= 1:
-        return "E"
-    elif p >= 99:
+    if p <= "1":
+        return p
+    elif p >= "99":
         return "F"
     else:
         return (f"{p}%")
