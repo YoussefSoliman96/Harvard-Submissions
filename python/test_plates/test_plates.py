@@ -13,5 +13,6 @@ def test_valid():
     assert is_valid("HELLOOOO") == False
     assert is_valid("CS05") == False
     assert is_valid("22") == False
+    assert is_valid("CS50 CS") == False
 if __name__ == "__main__":
     main()
