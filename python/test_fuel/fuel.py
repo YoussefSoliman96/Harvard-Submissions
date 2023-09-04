@@ -14,9 +14,9 @@ def convert(fraction):
             if result <= 1:
                 return result
         except ValueError:
-            pass
+            raise
         except ZeroDivisionError:
-            pass
+            raise
 
 def gauge(result):
     p = round(result * 100)
