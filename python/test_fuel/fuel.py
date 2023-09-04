@@ -25,7 +25,6 @@ def convert(fraction):
             raise
 
 def gauge(p):
-
     # If percentage < 1%, print E
     if p <= 1:
         return "E"
