@@ -1,11 +1,11 @@
 def main():
+    fraction = input("Fraction: ")
     fraction = convert(fraction)
 
 
 
 def convert(fraction):
     while True:
-        fraction = input("Fraction: ")
         try:
             x = fraction.split("/")
             result = (int(x[0]) / int(x[1]))
