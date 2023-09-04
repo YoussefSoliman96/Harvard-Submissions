@@ -5,6 +5,7 @@ import pytest
 def main():
     test_convert()
     test_division()
+    test_value()
 
 def test_convert():
     assert convert("1/2") == 50 and gauge(50) == "%50"
