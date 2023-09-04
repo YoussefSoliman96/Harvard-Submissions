@@ -4,7 +4,7 @@ def main():
 
 
 def value(greeting):
-    words = greeting.split(" ")
+    words = remove_greeting.split(" ")
     first = words[0]
     if first == "hello":
         print("Output: $0")
