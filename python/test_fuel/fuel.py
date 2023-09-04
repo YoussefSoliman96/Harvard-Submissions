@@ -14,7 +14,7 @@ def convert(fraction):
             y = int(y)
             result =  x / y
             if result <= 1:
-                p = round(result * 100)
+                p = int(result * 100)
                 return p
             else:
                 fraction = input("Fraction: ")
