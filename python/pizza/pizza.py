@@ -8,7 +8,7 @@ def main():
         reader = csv.reader(file)
         for line in reader:
             menu.append(line)
-            print(menu)
+    print(menu)
 
 
 
