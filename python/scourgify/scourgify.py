@@ -9,7 +9,6 @@ def main():
             reader = csv.DictReader(file)
             for line in reader:
                 last_name, first_name = line["name"].split(",")
-                print(first_name)
                 output.append({'first': first_name.lstrip(), 'last': last_name.lstrip(), 'house': line["house"].lstrip()})
 
     except FileNotFoundError:
@@ -17,9 +16,7 @@ def main():
     with open(sys.argv[2], "w") as file:
             writer = csv.writer(file, fieldnames=["first", "last", "house"])
             for line in output:
-                last_name, first_name = line["name"].split(",")
-                print(first_name)
-                output.append({'first': first_name.lstrip(), 'last': last_name.lstrip(), 'house': line["house"].lstrip()})
+                writer.writeline({"first": first_name, "last": last_name, "house": line["house"]})
     print(output)
 
 
