@@ -9,11 +9,13 @@ def main():
     except FileNotFoundError:
         sys.exit("File does not exit")
     # Loop through each line in the file
+    count = 0
     for line in lines :
          if line.isspace():
-              return True
+              count += 1
          if line.lstrip.startswith("#"):
-              return True
+              count += 1
+    print(count)
 
 
 
