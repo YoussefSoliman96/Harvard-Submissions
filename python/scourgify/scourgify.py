@@ -14,10 +14,10 @@ def main():
     except FileNotFoundError:
         sys.exit("File does not Exist")
     with open(sys.argv[2], "w") as file:
-            writer = csv.writer(file, fieldnames=["first", "last", "house"])
+            writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
 
             for line in output:
-                writer.writeline({"first": first_name, "last": last_name, "house": line["house"]})
+                writer.writerow({"first": ["first"], "last": line["last"], "house": line["house"]})
 
 
 def argument_check():
