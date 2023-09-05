@@ -13,7 +13,7 @@ def main():
                 menu.append(line)
     except FileNotFoundError:
         sys.exit("File does not exist")
-    print(tabulate(menu[1:], headers = menu[0]))
+    print(tabulate(menu[1:], headers = menu[0], tablefmt = "grid"))
 
 
 
