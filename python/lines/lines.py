@@ -11,8 +11,10 @@ def main():
     count = 0
     for line in lines :
          if line.isspace():
-              count += 1
-         if line.lstrip().startswith("#"):
+              count += 0
+         elif line.lstrip().startswith("#"):
+              count += 0
+         else:
               count += 1
     print(count)
 
