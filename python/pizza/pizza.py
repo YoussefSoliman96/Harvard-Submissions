@@ -1,5 +1,6 @@
 import sys
 import csv
+import tabulate
 
 def main():
     argument_check()
@@ -7,12 +8,12 @@ def main():
     try:
         # Read the csv file
         with open("sicilian.csv", "r") as file:
-        reader = csv.reader(file)
-        for line in reader:
-            menu.append(line)
-    print(menu)
+            reader = csv.reader(file)
+            for line in reader:
+                menu.append(line)
     except FileNotFoundError:
         sys.exit("File does not exist")
+    print(tabulate(menu[1:], headers = menu[0]))
 
 
 
