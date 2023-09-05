@@ -4,7 +4,8 @@ def main():
     argument_check()
     menu = []
     with open("sicilian.csv", "r") as file:
-        for line in file:
+        reader = csv.reader(file)
+        for line in reader:
             name, price = line.strip().split(",")
             item = {"name": name, "price": price}
             menu.append(item)
