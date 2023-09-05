@@ -15,9 +15,9 @@ def main():
         sys.exit("File does not Exist")
     with open(sys.argv[2], "w") as file:
             writer = csv.writer(file, fieldnames=["first", "last", "house"])
+
             for line in output:
                 writer.writeline({"first": first_name, "last": last_name, "house": line["house"]})
-    print(output)
 
 
 def argument_check():
