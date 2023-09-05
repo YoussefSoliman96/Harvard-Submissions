@@ -1,7 +1,11 @@
 import sys
 def main():
     argument_check()
-    
+
+    try:
+        file = open(sys.argv[1], "r")
+    except FileNotFoundError:
+        sys.exit("File does not exit")
 
 def argument_check():
 for arg in sys.argv:
