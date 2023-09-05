@@ -7,3 +7,4 @@ for arg in sys.argv:
         print("Too many command-line arguments")
     else:
         break
+
