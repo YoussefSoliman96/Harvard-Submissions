@@ -2,6 +2,13 @@ import sys
 
 def main():
     argument_check()
+    menu = []
+    with open("sicilian.csv") as file:
+        for line in file:
+            name, price = line.strip().split(",")
+            item = {"name": name, "price": price}
+            menu.append(item)
+
 
 
 
