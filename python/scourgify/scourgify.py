@@ -10,7 +10,7 @@ def main():
             for line in reader:
                 last_name, first_name = line["name"].split(",")
                 print(first_name)
-                output.append()
+                output.append({'name': })
 
     except FileNotFoundError:
         sys.exit("File does not Exist")
