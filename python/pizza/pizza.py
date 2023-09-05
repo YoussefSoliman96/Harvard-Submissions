@@ -3,7 +3,7 @@ import sys
 def main():
     argument_check()
     menu = []
-    with open("sicilian.csv") as file:
+    with open("sicilian.csv", "r") as file:
         for line in file:
             name, price = line.strip().split(",")
             item = {"name": name, "price": price}
