@@ -17,7 +17,7 @@ def main():
             writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
 
             for line in output:
-                writer.writerow({"first": ["first"], "last": line["last"], "house": line["house"]})
+                writer.writerow({"first": line["first"], "last": line["last"], "house": line["house"]})
 
 
 def argument_check():
