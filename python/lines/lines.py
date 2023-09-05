@@ -4,6 +4,8 @@ def main():
 
     try:
         file = open(sys.argv[1], "r")
+        lines = file.readlines()
+        print(lines)
     except FileNotFoundError:
         sys.exit("File does not exit")
 
