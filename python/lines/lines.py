@@ -10,7 +10,10 @@ def main():
         sys.exit("File does not exit")
     # Loop through each line in the file
     for line in lines :
-         
+         if line.isspace():
+              return True
+         if line.lstrip.startswith("#"):
+              return True
 
 
 
