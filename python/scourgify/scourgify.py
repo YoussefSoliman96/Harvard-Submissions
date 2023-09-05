@@ -3,11 +3,14 @@ import csv
 
 def main():
     argument_check()
+    output = []
     try:
         with open(sys.argv[1], "r") as file:
             reader = csv.DictReader(file)
             for line in reader:
-                print(line)
+                last_name, first_name = line["name"].split(",")
+                print(first_name)
+                output.append()
 
     except FileNotFoundError:
         sys.exit("File does not Exist")
