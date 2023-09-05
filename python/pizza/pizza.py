@@ -4,12 +4,15 @@ import csv
 def main():
     argument_check()
     menu = []
-    with open("sicilian.csv", "r") as file:
+    try:
+        # Read the csv file
+        with open("sicilian.csv", "r") as file:
         reader = csv.reader(file)
         for line in reader:
             menu.append(line)
     print(menu)
-
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
 
 
