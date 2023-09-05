@@ -1,4 +1,5 @@
 import sys
+import csv
 
 def main():
     argument_check()
@@ -6,9 +7,8 @@ def main():
     with open("sicilian.csv", "r") as file:
         reader = csv.reader(file)
         for line in reader:
-            name, price = line.strip().split(",")
-            item = {"name": name, "price": price}
-            menu.append(item)
+            menu.append(line)
+            print(menu)
 
 
 
