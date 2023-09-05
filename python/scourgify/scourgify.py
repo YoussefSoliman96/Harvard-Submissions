@@ -1,7 +1,16 @@
 import sys
+import csv
 
 def main():
     argument_check()
+    try:
+        with open(sys.argv[1], "r") as file:
+            reader = csv.DictReader(file)
+            for line in reader:
+                print(line)
+
+    except FileNotFoundError:
+        sys.exit("File does not Exist")
 
 
 
@@ -22,5 +31,5 @@ def argument_check():
 
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()

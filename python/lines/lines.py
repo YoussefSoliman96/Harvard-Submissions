@@ -6,7 +6,7 @@ def main():
         file = open(sys.argv[1], "r")
         lines = file.readlines()
     except FileNotFoundError:
-        sys.exit("File does not exit")
+        sys.exit("File does not exist")
     # Loop through each line in the file
     count = 0
     for line in lines :
