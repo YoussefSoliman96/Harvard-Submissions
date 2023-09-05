@@ -5,7 +5,6 @@ def main():
     try:
         file = open(sys.argv[1], "r")
         lines = file.readlines()
-        print(lines)
     except FileNotFoundError:
         sys.exit("File does not exit")
     # Loop through each line in the file
@@ -13,7 +12,7 @@ def main():
     for line in lines :
          if line.isspace():
               count += 1
-         if line.lstrip.startswith("#"):
+         if line.lstrip().startswith("#"):
               count += 1
     print(count)
 
