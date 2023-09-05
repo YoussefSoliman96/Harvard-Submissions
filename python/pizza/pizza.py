@@ -7,7 +7,7 @@ def main():
     menu = []
     try:
         # Read the csv file
-        with open("sicilian.csv", "r") as file:
+        with open(sys.argv[1], "r") as file:
             reader = csv.reader(file)
             for line in reader:
                 menu.append(line)
