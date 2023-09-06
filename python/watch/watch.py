@@ -12,7 +12,6 @@ def parse(s):
         if url:
             split = url.groups()
             return split[1]
-...
 
 
 if __name__ == "__main__":
