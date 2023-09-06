@@ -11,7 +11,7 @@ def parse(s):
         url = re.search("http(s)*:\/\/(www\.)*youtube\.com\/embed\/([a-zA-Z0-9]+)", s)
         if url:
             split = url.groups()
-            return split[2]
+            return "https://youtu.be/" + split[2]
 
 
 if __name__ == "__main__":
