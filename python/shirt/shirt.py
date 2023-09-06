@@ -10,7 +10,7 @@ def main():
 
 # Check if input and output files are in correct format
 def file_type_check(file):
-     extensions = [".jpg", ".jpeg", "png"]
+     extensions = [".jpg", ".jpeg", ".png"]
      if file in extensions:
          return True
      return False
@@ -22,14 +22,14 @@ def argument_check():
     elif (len(sys.argv) > 3):
         sys.exit("Too many command-line arguments")
     # If command-line arguments pass the test, they are split into file_name and extensions
-    first_name, first_extension = splitext(sys.argv[1])
-    second_name, second_extension = splitext(sys.argv[2])
+    first_name, first_extension = splitext(sys.argv[1].lower())
+    second_name, second_extension = splitext(sys.argv[2].lower())
 
     if file_type_check(first_extension) == False:
         print("First file extension invalid")
-    elif file_type_check(second_extension) == False:
+    if file_type_check(second_extension) == False:
         print("Second file extension invalid")
-    elif first_extension == second_extension:
+    if first_extension != second_extension:
         print("Input and Output file got different formats")
 
 
