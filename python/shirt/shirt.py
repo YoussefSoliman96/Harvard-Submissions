@@ -38,11 +38,11 @@ def argument_check():
     second_name, second_extension = splitext(sys.argv[2].lower())
 
     if file_type_check(first_extension) == False:
-        print("First file extension invalid")
+        sys.exit("First file extension invalid")
     if file_type_check(second_extension) == False:
-        print("Second file extension invalid")
+        sys.exit("Second file extension invalid")
     if first_extension != second_extension:
-        print("Input and Output file got different formats")
+        sys.exit("Input and Output file got different formats")
 
 
 
