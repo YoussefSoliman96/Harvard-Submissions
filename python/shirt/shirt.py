@@ -3,7 +3,10 @@ from os.path import splitext
 from PIL import Image, ImageOps
 def main():
     argument_check()
-
+    # Try to open the file
+    try:
+        shirt = Image.open(sys.argv[1])
+    except:
 
 
 
