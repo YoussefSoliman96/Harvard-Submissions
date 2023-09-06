@@ -13,7 +13,10 @@ def main():
     # Get the size of the shirt
     size = shirt.size
     # Resize the muppet
-    
+    muppet = ImageOps.fit(image, size)
+    # Overlay shirt over new muppet and save it in output file
+    muppet.paste(shirt, shirt)
+    muppet.save(sys.argv[2])
 
 
 
