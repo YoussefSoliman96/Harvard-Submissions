@@ -6,7 +6,8 @@ def main():
     # Try to open the file
     try:
         shirt = Image.open(sys.argv[1])
-    except:
+    except FileNotFoundError:
+        sys.exit("File not found")
 
 
 
