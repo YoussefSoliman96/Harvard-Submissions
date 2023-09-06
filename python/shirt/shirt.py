@@ -5,10 +5,15 @@ def main():
     argument_check()
     # Try to open the file
     try:
-        shirt = Image.open(sys.argv[1])
+        image = Image.open(sys.argv[1])
     except FileNotFoundError:
-        sys.exit("File not found")
-
+        sys.exit("Input does not exist")
+    # Open the shirt image
+    shirt = Image.open("shirt.png")
+    # Get the size of the shirt
+    size = shirt.size
+    # Resize the muppet
+    
 
 
 
