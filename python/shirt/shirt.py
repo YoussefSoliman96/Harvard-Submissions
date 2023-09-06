@@ -12,6 +12,10 @@ def argument_check():
         sys.exit("Too few command-line arguments")
     elif (len(sys.argv) > 3):
         sys.exit("Too many command-line arguments")
+    # If command-line arguments pass the test, they are split into file_name and extensions
+    first_name, first_extension = splitext(sys.argv[1])
+    second_name, second_extension = splitext(sys.argv[2])
+
 
 # Check if input and output files are in correct format
 def file_type_check(file):
