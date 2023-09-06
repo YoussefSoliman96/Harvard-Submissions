@@ -2,11 +2,6 @@ import sys
 def main():
     argument_check()
     output = []
-    try:
-
-
-    except FileNotFoundError:
-        sys.exit("File does not Exist")
 
 
 
@@ -19,7 +14,9 @@ def argument_check():
     elif (len(sys.argv) > 3):
         sys.exit("Too many command-line arguments")
     elif ".jpg" or "jpeg" or ".png" not in sys.argv[1]:
-        sys.exit("Not a CSV file")
+        sys.exit("Input not a photo")
+    elif ".jpg" or "jpeg" or ".png" not in sys.argv[2]:
+        sys.exit("Output not a photo")
 
 
 
