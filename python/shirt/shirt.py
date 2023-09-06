@@ -18,7 +18,7 @@ def argument_check():
         sys.exit("Too few command-line arguments")
     elif (len(sys.argv) > 3):
         sys.exit("Too many command-line arguments")
-    elif ".jpg" or "jpeg" or ".png" not sys.argv[1]:
+    elif ".jpg" or "jpeg" or ".png" not in sys.argv[1]:
         sys.exit("Not a CSV file")
 
 
