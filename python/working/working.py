@@ -7,14 +7,14 @@ def main():
 
 
 def convert(s):
-    format =  re.search(r"^([0-9]+):*([0-5]*)([A-P]M) to ([0-9]+):*([0-5]*)([A-P]M)$", s)
+    format =  re.search(r"^([0-9]+):*([0-5]*) ([A-P]M) to ([0-9]+):*([0-5]*) ([A-P]M)$", s)
     if format:
         groups = format.groups()
         if int(groups[0]) > 12 or int(groups[4]) > 12:
             raise ValueError
         first_output = new_format(groups[0], groups[1], groups[2])
         second_output = new_format(groups[3], groups[4], groups[5])
-        return 
+        return groups
 
     else:
         raise ValueError
