@@ -29,10 +29,12 @@ def new_format(hour, min, a_p):
         else:
             new_hour = int(hour)
     else:
+        # If a_p is PM, add 12 to current hour unless it's 12 PM
         if int(hour) == 12:
             new_hour = int(hour)
         else:
             new_hour = int(hour) + 12
+    # If min is empty add "00"
     if min == "":
         time = f"{new_hour:02}" + ":00"
     else:
