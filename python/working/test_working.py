@@ -24,7 +24,10 @@ def test_min():
         convert("5:70 AM to 9:00 PM")
         convert("5:00 AM to 9:65 PM")
 
-
+def test_output():
+    assert convert("9 AM to 5 PM") == "09:00 to 17:00"
+    assert convert("8 AM to 8 AM") == "20:00 to 08:00"
+    assert convert("12 AM to 12 PM") == "00:00 to 12:00"
 
 
 if __name__ == "__main__":
