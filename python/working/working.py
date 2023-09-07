@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    ...
+    if re.search("")
 
 
 ...
