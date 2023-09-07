@@ -7,6 +7,7 @@ def main():
 
 
 def convert(s):
+    # Format the user's input in hours, mins and AM/PM
     format =  re.search(r"^([0-9]+):*([0-5]*) ([A-P]M) to ([0-9]+):*([0-5]*) ([A-P]M)$", s)
     if format:
         groups = format.groups()
