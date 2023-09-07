@@ -8,7 +8,9 @@ def main():
 
 def convert(s):
     if re.search(r"^[0-9]+:*[0-5]*[0-9]* [A-P]M to [0-9]:*[0-5]*[0-9]* [A-P]M$", s):
-        print(s)
+
+    else:
+        raise ValueError
 
 
 
