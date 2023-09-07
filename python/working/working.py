@@ -7,10 +7,11 @@ def main():
 
 
 def convert(s):
-    if re.search("")
+    if re.search("[0-9]+:*[0-5]*[0-9]* AM to [0-9]:*[0-5]*[0-9]* PM", s):
+        print(s)
 
 
-...
+
 
 
 if __name__ == "__main__":
