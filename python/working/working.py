@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    format =  re.search(r"^([0-9]+:*[0-5]*[0-9]*) ([A-P]M) to ([0-9]:*[0-5]*[0-9]*) ([A-P]M)$", s)
+    format =  re.search(r"^([0-9]+):*([0-5]*)([0-9]*) ([A-P]M) to ([0-9]+):*([0-5]*)([0-9]*) ([A-P]M)$", s)
     if format:
         groups = format.groups()
         return groups
