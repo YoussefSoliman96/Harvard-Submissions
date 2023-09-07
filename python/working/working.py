@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    print(convert(input("Hours: ")))
+    groups = print(convert(input("Hours: ")))
     new_format()
 
 
