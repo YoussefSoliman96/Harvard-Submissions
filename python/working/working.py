@@ -21,20 +21,20 @@ def convert(s):
 
 def new_format(hour, min, a_p):
     if a_p == "AM":
-        if hour == 12:
-            new_hour == "00"
+        if int(hour) == 12:
+            new_hour = 00
         else:
-            new_hour == hour
+            new_hour = int(hour)
     else:
-        if hour == 12:
-            new_hour == hour
+        if int(hour) == 12:
+            new_hour = int(hour)
         else:
-            new_hour = hour + 12
+            new_hour = int(hour) + 12
     if min == None:
         min = ":00"
-        time = "{new_hour:02}" + min
+        time = f"{new_hour:02}" + min
     else:
-        time = "{new_hour:02}" + ":" + min
+        time = f"{new_hour:02}" + ":" + min
     return time
 
 
