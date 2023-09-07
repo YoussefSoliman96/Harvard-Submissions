@@ -29,7 +29,8 @@ def new_format(hour, min, a_p):
             new_hour == hour
         else:
             new_hour = hour + 12
-
+    if min == None:
+        time = new_hour + ":00"
 
 
 
