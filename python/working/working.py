@@ -14,7 +14,7 @@ def convert(s):
             raise ValueError
         first_output = new_format(groups[0], groups[1], groups[2])
         second_output = new_format(groups[3], groups[4], groups[5])
-        return fc"{first_output} to {second_output}"
+        return f"{first_output} to {second_output}"
 
     else:
         raise ValueError
