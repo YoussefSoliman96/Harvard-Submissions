@@ -14,7 +14,9 @@ def convert(s):
         groups = format.groups()
         if int(groups[0]) > 12 or int(groups[4]) > 12:
             raise ValueError
-        return groups
+        first_output = new_format(groups[0], groups[1], groups[2])
+        second_output = new_format(groups[3], groups[4], groups[5])
+        return groups, first_output, second_output
 
     else:
         raise ValueError
@@ -32,7 +34,10 @@ def new_format(hour, min, a_p):
             new_hour = hour + 12
     if min == None:
         min = ":00"
-
+        time = "{new_hour:02}" + min
+    else:
+        time = "{new_hour:02}" + ":" + min
+    return time
 
 
 
