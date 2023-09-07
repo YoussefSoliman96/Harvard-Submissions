@@ -4,7 +4,7 @@ import sys
 
 def main():
     groups = print(convert(input("Hours: ")))
-    new_format()
+    time = new_format(groups[0], groups[1], groups[2])
 
 
 def convert(s):
@@ -19,7 +19,7 @@ def convert(s):
         raise ValueError
 
 def new_format(hour, min, a_p):
-    if int(a_p) == AM:
+    if int(a_p) == "AM":
         if hour == 12:
             new_hour == 00
         else:
@@ -30,7 +30,7 @@ def new_format(hour, min, a_p):
         else:
             new_hour = hour + 12
     if min == None:
-        time = new_hour + ":00"
+        min = ":00"
 
 
 
