@@ -4,6 +4,7 @@ import sys
 
 def main():
     print(convert(input("Hours: ")))
+    new_format()
 
 
 def convert(s):
@@ -17,7 +18,18 @@ def convert(s):
     else:
         raise ValueError
 
-    
+def new_format(hour, min, a_p):
+    if int(a_p) == AM:
+        if hour == 12:
+            new_hour == 00
+        else:
+            new_hour == hour
+    else:
+        if hour == 12:
+            new_hour == hour
+        else:
+            new_hour = hour + 12
+        
 
 
 
