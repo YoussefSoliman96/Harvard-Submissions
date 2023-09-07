@@ -30,7 +30,7 @@ def new_format(hour, min, a_p):
             new_hour = int(hour)
         else:
             new_hour = int(hour) + 12
-    if min == None:
+    if min == "":
         time = f"{new_hour:02}" + ":00"
     else:
         time = f"{new_hour:02}" + ":" + min
