@@ -20,9 +20,9 @@ def convert(s):
         raise ValueError
 
 def new_format(hour, min, a_p):
-    if int(a_p) == "AM":
+    if a_p == "AM":
         if hour == 12:
-            new_hour == 00
+            new_hour == "00"
         else:
             new_hour == hour
     else:
