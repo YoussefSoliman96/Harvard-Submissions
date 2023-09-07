@@ -10,6 +10,7 @@ def convert(s):
     format =  re.search(r"^([0-9]+):*([0-5]*) ([A-P]M) to ([0-9]+):*([0-5]*) ([A-P]M)$", s)
     if format:
         groups = format.groups()
+        # Raise a value Error if hours are more than 12
         if int(groups[0]) > 12 or int(groups[3]) > 12:
             raise ValueError
         first_output = new_format(groups[0], groups[1], groups[2])
@@ -21,6 +22,7 @@ def convert(s):
 
 def new_format(hour, min, a_p):
     if a_p == "AM":
+        # Set hours to 00 if input is 12 AM
         if int(hour) == 12:
             new_hour = 00
         else:
