@@ -7,7 +7,8 @@ def main():
 
 
 def count(s):
-    if re.findall(r"")
+    ums = re.findall(r"\bum\b", s, re.IGNORECASE)
+    print(ums)
 
 
 ...
