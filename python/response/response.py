@@ -1,15 +1,9 @@
 import sys
 import re
+import validators
 
 def main():
-    print(validator(input("What's your email address? ")))
-
-
-
-
-
-
-def validator():
+    print(validators.email(input("What's your email address? ")))
 
 
 
