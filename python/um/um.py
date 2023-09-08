@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if re.findall("")
+    if re.findall(r"")
 
 
 ...
