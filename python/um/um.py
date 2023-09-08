@@ -8,10 +8,8 @@ def main():
 
 def count(s):
     ums = re.findall(r"\bum\b", s, re.IGNORECASE)
-    print(ums)
+    return (len(ums))
 
-
-...
 
 
 if __name__ == "__main__":
