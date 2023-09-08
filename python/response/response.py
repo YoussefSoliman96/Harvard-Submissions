@@ -1,5 +1,4 @@
 import sys
-import re
 import validators
 
 def main():
