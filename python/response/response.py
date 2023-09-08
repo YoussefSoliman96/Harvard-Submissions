@@ -3,11 +3,7 @@ import re
 import validators
 
 def main():
-    email = print(input("What's your email address? "))
-
-    validation = validators.email(email)
-
-    print(validation)
+    (input("What's your email address? ")))
 
 
 
