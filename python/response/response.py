@@ -3,9 +3,14 @@ import re
 import validators
 
 def main():
-    (input("What's your email address? ")))
+    email = input("What's your email address? ")
+    print(validators.email(email))
 
 
+
+def validation(email):
+    validator = validators.email(email)
+    if validator == True
 
 
 
