@@ -5,7 +5,7 @@ def main():
     class PDF(FPDF):
         def header(self):
             # Rendering logo:
-            self.image("shirtificate.png", 0, 0, w=pdf.epw)
+            self.image("shirtificate.png", 10, 50, w=pdf.epw)
             # Setting font: helvetica bold 15
             self.set_font("helvetica", "B", 40)
             # Printing title:
@@ -13,15 +13,13 @@ def main():
             # Performing a line break:
             self.ln(20)
 
-
-
-
     # Instantiation of inherited class
     pdf = PDF()
     pdf.add_page()
-    pdf.set_font("Times", size=12)
+    pdf.set_font("Times", "B", 40)
+    pdf.set_text_color(255, 255, 255)
     name = input("Name: ")
-    pdf.cell(0, 10, f"{name}", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(20, 40, f"{name}", new_x="LMARGIN", new_y="NEXT")
     pdf.output("new_shirtificate.pdf")
 
 
