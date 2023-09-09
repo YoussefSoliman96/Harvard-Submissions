@@ -17,8 +17,9 @@ def main():
     today_date = original_date.today()
     days = today_date - original_date
     mins = days.days * 24 * 60
-    words = p.number_to_words(mins, wantlist=True)
-    print(words)
+    words = p.number_to_words(mins)
+    final = words.capitalize() + " minutes"
+    print(final)
 
 
 def get_date(date):
