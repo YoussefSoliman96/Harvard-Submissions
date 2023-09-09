@@ -4,12 +4,13 @@ import re
 
 def main():
     date = input("Date of Birth: ")
-    get_date(date)
+    new_date = get_date(date)
+    print(new_date)
 
 def get_date(date):
     if re.search(r"(^[0-9]+)-([0-9]+)-([0-9]+)$", date):
         year, month, day = date.split("-")
-        print(year, month, day)
+        return(year, month, day)
 
 
 if __name__ == "__main__":
