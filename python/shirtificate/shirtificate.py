@@ -5,6 +5,9 @@ def main():
     class PDF(FPDF):
         def __init__(self, name):
             pdf = PDF()
+            pdf.add_page()
+            pdf.set_font("Times", "B", 40)
+            pdf.set_text_color(255, 0, 255)
             pdf.cell(20, 40, f"{name}", new_x="LMARGIN", new_y="NEXT")
             pdf.output("new_shirtificate.pdf")
             # Rendering logo:
@@ -15,9 +18,6 @@ def main():
             self.cell(0, 10, "CS50 Shirtificate", align="C")
             # Performing a line break:
             self.ln(20)
-            pdf.add_page()
-            pdf.set_font("Times", "B", 40)
-            pdf.set_text_color(255, 255, 255)
 
     name = input("Name: ")
 
