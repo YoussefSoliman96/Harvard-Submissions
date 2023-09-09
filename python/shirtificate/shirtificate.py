@@ -5,7 +5,7 @@ def main():
     class PDF(FPDF):
         def header(self):
             # Rendering logo:
-            self.image("shirtificate.png", 10, 8, 33)
+            self.image("shirtificate.png", 0, 0, 0)
             # Setting font: helvetica bold 15
             self.set_font("helvetica", "B", 40)
             # Printing title:
