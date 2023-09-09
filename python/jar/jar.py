@@ -23,10 +23,11 @@ class Jar:
         else:
             self.size -= n
 
-"""
+
     @property
     def capacity(self):
-        ...
+        return self.capacity
+"""
 
     @property
     def size(self):
