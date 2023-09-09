@@ -20,7 +20,7 @@ def test_deposit():
     jar.deposit(3)
     assert jar.size == 5
 
-def test_deposit():
+def test_withdraw():
     jar = Jar()
     jar.deposit(5)
     assert jar.size == 5
