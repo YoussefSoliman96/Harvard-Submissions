@@ -3,12 +3,12 @@ import re
 import sys
 
 def main():
-    date = input("Date of Birth: ")
+    date_of_birth = input("Date of Birth: ")
     try:
-         year, month, day = get_date(date)
+         year, month, day = get_date(date_of_birth)
     except:
         sys.exit("Invalid format")
-    print(year, month, day)
+    print(date(int(year), int(month), int(day)))
 
 def get_date(date):
 
