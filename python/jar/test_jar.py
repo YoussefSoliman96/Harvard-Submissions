@@ -1,1 +1,1 @@
-from jar import 
+from jar import Jar
