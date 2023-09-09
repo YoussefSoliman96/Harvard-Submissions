@@ -3,13 +3,7 @@ from fpdf import FPDF
 def main():
 
     class PDF(FPDF):
-        def __init__(self, name):
-            pdf = PDF()
-            pdf.add_page()
-            pdf.set_font("Times", "B", 40)
-            pdf.set_text_color(255, 255, 255)
-            pdf.cell(20, 40, f"{name}", new_x="LMARGIN", new_y="NEXT")
-            pdf.output("new_shirtificate.pdf")
+        def header(self):
             # Rendering logo:
             self.image("shirtificate.png", 10, 50, w=pdf.epw)
             # Setting font: helvetica bold 15
@@ -19,7 +13,19 @@ def main():
             # Performing a line break:
             self.ln(20)
 
+
+
+
+    # Instantiation of inherited class
+    pdf = PDF()
+    pdf.add_page()
+    pdf.set_font("Times", size=30)
+    pdf.set_text_color(255, 255, 255)
     name = input("Name: ")
+    pdf.cell(0, 150, f"{name} took CS50", align="C")
+    pdf.output("new_shirtificate.pdf")
+
+
 
 
 if __name__ == "__main__":
