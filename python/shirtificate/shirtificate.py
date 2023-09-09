@@ -28,7 +28,7 @@ def main():
     pdf = PDF()
     pdf.add_page()
     pdf.set_font("Times", size=12)
-    name = input("took CS50")
+    name = input("Name: ")
     pdf.cell(0, 10, f"{name}", new_x="LMARGIN", new_y="NEXT")
     pdf.output("new_shirtificate.pdf")
 
