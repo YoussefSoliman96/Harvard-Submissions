@@ -4,11 +4,11 @@ def main():
     test_get_date()
 
 def test_get_date():
-    assert get_date("1996-07-24") == "Fourteen million, two hundred sixty-seven thousand, five hundred twenty minutes"
-    assert get_date("1996-7-24") == "Invalid format"
-    assert get_date("1996-07-2") == "Invalid format"
-    assert get_date("24-07-1996") == "Invalid format"
-    assert get_date("07-24-1996") == "Invalid format"
+    assert get_date("1996-07-24") == ('1996', '07', '24')
+    assert get_date("1996-7-24") == None
+    assert get_date("1996-07-2") == None
+    assert get_date("24-07-1996") == None
+    assert get_date("07-24-1996") == None
 
 
 
