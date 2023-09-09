@@ -7,8 +7,8 @@ def main():
     get_date(date)
 
 def get_date(date):
-    date = re.search(r"(^[0-9]+)-([0-9]+)-([0-9]+)$")
-    print(date)
+    new_date = re.search(r"(^[0-9]+)-([0-9]+)-([0-9]+)$", date)
+    print(new_date)
 
 
 if __name__ == "__main__":
