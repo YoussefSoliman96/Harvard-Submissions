@@ -23,7 +23,7 @@ def main():
     pdf.set_text_color(255, 255, 255)
     name = input("Name: ")
     pdf.cell(0, 150, f"{name} took CS50", align="C")
-    pdf.output("new_shirtificate.pdf")
+    pdf.output("shirtificate.pdf")
 
 
 
