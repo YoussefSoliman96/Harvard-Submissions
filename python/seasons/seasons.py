@@ -1,6 +1,9 @@
 from datetime import date
 import re
 import sys
+import inflect
+
+p = inflect.engine()
 
 def main():
     date_of_birth = input("Date of Birth: ")
@@ -14,7 +17,8 @@ def main():
     today_date = original_date.today()
     days = today_date - original_date
     mins = days.days * 24 * 60
-    print(mins)
+    words = p.number_to_words(mins, wantlist=True)
+    print(words)
 
 
 def get_date(date):
