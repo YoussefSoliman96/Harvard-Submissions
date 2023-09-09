@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity=12):
-        self.capacity = capacity
-        self.size = 0
+        self._capacity = capacity
+        self._size = 0
         if capacity < 0:
             raise ValueError("Invalid Input")
 
@@ -15,24 +15,24 @@ class Jar:
         elif (n + self.size) > self.capacity:
             raise ValueError("Amount requested is too big")
         else:
-            self.size += n
+            self._size += n
 
     def withdraw(self, n):
         if n > self.size:
             raise ValueError("Amount requested is unavailable")
         else:
-            self.size -= n
+            self._size -= n
 
 
     @property
     def capacity(self):
-        return self.capacity
-"""
+        return self._capacity
+
 
     @property
     def size(self):
-        ...
-"""
+        return self._size
+
 
 jar = Jar()
 jar.deposit(5)
