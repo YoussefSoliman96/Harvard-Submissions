@@ -7,7 +7,7 @@ def main():
     try:
          year, month, day = get_date(date)
     except:
-        sys.exit("Invalid_format")
+        sys.exit("Invalid format")
     print(year, month, day)
 
 def get_date(date):
