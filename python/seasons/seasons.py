@@ -7,7 +7,8 @@ def main():
     get_date(date)
 
 def get_date(date):
-    new_date = date.fromisoformat(date)
+    new_date = date.fromisoformat('2019-12-04')
+    datetime.date(2019, 12, 4)
     print(new_date)
 
 
