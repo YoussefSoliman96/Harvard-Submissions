@@ -1,5 +1,6 @@
 from datetime import date
 import re
+import sys
 
 
 def main():
@@ -8,10 +9,13 @@ def main():
     print(new_date)
 
 def get_date(date):
-    if re.search(r"(^[0-9]+)-([0-9]+)-([0-9]+)$", date):
-        year, month, day = date.split("-")
-        return(year, month, day)
-
+    try:
+        if re.search(r"(^[0-9]{4})-([0-9]{2})-([0-9]{2})$", date):
+            year, month, day = date.split("-")
+            return(year, month, day)
+    except:
+        sys.exit("Invalid date")
+        
 
 if __name__ == "__main__":
     main()
