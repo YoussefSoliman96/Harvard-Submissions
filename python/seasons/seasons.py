@@ -13,8 +13,8 @@ def main():
     original_date = date(int(year), int(month), int(day))
     today_date = original_date.today()
     days = today_date - original_date
-    mins = days * 24 * 60
-    print(mins.replace("days", "mins"))
+    mins = days.days * 24 * 60
+    print(mins)
 
 
 def get_date(date):
