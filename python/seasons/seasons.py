@@ -12,6 +12,9 @@ def main():
     # Get the original date of birth and today's date to calculate the number of days between them
     original_date = date(int(year), int(month), int(day))
     today_date = original_date.today()
+    days = today_date - original_date
+    mins = days * 24 * 60
+    print(mins.replace("days", "mins"))
 
 
 def get_date(date):
