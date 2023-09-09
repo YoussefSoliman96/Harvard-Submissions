@@ -7,7 +7,7 @@ def main():
             pdf = PDF()
             pdf.add_page()
             pdf.set_font("Times", "B", 40)
-            pdf.set_text_color(255, 0, 255)
+            pdf.set_text_color(255, 255, 255)
             pdf.cell(20, 40, f"{name}", new_x="LMARGIN", new_y="NEXT")
             pdf.output("new_shirtificate.pdf")
             # Rendering logo:
