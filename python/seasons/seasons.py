@@ -1,12 +1,14 @@
 from datetime import date
+import re
 
 
 def main():
-    get_date()
+    date = input("Date of Birth: ")
+    get_date(date)
 
-
-def get_date():
-    input("Date of Birth: ")
+def get_date(date):
+    date = re.search("([0-9]+)-([0-9]+)-([0-9]+)")
+    print(date)
 
 
 if __name__ == "__main__":
