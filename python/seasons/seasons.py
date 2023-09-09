@@ -7,9 +7,8 @@ def main():
     get_date(date)
 
 def get_date(date):
-    new_date = date.fromisoformat('2019-12-04')
-    datetime.date(2019, 12, 4)
-    print(new_date)
+    date = re.search("([0-9]+)-([0-9]+)-([0-9]+)")
+    print(date)
 
 
 if __name__ == "__main__":
