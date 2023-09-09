@@ -3,6 +3,8 @@ from jar import Jar
 def test_init():
     jar = Jar()
     assert jar.capacity == 12
+    new_jar = Jar(5)
+    assert jar.capacity == 5
 
 
 def test_str():
