@@ -20,7 +20,10 @@ def read_file():
             csv_reader = csv.DictReader(csv_file)
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
-                clients['first_name' = line["first_name"]]
+                clients['first_name'] = line["first_name"]
+                clients['last_name'] = line["last_name"]
+                clients['email'] = line["email"]
+                clients['savings'] = line["savings"]
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
