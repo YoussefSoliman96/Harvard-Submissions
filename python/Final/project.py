@@ -10,7 +10,8 @@ def main():
             self.email = email
             self.savings = savings
     client_data = read_file()
-    print(client_data[0])
+    get_names(client_data)
+
 
 # Read the file containing clients' data
 def read_file():
@@ -26,10 +27,14 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File not found")
 
+# Get all the clients' names
+def get_names(client_data):
+    for d in client_data:
+        print([d["first_name"]])
+
 
 if __name__ == "__main__":
     main()
-
 
 
 
