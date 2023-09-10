@@ -25,7 +25,9 @@ def withdraw():
 def calculate_savings():
 
 
-def create_file():
+def read_file():
+    with open("clients.csv", "r") as csv_file:
+        csv_reader = csv.reader(csv_file)
 
 
 
