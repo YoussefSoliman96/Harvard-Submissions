@@ -9,21 +9,18 @@ def main():
             self.last_name = last_name
             self.email = email
     client_data = read_file()
-    print(client_data)
+    print(client_data[0])
 
 # Read the file containing clients' data
 def read_file():
-    clients = {}
+    clients = []
     try:
         # Open the file containing clients' data
         with open("clients.csv", "r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
-                clients['first_name'] = line["first_name"]
-                clients['last_name'] = line["last_name"]
-                clients['email'] = line["email"]
-                clients['savings'] = line["savings"]
+                clients.append({'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'savings': line["savings"]})
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
