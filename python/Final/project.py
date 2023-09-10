@@ -36,18 +36,16 @@ if __name__ == "__main__"
 """
 
 def read_file():
-    clients = []
+    clients = {}
     try:
         # Open the file containing clients' data
         with open("clients.csv", "r") as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter="\t")
-            next(csv_reader)
+            csv_reader = csv.DictReader(csv_file)
+
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
-                clients.append(line)
+                print(line)
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
 
-client = read_file()
-print(client)
