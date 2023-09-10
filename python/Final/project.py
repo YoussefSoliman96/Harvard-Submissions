@@ -1,4 +1,5 @@
 import csv
+import sys
 
 """
 def main():
@@ -35,9 +36,15 @@ if __name__ == "__main__"
 """
 
 def read_file():
-    with open("clients.csv", "r") as csv_file:
-        csv_reader = csv.reader(csv_file)
-        for line in csv_reader:
-            return line
+    clients = []
+    try:
+        with open("clients.csv", "r") as csv_file:
+            csv_reader = csv.reader(csv_file)
+            for line in csv_reader:
+                clients.append(line)
+        return clients
+    except FileNotFoundError:
+        sys.exit("File not found")
+
 client = read_file()
 print(client)
