@@ -31,7 +31,7 @@ def read_file():
 def get_names(client_data):
     for d in client_data:
         print([d["first_name"]])
-
+        print([d["last_name"]])
 
 if __name__ == "__main__":
     main()
