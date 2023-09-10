@@ -11,6 +11,12 @@ def main():
             self.savings = savings
     client_data = read_file()
     get_names(client_data)
+    client_search = input("Client name: ")
+    i = 0
+    for i in client_data[i]:
+        if client_search == get_names(client_data[i]):
+            print(client_data[i])
+
 
 
 # Read the file containing clients' data
