@@ -15,7 +15,7 @@ def main():
     get_names(clients_data)
     # Get the requested client's data
     client_data = get_data(clients_data)
-    print(client_data)
+    print(client_data["first_name"])
 
 
 # Read the file containing clients' data
