@@ -13,7 +13,7 @@ def main():
     get_names(client_data)
     client_search = input("Client name: ")
     i = 0
-    for i in client_data[i]:
+    for key in client_data:
         if client_search == get_names(client_data[i]):
             print(client_data[i])
 
