@@ -9,17 +9,14 @@ def main():
             self.last_name = last_name
             self.email = email
             self.savings = savings
-    client_data = read_file()
-    get_names(client_data)
-    client_search = input("Client name: ")
-    for name in client_data:
-        if name["first_name"] == client_search:
-            print(name)
     # Get all the clients' data
     clients_data = read_file()
     # Extract all the clients' names out of the file
     get_names(clients_data)
-    # Take user's input of a certain client's name
+    # Get the requested client's data
+    client_data = get_data(clients_data)
+    print(client_data)
+
 
 # Read the file containing clients' data
 def read_file():
@@ -41,8 +38,13 @@ def get_names(client_data):
         return([d["first_name"]])
 
 # Get the a certain client's data
-def get_data(client_search):
-
+def get_data(client_data):
+    # Take user's input of a certain client's name
+    client_search = input("Client name: ")
+    # Loop through all the client names untill you find the client then return the data
+    for name in client_data:
+        if name["first_name"] == client_search:
+            return(name)
 
 if __name__ == "__main__":
     main()
