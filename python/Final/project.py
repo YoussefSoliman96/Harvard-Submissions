@@ -42,7 +42,7 @@ def read_file():
             csv_reader = csv.DictReader(csv_file)
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
-                clients.append({'first': first_name.lstrip(), 'last': last_name.lstrip(), 'email': line["email"].lstrip(), 'savings': line["savings"].lstrip()})
+                clients.append({'first_name': line["first_name"].lstrip(), 'last_name': ["last_name"].lstrip(), 'email': line["email"].lstrip(), 'savings': line["savings"].lstrip()})
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
