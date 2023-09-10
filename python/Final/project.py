@@ -1,6 +1,6 @@
 import csv
 
-
+"""
 def main():
     class Client:
         def __init__(self, first_name, last_name, email, savings):
@@ -25,13 +25,19 @@ def withdraw():
 def calculate_savings():
 
 
-def read_file():
-    with open("clients.csv", "r") as csv_file:
-        csv_reader = csv.reader(csv_file)
-
 
 
 
 
 if __name__ == "__main__"
     main()
+
+"""
+
+def read_file():
+    with open("clients.csv", "r") as csv_file:
+        csv_reader = csv.reader(csv_file)
+        for line in csv_reader:
+            return line
+client = read_file()
+print(client)
