@@ -25,7 +25,7 @@ def read_file():
 
 # Add new clients to the Clients' file
 def write_file(csv_reader):
-    with open("clients.csv", "w") as csv_file:
+    with open("new_clients.csv", "w") as csv_file:
         csv_writer = csv.DictWriter(csv_file, fieldnames=["first_name", "last_name", "email", "savings"])
         csv_writer.writerow({"first_name": "first_name", "last_name": "last_name", "email": "email", "savings": "savings"})
         for line in csv_reader:
