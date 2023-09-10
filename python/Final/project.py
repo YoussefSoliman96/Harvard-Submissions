@@ -12,10 +12,9 @@ def main():
     client_data = read_file()
     get_names(client_data)
     client_search = input("Client name: ")
-    i = 0
     for key in client_data:
-        if client_search == get_names(client_data[i]):
-            print(client_data[i])
+        if client_search == get_names(client_data[key]):
+            print(client_data[key])
 
 
 
