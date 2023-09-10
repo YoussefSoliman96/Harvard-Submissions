@@ -40,6 +40,7 @@ def read_file():
     try:
         with open("clients.csv", "r") as csv_file:
             csv_reader = csv.reader(csv_file)
+            next(csv_reader)
             for line in csv_reader:
                 clients.append(line)
         return clients
