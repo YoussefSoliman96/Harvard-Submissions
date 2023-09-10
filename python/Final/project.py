@@ -40,7 +40,7 @@ def read_file():
     try:
         # Open the file containing clients' data
         with open("clients.csv", "r") as csv_file:
-            csv_reader = csv.reader(csv_file)
+            csv_reader = csv.reader(csv_file, delimiter="\t")
             next(csv_reader)
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
