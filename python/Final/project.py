@@ -15,7 +15,9 @@ def main():
     get_names(clients_data)
     # Get the requested client's data
     client_data = get_data(clients_data)
-    print(client_data["first_name"])
+    # Get the requested client's savings
+    client_savings = (client_data["savings"])
+    print(client_savings)
 
 
 # Read the file containing clients' data
@@ -39,12 +41,17 @@ def get_names(client_data):
 
 # Get the a certain client's data
 def get_data(client_data):
-    # Take user's input of a certain client's name
-    client_search = input("Client name: ")
-    # Loop through all the client names untill you find the client then return the data
-    for name in client_data:
-        if name["first_name"] == client_search:
-            return(name)
+    # Loop forever untill the user inputs a valid name or (Control-d)
+    while True:
+        try:
+            # Take user's input of a certain client's name
+            client_search = input("Client name: ")
+            # Loop through all the client names untill you find the client then return the data
+            for name in client_data:
+                if name["first_name"] == client_search:
+                    return(name)
+        except EOFError:
+            sys.exit("User input invalid")
 
 if __name__ == "__main__":
     main()
