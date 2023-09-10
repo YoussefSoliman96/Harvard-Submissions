@@ -12,8 +12,8 @@ def main():
     client_data = read_file()
     get_names(client_data)
     client_search = input("Client name: ")
-    for first_name in client_data.items():
-        print(first_name)
+    for name in client_data:
+        print(name)
 
 
 # Read the file containing clients' data
