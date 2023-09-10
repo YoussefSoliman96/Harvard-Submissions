@@ -3,12 +3,6 @@ import sys
 
 
 def main():
-    class Client:
-        def __init__(self, first_name, last_name, email, savings):
-            self.first_name = first_name
-            self.last_name = last_name
-            self.email = email
-            self.savings = savings
     # Get all the clients' data
     clients_data = read_file()
     # Extract all the clients' names out of the file
@@ -17,7 +11,13 @@ def main():
     client_data = get_data(clients_data)
     # Get the requested client's savings
     client_savings = (client_data["savings"])
-    print(client_savings)
+    class Client:
+        def __init__(self, first_name, last_name, email, savings):
+            self.first_name = first_name
+            self.last_name = last_name
+            self.email = email
+            self.savings = savings
+
 
 
 # Read the file containing clients' data
