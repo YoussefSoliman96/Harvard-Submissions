@@ -24,17 +24,17 @@ def read_file():
         sys.exit("File not found")
 
 # Add new clients to the Clients' file
-def write_file():
-    with open(sys.argv[2], "w") as file:
-        writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
-        writer.writerow({"first": "first", "last": "last", "house": "house"})
-        for line in output:
-            writer.writerow({"first": line["first"], "last": line["last"], "house": line["house"]})
+def write_file(csv_reader):
+    with open("clients.csv", "w") as csv_file:
+        csv_writer = csv.DictWriter(csv_file, fieldnames=["first_name", "last_name", "email", "savings"])
+        csv_writer.writerow({"first_name": "first_name", "last_name": "last_name", "email": "email", "savings": "savings"})
+        for line in csv_reader:
+            csv_writer.writerow({"first_name": line["first_name"], "last_name": line["last_name"], "email": line["email"], "savings": line["savings"]})
 
 
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
 
 
