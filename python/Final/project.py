@@ -13,7 +13,7 @@ def main():
     get_names(client_data)
     client_search = input("Client name: ")
     for name in client_data:
-        print(name)
+        print(name["first_name"])
 
 
 # Read the file containing clients' data
