@@ -18,7 +18,8 @@ def main():
     balance = (client_data["balance"])
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
-    if client_choice
+    if client_choice = "Print statement":
+        
     # The upcoming operation depending on what the user chose
     cash = operation(client_choice)
 
@@ -94,7 +95,7 @@ def update_balance(id, new_balance):
 # Display options of what the client can do
 def options():
     choices = ["Deposit", "Withdraw", "Print statement"]
-    choice = print("What do you want to do:")
+    print("What do you want to do:")
     for idx, element in enumerate(choices):
         print("{}) {}".format(idx+1,element))
     while True:
