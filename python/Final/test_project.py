@@ -9,6 +9,8 @@ def main():
 
 
 def test_options():
+    i = 1
+    
     assert options() == "Deposit"
 
 def test_get_data()
