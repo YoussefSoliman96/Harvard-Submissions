@@ -157,6 +157,5 @@ def print_statement(id, first, last, email, balance, date):
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
 
 
-
 if __name__ == "__main__":
     main()
