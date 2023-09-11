@@ -86,6 +86,32 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File not found")
 
+# Get the a certain client's data
+def get_data(client_data):
+    # Loop forever untill the user inputs a valid name or (Control-d)
+    while True:
+        try:
+            # Take user's input of a certain client's name
+            client_search = input("Client name: ")
+            # Get the first name and the last name
+            full_name = client_search.split(" ")
+            if len(full_name) < 2:
+                print("Missing lastname")
+            # Loop through all the client names untill you find the client then return the data
+            for name in client_data:
+                try:
+                    if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
+                        return(name)
+                except IndexError:
+                    pass
+        except EOFError:
+            sys.exit("User input invalid")
+
+def get_date():
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    return(dt_string)
+
 def update_balance(id, new_balance):
     # Reading the CSV file and set the index to the "ID" column
     df = pd.read_csv("clients.csv", index_col="id")
@@ -115,38 +141,6 @@ def options():
             pass
 
 
-# Get the a certain client's data
-def get_data(client_data):
-    # Loop forever untill the user inputs a valid name or (Control-d)
-    while True:
-        try:
-            # Take user's input of a certain client's name
-            client_search = input("Client name: ")
-            # Get the first name and the last name
-            full_name = client_search.split(" ")
-            if len(full_name) < 2:
-                print("Missing lastname")
-            # Loop through all the client names untill you find the client then return the data
-            for name in client_data:
-                try:
-                    if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
-                        return(name)
-                except IndexError:
-                    pass
-        except EOFError:
-            sys.exit("User input invalid")
-
-def operation(choice):
-        # Store the cash the user wants to deposit or withdraw into a variable
-        cash = input(f"How much cash do you want to {choice}? ")
-        return cash
-
-def get_date():
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    return(dt_string)
-
-
 def print_statement(id, first, last, email, balance, date):
     data = [[id, first, last, email, balance, date]]
     #define header names
@@ -154,6 +148,12 @@ def print_statement(id, first, last, email, balance, date):
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
+
+
+def operation(choice):
+        # Store the cash the user wants to deposit or withdraw into a variable
+        cash = input(f"How much cash do you want to {choice}? ")
+        return cash
 
 
 
