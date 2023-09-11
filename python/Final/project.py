@@ -59,7 +59,7 @@ def main():
         client.withdraw(cash)
 
     print(client.balance)
-    update_balance(client.id, client.balance)
+    update_balance(0, client.balance)
 
 # Read the file containing clients' data
 def read_file():
