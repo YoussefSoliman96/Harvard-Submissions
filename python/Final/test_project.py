@@ -1,4 +1,4 @@
-from unittest.mock import mock
+from unittest import mock
 from project import operation
 from project import get_data
 import pytest
