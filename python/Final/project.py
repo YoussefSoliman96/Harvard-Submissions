@@ -156,9 +156,9 @@ def print_statement(id, first, last, email, balance, date):
 
 
 def operation(choice):
-        # Store the cash the user wants to deposit or withdraw into a variable
-        cash = input(f"How much cash do you want to {choice}? ")
-        return cash
+    # Store the cash the user wants to deposit or withdraw into a variable
+    cash = input(f"How much cash do you want to {choice}? ")
+    return cash
 # Loop forever and ask for user's input as long as user inputs "y"
 def more_inputs(first, last, email, balance, current_date):
     while True:
