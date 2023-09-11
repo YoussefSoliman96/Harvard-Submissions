@@ -24,16 +24,20 @@ def main():
         print_statement(id, first, last, email, (balance + "💲"), current_date)
     else:
         cash = operation(client_choice)
-    while True:
-        again = input("Do you want to do anything else? (y/n)")
-        try:
-            if again == "y":
-                client_choice = options()
-            elif again == "n":
-                sys.exit("Thank you")
-        except ValueError:
-            print("Invalid input")
-            pass
+        while True:
+            again = input("Do you want to do anything else? (y/n)")
+            try:
+                if again == "y":
+                    client_choice = options()
+                    if client_choice == "Print statement":
+                        print_statement(id, first, last, email, (balance + "💲"), current_date)
+                    else:
+                        cash = operation(client_choice)
+                elif again == "n":
+                    sys.exit("Thank you")
+            except ValueError:
+                print("Invalid input")
+                pass
 
 
     class Client:
