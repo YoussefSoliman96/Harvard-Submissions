@@ -14,9 +14,8 @@ def main():
     last = (client_data["last_name"])
     email = (client_data["email"])
     balance = (client_data["balance"])
-    # Display the list of options to the current client
-    print(options())
-
+    # Display the list of options to the current client and store the client's choice
+    client_choice = options()
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -67,7 +66,7 @@ def options():
         i = input("Enter number: ")
         try:
             if 0 < int(i) <= len(choices):
-                return choices[i]
+                return choices[int(i) - 1]
         except ValueError:
             pass
 
