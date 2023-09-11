@@ -17,7 +17,7 @@ def test_operation():
     mock.side_effect = side_effect
 
     mock.side_effect = ["Withdraw"]
-    assert operation("Withdraw") == "Withdraw"
+    assert operation(500) == "500"
 
 
 """
