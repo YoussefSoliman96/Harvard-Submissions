@@ -45,10 +45,7 @@ def main():
                 new_balance = self._balance
                 print(f"New blanace = {new_balance}")
                 client.balance = new_balance
-
-        @property
-        def balance(self):
-            return self._balance
+        
 
     client = Client(first, last, email, balance)
 
