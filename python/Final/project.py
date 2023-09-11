@@ -45,11 +45,11 @@ def main():
             client.balance = new_balance
 
 
-        def withdraw(self, cash: float):
+        def withdraw(self, cash: float) -> None:
             while True:
                 try:
-                    if cash > float(self._balance:
-                        raise ValueError("Unavailable balance")
+                    if float(cash) > float(self._balance):
+                        sys.exit(cash)
                     else:
                         self._balance = float(self._balance) - float(cash)
                         new_balance = self._balance
@@ -135,6 +135,8 @@ def options():
                 return choices[int(i) - 1]
         except ValueError:
             pass
+
+
 
 def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
