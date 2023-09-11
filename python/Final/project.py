@@ -7,10 +7,11 @@ def main():
     # Get all the clients' data
     clients_data = read_file()
     # Extract all the clients' names out of the file
-    names = get_names(clients_data)
-    print(names)
     # Get the requested client's data
     client_data = get_data(clients_data)
+    # Get the clients' names
+
+    print(clients_data)
     # Get the requested client's balance
     client_balance = (client_data["balance"])
     print(client_balance)
@@ -40,10 +41,10 @@ def read_file():
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
-
+"""
 # Get all the clients' names
 def get_names(client_data):
-    
+
     with open("clients.csv", "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         # Loop through the file and append data to the clients stack
@@ -51,7 +52,7 @@ def get_names(client_data):
             for d in client_data:
                 return([d["first_name"]], [d["last_name"]])
 
-
+"""
 
 # Get the a certain client's data
 def get_data(client_data):
