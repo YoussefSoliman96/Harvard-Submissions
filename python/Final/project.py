@@ -16,11 +16,9 @@ def main():
     balance = (client_data["balance"])
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
-    if client_choice == "Print statement":
-        print_statement()
-    else:
-        # Store the cash the user wants to deposit or withdraw into a variable
-        cash = input(f"How much cash do you want to {client_choice}? ")
+    # The upcoming operation depending on what the user chose
+    operation(client_choice)
+
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -96,6 +94,14 @@ def get_data(client_data):
                     pass
         except EOFError:
             sys.exit("User input invalid")
+
+def operation(choice):
+    if choice == "Print statement":
+        print_statement()
+    else:
+        # Store the cash the user wants to deposit or withdraw into a variable
+        cash = input(f"How much cash do you want to {choice}? ")
+        return cash
 
 def print_statement():
 
