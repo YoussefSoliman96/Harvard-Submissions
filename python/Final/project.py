@@ -8,7 +8,7 @@ def main():
     clients_data = read_file()
     # Extract all the clients' names out of the file
     names = get_names(clients_data)
-    print(names[1])
+    print(names[2])
     # Get the requested client's data
     client_data = get_data(clients_data)
     # Get the requested client's balance
