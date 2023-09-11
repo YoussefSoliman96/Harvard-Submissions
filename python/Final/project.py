@@ -6,7 +6,6 @@ from datetime import datetime
 def main():
     # Get all the clients' data
     clients_data = read_file()
-    # Extract all the clients' names out of the file
     # Get the requested client's data
     client_data = get_data(clients_data)
     # Get the requested client's first name, last name, email and balance
