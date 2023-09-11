@@ -27,7 +27,8 @@ def main():
             amount = self.balance + "💲"
             return amount
 
-        def deposit(self, ):
+        def deposit(self, cash):
+            
 
 
 
