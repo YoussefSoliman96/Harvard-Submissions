@@ -16,7 +16,7 @@ def main():
     balance = (client_data["balance"])
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
-    cash = input("How much cash do you want to {client_choice}? ")
+    cash = input(f"How much cash do you want to {client_choice}? ")
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
