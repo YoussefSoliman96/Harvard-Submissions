@@ -85,7 +85,6 @@ def more_inputs(first, last, email, balance, current_date):
                 print_statement(id, first, last, email, (balance + "💲"), current_date)
             else:
                 cash = operation(client_choice)
-                return cash
         elif again == "n":
             sys.exit("Thank you")
 
