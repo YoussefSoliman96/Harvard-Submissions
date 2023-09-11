@@ -54,13 +54,14 @@ def get_data(client_data):
             client_search = input("Client name: ")
             # Get the first name and the last name
             full_name = client_search.split(" ")
+            if len(full_name) < 2:
+                print("Missing lastname")
             # Loop through all the client names untill you find the client then return the data
             for name in client_data:
                 try:
                     if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
                         return(name)
                 except IndexError:
-                    print("Missing lastname")
                     pass
         except EOFError:
             sys.exit("User input invalid")
