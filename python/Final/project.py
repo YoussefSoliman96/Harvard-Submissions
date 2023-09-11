@@ -1,6 +1,7 @@
 import csv
 import sys
 from datetime import datetime
+import pandas as pd
 
 
 def main():
@@ -79,11 +80,16 @@ def read_file():
         sys.exit("File not found")
 
 def update_balance():
-        with open("clients.csv", "w") as csv_file:
-            csv_writer = csv.DictWriter(file, fieldnames=["first_name", "last_name", "email", "balance"])
-            writer.writerow({"first": "first", "last": "last", "house": "house"})
-            for line in output:
-                writer.writerow({"first": line["first"], "last": line["last"], "house": line["house"]})
+    # reading the csv file
+    df = pd.read_csv("AllDetails.csv")
+
+    # updating the column value/data
+    df.loc[5, 'Name'] = 'SHIV CHANDRA'
+
+    # writing into the file
+    df.to_csv("AllDetails.csv", index=False)
+
+    print(df)
 
 
 # Display options of what the client can do
