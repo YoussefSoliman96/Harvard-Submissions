@@ -133,6 +133,9 @@ def operation(choice):
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
 
+def get_date():
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("date and time =", dt_string)
 
 def print_statement():
 
@@ -148,7 +151,7 @@ if __name__ == "__main__":
 """
 
 
-def get_date():
+
 
 
 
