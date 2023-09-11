@@ -31,6 +31,7 @@ def main():
                     client_choice = options()
                     if client_choice == "Print statement":
                         print_statement(id, first, last, email, (balance + "💲"), current_date)
+                        return True
                     else:
                         cash = operation(client_choice)
                 elif again == "n":
