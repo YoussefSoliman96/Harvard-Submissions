@@ -14,7 +14,7 @@ def main():
     last = (client_data["last_name"])
     email = (client_data["email"])
     balance = (client_data["balance"])
-    print(first, last, email, balance)
+    data = (first, last, email, balance)
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
