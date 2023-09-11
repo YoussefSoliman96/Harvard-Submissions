@@ -125,7 +125,7 @@ def update_balance(id, new_balance):
 # Display options of what the client can do
 def options():
     choices = ["Deposit", "Withdraw", "Print statement"]
-    print("What do you want to do:")
+    choice = print("What do you want to do:")
     for idx, element in enumerate(choices):
         print("{}) {}".format(idx+1,element))
     while True:
