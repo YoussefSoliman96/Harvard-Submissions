@@ -20,7 +20,7 @@ def main():
 
 
     class Client:
-        def __init__(self, first_name, last_name, email, balance: int):
+        def __init__(self, first_name, last_name, email, balance):
             self.first_name = first_name
             self.last_name = last_name
             self.email = email
@@ -29,10 +29,14 @@ def main():
         def __str__(self):
             amount = self.balance + "💲"
             return amount
+    class BankAccount:
+        def __init__(self, b)
+
 
         def deposit(self, cash):
             self.balance += int(cash)
             print(self.balance)
+
         def withdraw(self, cash):
             if cash > self.balance:
                 raise ValueError("Unavailable balance")
