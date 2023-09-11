@@ -80,7 +80,7 @@ def update_balance(id, new_balance):
     df = pd.read_csv("clients.csv")
 
     # updating the column value/data
-    df.loc[id, 'Name'] = new_balance
+    df.set_value(id, "balance", new_balance)
 
     # writing into the file
     df.to_csv("clients.csv", index=False)
