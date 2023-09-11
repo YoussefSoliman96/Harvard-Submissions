@@ -10,6 +10,7 @@ def main():
     clients_data = read_file()
     # Get the requested client's data
     client_data = get_data(clients_data)
+    print(client_data)
     # Get the requested client's first name, last name, email and balance
     id = (client_data["id"])
     first = (client_data["first_name"])
