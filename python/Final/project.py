@@ -27,7 +27,7 @@ def main():
             amount = self.balance + "💲"
             return amount
 
-    client = Client(data)
+    client = Client(first, last, email, balance)
 
     print(client)
 
