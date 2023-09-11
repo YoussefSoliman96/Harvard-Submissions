@@ -22,11 +22,10 @@ def main():
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
         print_statement(id, first, last, email, (balance + "💲"), current_date)
-        more_inputs(first, last, email, balance, current_date)
     else:
         cash = operation(client_choice)
-        more_inputs(first, last, email, balance, current_date)
 
+    more_inputs(first, last, email, balance, current_date)
 
 
 
