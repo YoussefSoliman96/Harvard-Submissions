@@ -15,7 +15,7 @@ def main():
     email = (client_data["email"])
     balance = (client_data["balance"])
     print(first, last, email, balance)
-    """
+
     class Client:
         def __init__(self, first_name, last_name, email, balance):
             self.first_name = first_name
@@ -23,9 +23,13 @@ def main():
             self.email = email
             self.balance = balance
 
-        def __str__(self)
+        def __str__(self):
             amount = self.balance + "💲"
-"""
+            return amount
+
+        def deposit(self, ):
+
+
 
 
 # Read the file containing clients' data
@@ -90,7 +94,7 @@ def get_date():
 
 
 
-def deposit():
+
 
 
 def withdraw():
