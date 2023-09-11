@@ -31,14 +31,14 @@ def main():
             return amount
 
         def deposit(self, cash):
-            self._balance += cash
-            print(self._balance)
+            self.balance += int(cash)
+            print(self.balance)
         def withdraw(self, cash):
             if cash > self.balance:
                 raise ValueError("Unavailable balance")
             else:
-                self._balance -= cash
-                print(self._balance)
+                self.balance -= int(cash)
+                print(self.balance)
 
 
     client = Client(first, last, email, balance)
