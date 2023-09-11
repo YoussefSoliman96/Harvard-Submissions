@@ -59,12 +59,6 @@ def main():
     print(client.balance)
 
 
-
-
-
-
-
-
 # Read the file containing clients' data
 def read_file():
     clients = []
@@ -79,15 +73,15 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File not found")
 
-def update_balance():
+def update_balance(first, new_balance):
     # reading the csv file
-    df = pd.read_csv("AllDetails.csv")
+    df = pd.read_csv("clients.csv")
 
     # updating the column value/data
-    df.loc[5, 'Name'] = 'SHIV CHANDRA'
+    df.loc[first, 'balance'] = new_balance
 
     # writing into the file
-    df.to_csv("AllDetails.csv", index=False)
+    df.to_csv("clients.csv", index=False)
 
     print(df)
 
