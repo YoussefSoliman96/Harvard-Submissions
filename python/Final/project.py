@@ -22,10 +22,11 @@ def main():
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
         print_statement(id, first, last, email, (balance + "💲"), current_date)
+        more_inputs(first, last, email, balance, current_date)
     else:
         cash = operation(client_choice)
+        more_inputs(first, last, email, balance, current_date)
 
-    more_inputs(first, last, email, balance, current_date)
 
 
 
@@ -86,9 +87,10 @@ def more_inputs(first, last, email, balance, current_date):
                 client_choice = options()
                 if client_choice == "Print statement":
                     print_statement(id, first, last, email, (balance + "💲"), current_date)
+                    return True
                 else:
                     cash = operation(client_choice)
-                    return cash
+                    return True
             elif again == "n":
                 sys.exit("Thank you")
         except EOFError:
