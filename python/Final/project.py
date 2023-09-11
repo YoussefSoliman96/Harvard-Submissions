@@ -128,9 +128,9 @@ def get_data(client_data):
         except EOFError:
             sys.exit("User input invalid")
 
-def operation(choice, id, first, last, email, balance):
+def operation(choice):
     if choice == "Print statement":
-        print_statement(id, first, last, email, balance)
+        pass
     else:
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
