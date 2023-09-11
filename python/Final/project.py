@@ -14,7 +14,6 @@ def main():
     last = (client_data["last_name"])
     email = (client_data["email"])
     balance = (client_data["balance"])
-    data = (first, last, email, balance)
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -27,9 +26,12 @@ def main():
             amount = self.balance + "💲"
             return amount
 
+        def deposit(self, cash):
+            
+
+
     client = Client(first, last, email, balance)
 
-    print(client)
 
 
 
