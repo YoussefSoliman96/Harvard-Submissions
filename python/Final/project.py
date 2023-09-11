@@ -35,7 +35,7 @@ def main():
             self._balance: int = balance
 
         def __str__(self):
-            amount = self.balance + "💲"
+            amount = self._balance + "💲"
             return amount
 
         def deposit(self, cash: float) -> None:
@@ -59,6 +59,7 @@ def main():
 
 
     client = Client(id, first, last, email, balance)
+    print(client)
 
     if client_choice == "Deposit":
         client.deposit(cash)
