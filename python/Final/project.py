@@ -19,6 +19,9 @@ def main():
             self.email = email
             self.balance = balance
 
+        def __str__(self)
+            amount = self.balance + " "
+
 
 
 # Read the file containing clients' data
