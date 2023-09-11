@@ -52,13 +52,17 @@ def get_data(client_data):
         try:
             # Take user's input of a certain client's name
             client_search = input("Client name: ")
-            print(client_search[0])
+            # Get the first name and the last name
+            full_name = client_search.split(" ")
+            print(full_name[0], full_name[1])
             # Loop through all the client names untill you find the client then return the data
             for name in client_data:
-                if name["first_name"] == client_search[0]:
+                if name["first_name"] == full_name[0]:
                     return(name)
         except EOFError:
             sys.exit("User input invalid")
+
+
 
 if __name__ == "__main__":
     main()
