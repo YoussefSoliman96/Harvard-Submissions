@@ -60,7 +60,8 @@ def get_data(client_data):
                     if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
                         return(name)
                 except IndexError:
-                    sys.exit("Missing lastname")
+                    print("Missing lastname")
+                    pass
         except EOFError:
             sys.exit("User input invalid")
 
