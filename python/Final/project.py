@@ -21,7 +21,7 @@ def main():
     client_choice = options()
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
-        print_statement(id, first, last, email, balance+ "💲", current_date)
+        print_statement(id, first, last, email, (balance + "💲"), current_date)
     else:
         cash = operation(client_choice)
 
