@@ -2,6 +2,7 @@ import csv
 import sys
 from datetime import datetime
 import pandas as pd
+import tabulate
 
 
 def main():
@@ -19,7 +20,7 @@ def main():
     client_choice = options()
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
-        print_statement()
+        print_statement(id, first, last, email, balance)
     else:
         cash = operation(client_choice)
 
@@ -137,20 +138,14 @@ def get_date():
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print("date and time =", dt_string)
 
-def print_statement():
-    """
-    def print_statement(id, first, last, email, balance):
+
+def print_statement(id, first, last, email, balance):
     data = [id, first, last, email, balance]
-
-
     #define header names
     col_names = ["Id", "First Name", "Last Name", "Email", "Current Balance"]
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
-"""
-
-    return 1
 
 
 
