@@ -6,9 +6,9 @@ from datetime import datetime
 def main():
     # Get all the clients' data
     clients_data = read_file()
-    print("clients_date: ", clients_data)
     # Extract all the clients' names out of the file
-    get_names(clients_data)
+    names = get_names(clients_data)
+    print(names)
     # Get the requested client's data
     client_data = get_data(clients_data)
     # Get the requested client's balance
@@ -44,7 +44,7 @@ def read_file():
 # Get all the clients' names
 def get_names(client_data):
     for d in client_data:
-        return([d["first_name"]])
+        return([d["first_name"]], [d["last_name"]])
 
 # Get the a certain client's data
 def get_data(client_data):
