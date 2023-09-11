@@ -56,7 +56,16 @@ def read_file():
 
 # Display options of what the client can do
 def options():
-    input("What do you want to do?")
+    print("Please choose:")
+    for idx, element in enumerate(options):
+        print("{}) {}".format(idx+1,element))
+    i = input("Enter number: ")
+    try:
+        if 0 < int(i) <= len(options):
+            return int(i)
+    except:
+        pass
+    return None
 
 # Get the a certain client's data
 def get_data(client_data):
