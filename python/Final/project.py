@@ -27,7 +27,7 @@ def main():
             return amount
 
         def deposit(self, cash):
-            
+            self._balance += cash
 
 
     client = Client(first, last, email, balance)
