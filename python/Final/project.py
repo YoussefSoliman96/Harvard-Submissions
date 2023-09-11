@@ -43,8 +43,9 @@ def read_file():
 
 # Get all the clients' names
 def get_names(client_data):
-    for d in client_data:
-        return([d["first_name"]], [d["last_name"]])
+    for line in clients.csv:
+        for d in client_data:
+            return([d["first_name"]], [d["last_name"]])
 
 # Get the a certain client's data
 def get_data(client_data):
