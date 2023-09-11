@@ -6,10 +6,9 @@ def main():
     test_options()
 
 
-
-
 def test_options():
     assert options() == "Deposit"
+
 
 
 
