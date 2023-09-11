@@ -53,6 +53,9 @@ def main():
                 new_balance = self._balance
                 print(f"New blanace = {new_balance}")
                 client.balance = new_balance
+        @property
+        def size(self):
+            return self._balance
 
 
     client = Client(id, first, last, email, balance)
