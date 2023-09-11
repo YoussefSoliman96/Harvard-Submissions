@@ -27,10 +27,10 @@ def main():
             amount = self.balance + "💲"
             return amount
 
-        def full_name(self):
-            return "{} {}".format(self.first, self.last)
+        def first_name(self):
+            return "{}".format(self.first_name)
 
-    print(Client.full_name(self))
+    print(Client.first_name(first))
 
 
 
