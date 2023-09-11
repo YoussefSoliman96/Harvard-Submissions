@@ -30,8 +30,6 @@ def main():
 
 
 
-
-
     class Client:
         def __init__(self, id, first_name, last_name, email, balance: float) -> None:
             self.id = id
