@@ -8,6 +8,7 @@ def main():
     clients_data = read_file()
     # Extract all the clients' names out of the file
     names = get_names(clients_data)
+    print(names)
     # Get the requested client's data
     client_data = get_data(clients_data)
     # Get the requested client's balance
@@ -42,9 +43,15 @@ def read_file():
 
 # Get all the clients' names
 def get_names(client_data):
-        while True:# Loop through the file and append data to the clients stack
+    
+    with open("clients.csv", "r") as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        # Loop through the file and append data to the clients stack
+        for line in csv_reader:
             for d in client_data:
                 return([d["first_name"]], [d["last_name"]])
+
+
 
 # Get the a certain client's data
 def get_data(client_data):
