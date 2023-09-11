@@ -9,12 +9,12 @@ def main():
     # Extract all the clients' names out of the file
     # Get the requested client's data
     client_data = get_data(clients_data)
-    # Get the clients' names
-
-    print(clients_data.get('first_name'))
-    # Get the requested client's balance
-    client_balance = (client_data["balance"])
-    print(client_balance)
+    # Get the requested client's first name, last name, email and balance
+    first = (client_data["first_name"])
+    last = (client_data["last_name"])
+    email = (client_data["email"])
+    balance = (client_data["balance"])
+    print(first, last, email, balance)
     """
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -41,7 +41,7 @@ def read_file():
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
-"""
+'''
 # Get all the clients' names
 def get_names(client_data):
 
@@ -52,7 +52,7 @@ def get_names(client_data):
             for d in client_data:
                 return([d["first_name"]], [d["last_name"]])
 
-"""
+'''
 
 # Get the a certain client's data
 def get_data(client_data):
