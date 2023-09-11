@@ -6,6 +6,23 @@ from tabulate import tabulate
 
 
 def main():
+    def more_inputs():
+        while True:
+            again = input("Do you want to do anything else? (y/n)")
+            try:
+                if again == "y":
+                    client_choice = options()
+                    if client_choice == "Print statement":
+                        print_statement(id, first, last, email, (balance + "💲"), current_date)
+                        return print_statement
+                    else:
+                        cash = operation(client_choice)
+                        return cash
+                elif again == "n":
+                    sys.exit("Thank you")
+            except ValueError:
+                print("Invalid input")
+            return True
     # Get all the clients' data
     clients_data = read_file()
     # Get the requested client's data
@@ -22,36 +39,10 @@ def main():
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
         print_statement(id, first, last, email, (balance + "💲"), current_date)
-        while True:
-            again = input("Do you want to do anything else? (y/n)")
-            try:
-                if again == "y":
-                    client_choice = options()
-                    if client_choice == "Print statement":
-                        print_statement(id, first, last, email, (balance + "💲"), current_date)
-                    else:
-                        cash = operation(client_choice)
-                elif again == "n":
-                    sys.exit("Thank you")
-            except ValueError:
-                print("Invalid input")
-
+        more_inputs()
     else:
         cash = operation(client_choice)
-        while True:
-            again = input("Do you want to do anything else? (y/n)")
-            try:
-                if again == "y":
-                    client_choice = options()
-                    if client_choice == "Print statement":
-                        print_statement(id, first, last, email, (balance + "💲"), current_date)
-                    else:
-                        cash = operation(client_choice)
-                elif again == "n":
-                    sys.exit("Thank you")
-            except ValueError:
-                print("Invalid input")
-
+        more_inputs()
 
 
 
