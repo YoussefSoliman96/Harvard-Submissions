@@ -29,10 +29,11 @@ def main():
         try:
             if again == "y":
                 client_choice = options()
-            if again == "n":
+            elif again == "n":
                 sys.exit("Thank you")
         except ValueError:
             print("Invalid input")
+            pass
 
 
     class Client:
