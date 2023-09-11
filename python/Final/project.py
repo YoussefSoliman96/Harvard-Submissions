@@ -45,7 +45,7 @@ def main():
                 new_balance = self._balance
                 print(f"New blanace = {new_balance}")
                 client.balance = new_balance
-        
+
 
     client = Client(first, last, email, balance)
 
@@ -77,6 +77,14 @@ def read_file():
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
+
+def update_balance():
+        with open("clients.csv", "w") as csv_file:
+            csv_writer = csv.DictWriter(file, fieldnames=["first_name", "last_name", "email", "balance"])
+            writer.writerow({"first": "first", "last": "last", "house": "house"})
+            for line in output:
+                writer.writerow({"first": line["first"], "last": line["last"], "house": line["house"]})
+
 
 # Display options of what the client can do
 def options():
@@ -121,6 +129,7 @@ def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
+
 
 def print_statement():
 
