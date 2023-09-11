@@ -9,7 +9,7 @@ def main():
     test_get_balance()
 
 def test_email():
-    assert get_email" ==
+    assert get_email("harry.potter@hogwarts.com") == "harry.potter@hogwarts.com"
 
 def test_get_id():
     assert get_id(2) == 2
