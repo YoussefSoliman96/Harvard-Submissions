@@ -59,8 +59,11 @@ def main():
     if client_choice == "Withdraw":
         client.withdraw(cash)
 
-    print(client.id)
+    if client_choice == "Print_statement":
+        print_statement(id, first, last, email, balance)
+
     update_balance(int(client.id), client.balance)
+
 
 # Read the file containing clients' data
 def read_file():
@@ -139,14 +142,12 @@ def get_date():
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print("date and time =", dt_string)
 
-def print_statement():
-    data = [["Mavs", 99],
-        ["Suns", 91],
-        ["Spurs", 94],
-        ["Nets", 88]]
+def print_statement(id, first, last, email, balance):
+    data = [id, first, last, email, balance]
+
 
     #define header names
-    col_names = ["Team", "Points"]
+    col_names = ["Id", "First Name", "Last Name", "Email", "Current Balance"]
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
