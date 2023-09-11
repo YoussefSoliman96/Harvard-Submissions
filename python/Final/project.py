@@ -83,7 +83,7 @@ def update_balance(id, new_balance):
     df = pd.read_csv("clients.csv", index_col="id")
 
     # updating a cell based on the index (ID) and column.
-    df.at[id, 'balance'] =  new_balance
+    df.at[id, 'balance'] =  int(new_balance)
 
     # Reset inde to 0,1,2,...
     df = df.reset_index()
