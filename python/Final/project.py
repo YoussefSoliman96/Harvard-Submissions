@@ -80,8 +80,8 @@ def main():
 
 def more_inputs(first, last, email, balance, current_date):
     while True:
+        again = input("Do you want to do anything else? (y/n)")
         try:
-            again = input("Do you want to do anything else? (y/n)")
             if again == "y":
                 client_choice = options()
                 if client_choice == "Print statement":
@@ -91,8 +91,8 @@ def more_inputs(first, last, email, balance, current_date):
                     return cash
             elif again == "n":
                 sys.exit("Thank you")
-        except ValueError:
-            print("Invalid input")
+        except EOFError:
+            sys.exit("Invalid input")
 
 # Read the file containing clients' data
 def read_file():
