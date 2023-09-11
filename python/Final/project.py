@@ -45,10 +45,10 @@ def main():
             client.balance = new_balance
 
 
-        def withdraw(self, cash: float) -> None:
+        def withdraw(self, cash: float):
             while True:
                 try:
-                    if float(cash) > float(self._balance):
+                    if cash > float(self._balance:
                         raise ValueError("Unavailable balance")
                     else:
                         self._balance = float(self._balance) - float(cash)
