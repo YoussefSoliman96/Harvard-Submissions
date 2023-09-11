@@ -9,8 +9,7 @@ def main():
 
 
 def test_options():
-    choice = "Deposit"
-    assert options() == "Deposit"
+    assert options() == True
 """
 def test_get_data()
     assert
