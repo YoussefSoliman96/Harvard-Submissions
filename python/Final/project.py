@@ -18,8 +18,10 @@ def main():
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
     # The upcoming operation depending on what the user chose
-    cash = operation(client_choice)
-    if 
+    if client_choice == "Print statement":
+        print_statement()
+    else:
+        cash = operation(client_choice)
 
 
     class Client:
@@ -126,7 +128,6 @@ def get_data(client_data):
             sys.exit("User input invalid")
 
 def operation(choice):
-    if choice == "Deposit" or choice == "Withdraw":
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
