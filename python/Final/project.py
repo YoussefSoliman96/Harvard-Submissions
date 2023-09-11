@@ -31,13 +31,13 @@ def main():
             return amount
 
         def deposit(self, cash):
-            self.balance += int(cash)
+            int(self.balance) += int(cash)
             print(self.balance)
         def withdraw(self, cash):
             if cash > self.balance:
                 raise ValueError("Unavailable balance")
             else:
-                self.balance -= int(cash)
+                int(self.balance) -= int(cash)
                 print(self.balance)
 
 
