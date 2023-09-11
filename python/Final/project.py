@@ -152,24 +152,3 @@ def print_statement(id, first, last, email, balance, date):
 
 if __name__ == "__main__":
     main()
-
-
-
-"""
-
-
-
-
-
-
-
-
-
-
-def withdraw():
-
-
-
-def calculate_balance():
-
-"""
