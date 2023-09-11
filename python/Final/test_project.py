@@ -1,15 +1,16 @@
-from project import operation
+from project import get_data
 import pytest
 
 
 def main():
-    test_operation()
+    test_get_data()
 
 
 
 
-def test_operation():
-    assert operation("Deposit") == input("How much cash do you want to Deposit? ")
+def test_get_data(client_data):
+    with pytest.raises(IndexError):
+        get_data(client_data)
 
 
 
