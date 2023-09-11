@@ -22,10 +22,10 @@ def main():
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
         print_statement(id, first, last, email, (balance + "💲"), current_date)
+        more_inputs(first, last, email, balance, current_date)
     else:
         cash = operation(client_choice)
-
-    more_inputs(first, last, email, balance, current_date)
+        more_inputs(first, last, email, balance, current_date)
 
 
 
@@ -78,20 +78,16 @@ def main():
 
 def more_inputs(first, last, email, balance, current_date):
     while True:
-        try:
-            again = input("Do you want to do anything else? (y/n)")
-            if again == "y":
-                client_choice = options()
-                if client_choice == "Print statement":
-                    print_statement(id, first, last, email, (balance + "💲"), current_date)
-                    return True
-                else:
-                    cash = operation(client_choice)
-                    return True
-            elif again == "n":
-                sys.exit("Thank you")
-        except EOFError:
-            sys.exit("Invalid input")
+        again = input("Do you want to do anything else? (y/n)")
+        if again == "y":
+            client_choice = options()
+            if client_choice == "Print statement":
+                print_statement(id, first, last, email, (balance + "💲"), current_date)
+            else:
+                cash = operation(client_choice)
+                return cash
+        elif again == "n":
+            sys.exit("Thank you")
 
 # Read the file containing clients' data
 def read_file():
