@@ -11,7 +11,7 @@ def main():
     client_data = get_data(clients_data)
     # Get the clients' names
 
-    print(clients_data)
+    print(clients_data.get('first_name'))
     # Get the requested client's balance
     client_balance = (client_data["balance"])
     print(client_balance)
