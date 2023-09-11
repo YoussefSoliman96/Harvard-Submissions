@@ -14,6 +14,8 @@ def main():
     last = (client_data["last_name"])
     email = (client_data["email"])
     balance = (client_data["balance"])
+    # Display the list of options to the current client
+    options()
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -56,16 +58,18 @@ def read_file():
 
 # Display options of what the client can do
 def options():
-    print("Please choose:")
-    for idx, element in enumerate(options):
+    choices = ["Deposit", "Withdraw", "Print statement"]
+    print("What do you want to do:")
+    for idx, element in enumerate(choices):
         print("{}) {}".format(idx+1,element))
-    i = input("Enter number: ")
-    try:
-        if 0 < int(i) <= len(options):
-            return int(i)
-    except:
-        pass
-    return None
+    while True:
+        i = input("Enter number: ")
+        try:
+            if 0 < int(i) <= len(choices):
+                return int(i)
+        except ValueError:
+            pass
+
 
 # Get the a certain client's data
 def get_data(client_data):
