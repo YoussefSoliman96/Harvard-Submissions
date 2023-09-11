@@ -2,6 +2,7 @@ import csv
 import sys
 from datetime import datetime
 import pandas as pd
+from tabulate import tabulate
 
 
 def main():
@@ -139,8 +140,18 @@ def get_date():
     print("date and time =", dt_string)
 
 def print_statement():
+    data = [["Mavs", 99],
+        ["Suns", 91],
+        ["Spurs", 94],
+        ["Nets", 88]]
 
-    return 1
+    #define header names
+    col_names = ["Team", "Points"]
+
+    #display table
+    print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
+
+
 
 
 
