@@ -22,8 +22,11 @@ def main():
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
         print_statement(id, first, last, email, (balance + "💲"), current_date)
+        more_inputs()
     else:
         cash = operation(client_choice)
+        more_inputs()
+    def more_inputs():
         while True:
             again = input("Do you want to do anything else? (y/n)")
             try:
@@ -31,14 +34,14 @@ def main():
                     client_choice = options()
                     if client_choice == "Print statement":
                         print_statement(id, first, last, email, (balance + "💲"), current_date)
-                        return True
+
                     else:
                         cash = operation(client_choice)
                 elif again == "n":
                     sys.exit("Thank you")
             except ValueError:
                 print("Invalid input")
-                pass
+                return True
 
 
     class Client:
@@ -169,7 +172,6 @@ def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
-
 
 
 if __name__ == "__main__":
