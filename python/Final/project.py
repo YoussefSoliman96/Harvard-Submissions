@@ -59,6 +59,8 @@ def get_data(client_data):
             for name in client_data:
                 if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
                     return(name)
+                else:
+                    print(")
         except EOFError:
             sys.exit("User input invalid")
 
