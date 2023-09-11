@@ -2,7 +2,7 @@ import csv
 import sys
 from datetime import datetime
 import pandas as pd
-import tabulate
+from tabulate import tabulate
 
 
 def main():
@@ -62,7 +62,7 @@ def main():
     if client_choice == "Withdraw":
         client.withdraw(cash)
 
-    update_balance(int(client.id), client.balance)
+    update_balance(int(client.id), client._balance)
 
 # Read the file containing clients' data
 def read_file():
