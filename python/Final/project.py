@@ -43,10 +43,10 @@ def main():
 
     client = Client(first, last, email, balance)
     if client_choice == "Deposit":
-        Client.deposit(cash)
+        client.deposit(cash)
 
     if client_choice == "Withdraw":
-        Client.withdraw(cash)
+        client.withdraw(cash)
 
 
 
