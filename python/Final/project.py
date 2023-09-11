@@ -31,15 +31,15 @@ def main():
             return amount
 
         def deposit(self, cash: int) -> None:
-            self._balance = add(self._balance, cash)
-            print(self._balance)
+            self._balance = int(self._balance) + int(cash)
+            print(f"New blanace = {self._balance}")
 
         def withdraw(self, cash: int) -> None:
-            if cash > self.balance:
+            if cash > self._balance:
                 raise ValueError("Unavailable balance")
             else:
-                self._balance -= cash
-                print(self._balance)
+                self._balance = int(self._balance) - int(cash)
+                print(f"New blanace = {self._balance}")
 
 
     client = Client(first, last, email, balance)
