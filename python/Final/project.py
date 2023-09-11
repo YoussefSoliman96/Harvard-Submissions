@@ -2,7 +2,6 @@ import csv
 import sys
 from datetime import datetime
 import pandas as pd
-from tabulate import tabulate
 
 
 def main():
@@ -20,6 +19,7 @@ def main():
     client_choice = options()
     # The upcoming operation depending on what the user chose
     cash = operation(client_choice)
+    if 
 
 
     class Client:
@@ -54,15 +54,12 @@ def main():
     client = Client(id, first, last, email, balance)
 
     if client_choice == "Deposit":
-        cash = operation(client_choice)
         client.deposit(cash)
 
     if client_choice == "Withdraw":
-        cash = operation(client_choice)
         client.withdraw(cash)
 
     update_balance(int(client.id), client.balance)
-
 
 # Read the file containing clients' data
 def read_file():
@@ -129,9 +126,7 @@ def get_data(client_data):
             sys.exit("User input invalid")
 
 def operation(choice):
-    if choice == "Print statement":
-        pass
-    else:
+    if choice == "Deposit" or choice == "Withdraw":
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
@@ -141,7 +136,9 @@ def get_date():
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print("date and time =", dt_string)
 
-def print_statement(id, first, last, email, balance):
+def print_statement():
+    """
+    def print_statement(id, first, last, email, balance):
     data = [id, first, last, email, balance]
 
 
@@ -150,6 +147,9 @@ def print_statement(id, first, last, email, balance):
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
+"""
+
+    return 1
 
 
 
