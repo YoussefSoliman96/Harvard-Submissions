@@ -1,16 +1,15 @@
-from project import get_data
+from project import options
 import pytest
 
 
 def main():
-    test_get_data()
+    test_options()
 
 
 
 
-def test_get_data():
-    with pytest.raises(IndexError):
-        get_data({'id': '0', 'first_name': 'Harry', 'last_name': 'Potter', 'email': 'harry.potter@hogwarts.com', 'balance': '9500'})
+def test_options():
+    assert options() == "Deposit"
 
 
 
