@@ -16,11 +16,12 @@ def main():
     last = (client_data["last_name"])
     email = (client_data["email"])
     balance = (client_data["balance"])
+    current_date = get_date()
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
     # The upcoming operation depending on what the user chose
     if client_choice == "Print statement":
-        print_statement(id, first, last, email, balance)
+        print_statement(id, first, last, email, balance, current_date)
     else:
         cash = operation(client_choice)
 
@@ -136,13 +137,13 @@ def operation(choice):
 def get_date():
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("date and time =", dt_string)
+    return(dt_string)
 
 
-def print_statement(id, first, last, email, balance):
-    data = [[id, first, last, email, balance]]
+def print_statement(id, first, last, email, balance, date):
+    data = [[id, first, last, email, balance, date]]
     #define header names
-    col_names = ["Id", "First Name", "Last Name", "Email", "Current Balance"]
+    col_names = ["Id", "First Name", "Last Name", "Email", "Current Balance", "Date"]
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
