@@ -35,7 +35,7 @@ def main():
             print(f"New blanace = {self._balance}")
 
         def withdraw(self, cash: int) -> None:
-            if cash > self._balance:
+            if int(cash) > int(self._balance):
                 raise ValueError("Unavailable balance")
             else:
                 self._balance = int(self._balance) - int(cash)
