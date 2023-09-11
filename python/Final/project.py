@@ -76,18 +76,6 @@ def main():
 
     update_balance(int(client.id), client._balance)
 
-def more_inputs(first, last, email, balance, current_date):
-    while True:
-        again = input("Do you want to do anything else? (y/n)")
-        if again == "y":
-            client_choice = options()
-            if client_choice == "Print statement":
-                print_statement(id, first, last, email, (balance + "💲"), current_date)
-            else:
-                cash = operation(client_choice)
-        elif again == "n":
-            sys.exit("Thank you")
-
 # Read the file containing clients' data
 def read_file():
     clients = []
@@ -170,6 +158,18 @@ def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
+# Loop forever and ask for user's input as long as user inputs "y"
+def more_inputs(first, last, email, balance, current_date):
+    while True:
+        again = input("Do you want to do anything else? (y/n)")
+        if again == "y":
+            client_choice = options()
+            if client_choice == "Print statement":
+                print_statement(id, first, last, email, (balance + "💲"), current_date)
+            else:
+                cash = operation(client_choice)
+        elif again == "n":
+            sys.exit("Thank you")
 
 
 if __name__ == "__main__":
