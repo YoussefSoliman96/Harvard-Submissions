@@ -29,6 +29,9 @@ def main():
         def deposit(self, cash):
             self._balance += cash
 
+        def withdraw(self, cash):
+            self._balance -= cash
+
 
     client = Client(first, last, email, balance)
 
