@@ -59,10 +59,11 @@ def get_data(client_data):
             for name in client_data:
                 print("Please type your full name: ")
                 for i in full_name[i]:
-                    if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
-                        return(name)
+                    if i < len(name):
+                        print("Please complete the full name")
                     else:
-                        print("Missing last name")
+                        if (name["first_name"] == full_name[0]) & (name["last_name"] == full_name[1]):
+                          return(name)
         except EOFError:
             sys.exit("User input invalid")
 
