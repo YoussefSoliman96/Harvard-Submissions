@@ -19,11 +19,7 @@ def main():
     current_date = get_date()
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
-    # The upcoming operation depending on what the user chose
-    if client_choice == "Print statement":
-        print_statement(id, first, last, email, client, current_date)
-    else:
-        cash = operation(client_choice)
+
 
 
     class Client:
@@ -67,6 +63,11 @@ def main():
         client.withdraw(cash)
 
     update_balance(int(client.id), client._balance)
+    # The upcoming operation depending on what the user chose
+    if client_choice == "Print statement":
+        print_statement(id, first, last, email, client, current_date)
+    else:
+        cash = operation(client_choice)
 
 # Read the file containing clients' data
 def read_file():
