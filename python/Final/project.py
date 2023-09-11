@@ -10,9 +10,8 @@ def main():
     clients_data = read_file()
     # Get the requested client's data
     client_data = get_data(clients_data)
-    print(client_data)
     # Get the requested client's first name, last name, email and balance
-    id = (client_data["id"])
+    id = get_id(client_data["id"])
     first = (client_data["first_name"])
     last = (client_data["last_name"])
     email = get_email(client_data["email"])
@@ -107,20 +106,22 @@ def get_data(client_data):
         except EOFError:
             sys.exit("User input invalid")
 
+def get_id(id):
+    new_id = id
+    return new_id
 
-def update_balance(id, new_balance):
-    # Reading the CSV file and set the index to the "ID" column
-    df = pd.read_csv("clients.csv", index_col="id")
+def get_email(email):
+    Nemail = email
+    return Nemail
 
-    # updating a cell based on the index (ID) and column.
-    df.at[id, 'balance'] =  int(new_balance)
+def get_balance(balance):
+    Nbalance = balance
+    return Nbalance
 
-    # Reset inde to 0,1,2,...
-    df = df.reset_index()
-
-    # writing the changes into the file.
-    df.to_csv("clients.csv", index=False)
-
+def get_date():
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    return(dt_string)
 
 # Display options of what the client can do
 def options():
@@ -136,17 +137,11 @@ def options():
         except ValueError:
             pass
 
-
-
 def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
         return cash
 
-def get_date():
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    return(dt_string)
 
 
 def print_statement(id, first, last, email, balance, date):
@@ -157,13 +152,18 @@ def print_statement(id, first, last, email, balance, date):
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
 
-def get_email(email):
-    Nemail = email
-    return Nemail
+def update_balance(id, new_balance):
+    # Reading the CSV file and set the index to the "ID" column
+    df = pd.read_csv("clients.csv", index_col="id")
 
-def get_balance(balance):
-    Nbalance = balance
-    return Nbalance
+    # updating a cell based on the index (ID) and column.
+    df.at[id, 'balance'] =  int(new_balance)
+
+    # Reset inde to 0,1,2,...
+    df = df.reset_index()
+
+    # writing the changes into the file.
+    df.to_csv("clients.csv", index=False)
 
 if __name__ == "__main__":
     main()
