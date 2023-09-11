@@ -75,17 +75,9 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File not found")
 
-def update_balance(id, new_balance):
-    # reading the csv file
-    df = pd.read_csv("clients.csv")
+def update_balance(client,balance, new_balance):
+    
 
-    # updating the column value/data
-    df.loc[id, 'Name'] = new_balance
-
-    # writing into the file
-    df.to_csv("clients.csv", index=False)
-
-    print(df)
 
 
 # Display options of what the client can do
