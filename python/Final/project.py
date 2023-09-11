@@ -31,7 +31,7 @@ def main():
             return amount
 
         def deposit(self, cash: int) -> None:
-            self._balance += cash
+            self._balance = add(self._balance, cash)
             print(self._balance)
 
         def withdraw(self, cash: int) -> None:
