@@ -8,9 +8,9 @@ def main():
 
 
 
-def test_get_data(client_data):
+def test_get_data():
     with pytest.raises(IndexError):
-        get_data(client_data)
+        get_data({'id': '0', 'first_name': 'Harry', 'last_name': 'Potter', 'email': 'harry.potter@hogwarts.com', 'balance': '9500'})
 
 
 
