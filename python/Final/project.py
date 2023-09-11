@@ -30,7 +30,9 @@ def main():
         def first_name(self):
             return "{}".format(self.first_name)
 
-    print(Client.first_name(first))
+    client = data
+
+    print(Client.first_name(client))
 
 
 
