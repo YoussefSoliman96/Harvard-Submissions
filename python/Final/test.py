@@ -28,13 +28,6 @@ class Client:
         @property
         def size(self):
             return self._balance
-
-        client = Client(id, first, last, email, balance)
-
-        if client_choice == "Deposit":
-            client.deposit(cash)
-
-        if client_choice == "Withdraw":
-            client.withdraw(cash)
-
-        update_balance(int(client.id), client._balance)
+client = Client()
+client.deposit(100)
+client.withdraw(50)
