@@ -27,6 +27,8 @@ def main():
             amount = self.balance + "💲"
             return amount
 
+        def balance():
+
     print(Client.balance())
 
 
