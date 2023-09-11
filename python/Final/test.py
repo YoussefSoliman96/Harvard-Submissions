@@ -1,10 +1,30 @@
-from datetime import datetime
-import sys
-def main():
-    
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("date and time =", dt_string)
+class Client:
+        def __init__(self, id, first_name, last_name, email, balance: float) -> None:
+            self.id = id
+            self.first_name = first_name
+            self.last_name = last_name
+            self.email = email
+            self._balance: int = balance
 
-if __name__ == "__main__":
-    main()
+        def __str__(self):
+            amount = self.balance + "💲"
+            return amount
+
+        def deposit(self, cash: float) -> None:
+            self._balance = float(self._balance) + float(cash)
+            new_balance = self._balance
+            print(f"New blanace = {new_balance}")
+            client.balance = new_balance
+
+
+        def withdraw(self, cash: float) -> None:
+            if float(cash) > float(self._balance):
+                raise ValueError("Unavailable balance")
+            else:
+                self._balance = float(self._balance) - float(cash)
+                new_balance = self._balance
+                print(f"New blanace = {new_balance}")
+                client.balance = new_balance
+        @property
+        def size(self):
+            return self._balance
