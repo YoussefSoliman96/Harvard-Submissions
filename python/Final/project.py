@@ -173,6 +173,5 @@ def more_inputs(first, last, email, balance, current_date):
         elif again == "n":
             sys.exit("Thank you")
 
-
 if __name__ == "__main__":
     main()
