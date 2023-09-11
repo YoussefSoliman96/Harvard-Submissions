@@ -46,13 +46,17 @@ def main():
 
 
         def withdraw(self, cash: float) -> None:
-            if float(cash) > float(self._balance):
-                raise ValueError("Unavailable balance")
-            else:
-                self._balance = float(self._balance) - float(cash)
-                new_balance = self._balance
-                print(f"New blanace = {new_balance}")
-                client.balance = new_balance
+            while True:
+                try:
+                    if float(cash) > float(self._balance):
+                        raise ValueError("Unavailable balance")
+                    else:
+                        self._balance = float(self._balance) - float(cash)
+                        new_balance = self._balance
+                        print(f"New blanace = {new_balance}")
+                        client.balance = new_balance
+                except ValueError:
+                    print("Unavailable Balance")
         @property
         def size(self):
             return self._balance
