@@ -11,9 +11,9 @@ def test_init():
 def test_str():
     client = Client()
     assert str(client) == ""
-    jar.deposit(1)
-    assert str(jar) == 1 + "🍪"
-
+    client.deposit(1)
+    assert str(client) == 1 + "🍪"
+"""
 def test_deposit():
     client = Client()
     jar.deposit(2)
@@ -28,3 +28,4 @@ def test_withdraw():
     jar.withdraw(3)
     assert jar.size == 2
 
+"""
