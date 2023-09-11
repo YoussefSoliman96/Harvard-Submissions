@@ -9,7 +9,7 @@ def main():
 
 
 def test_operation():
-    assert operation("Deposit") == cash
+    assert operation("Deposit") == input(f"How much cash do you want to Deposit? ")
 
 
 
