@@ -76,16 +76,17 @@ def read_file():
         sys.exit("File not found")
 
 def update_balance(id, new_balance):
-    # reading the csv file
-    df = pd.read_csv("clients.csv")
+    # Reading the CSV file and set the index to the "ID" column
+    df = pd.read_csv("clients.csv", index_col="id")
 
-    # updating the column value/data
-    df._set_value(id, "balance", new_balance)
+    # updating a cell based on the index (ID) and column.
+    df.at[id, 'balance'] =  new_balance
 
-    # writing into the file
+    # Reset inde to 0,1,2,...
+    df = df.reset_index()
+
+    # writing the changes into the file.
     df.to_csv("clients.csv", index=False)
-
-    print(df)
 
 
 # Display options of what the client can do
