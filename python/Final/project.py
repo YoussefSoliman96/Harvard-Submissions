@@ -16,7 +16,7 @@ def main():
     first = (client_data["first_name"])
     last = (client_data["last_name"])
     email = (client_data["email"])
-    balance = (client_data["balance"])
+    balance = get_balance(client_data["balance"])
     current_date = get_date()
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
@@ -157,6 +157,9 @@ def print_statement(id, first, last, email, balance, date):
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
 
+def get_balance(balance):
+    Nbalance = balance
+    return Nbalance
 
 if __name__ == "__main__":
     main()

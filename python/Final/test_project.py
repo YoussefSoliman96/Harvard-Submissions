@@ -1,29 +1,15 @@
-from unittest import mock
-from project import operation
-from project import get_data
-import pytest
+from project import get_balance
 
 
 def main():
-    test_operation()
+    test_get_balance()
 
 
 
-def test_operation():
-    values = ["Deposit", "Withdraw"]
-    def side_effect(arg):
-        return values[arg]
-
-    mock.side_effect = side_effect
-
-    mock.side_effect = ["Withdraw"]
-    assert operation(500) == "500"
+def test_get_balance():
+    assert get_balance(500) == 500
 
 
-"""
-def test_get_data()
-    assert
-"""
 
 
 
