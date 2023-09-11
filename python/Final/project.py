@@ -167,6 +167,7 @@ def more_inputs(first, last, email, balance, current_date):
             if client_choice == "Print statement":
                 print_statement(id, first, last, email, (balance + "💲"), current_date)
             else:
+                print(f"Balance: {balance}")
                 cash = operation(client_choice)
         elif again == "n":
             sys.exit("Thank you")
