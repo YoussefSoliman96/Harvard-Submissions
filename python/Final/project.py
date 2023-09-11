@@ -46,6 +46,9 @@ def main():
                 print(f"New blanace = {new_balance}")
                 client.balance = new_balance
 
+        @property
+        def balance(self):
+            return self._balance
 
     client = Client(first, last, email, balance)
 
@@ -54,7 +57,7 @@ def main():
 
     if client_choice == "Withdraw":
         client.withdraw(cash)
-    
+
     print(client.balance)
 
 
