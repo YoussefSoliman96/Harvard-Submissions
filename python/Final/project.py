@@ -15,8 +15,8 @@ def main():
     email = (client_data["email"])
     balance = (client_data["balance"])
     # Display the list of options to the current client
-    options()
-    
+    print(options())
+
 
     class Client:
         def __init__(self, first_name, last_name, email, balance):
@@ -67,10 +67,9 @@ def options():
         i = input("Enter number: ")
         try:
             if 0 < int(i) <= len(choices):
-                return int(i)
+                return choices[i]
         except ValueError:
             pass
-        return choices[i]
 
 
 # Get the a certain client's data
