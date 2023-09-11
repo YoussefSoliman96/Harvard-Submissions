@@ -24,7 +24,9 @@ def main():
         print_statement(id, first, last, email, (balance + "💲"), current_date)
     else:
         cash = operation(client_choice)
+
     more_inputs(first, last, email, balance, current_date)
+
 
 
 
@@ -77,20 +79,21 @@ def main():
     update_balance(int(client.id), client._balance)
 
 def more_inputs(first, last, email, balance, current_date):
-        while True:
-            try:
-                again = input("Do you want to do anything else? (y/n)")
-                if again == "y":
-                    client_choice = options()
-                    if client_choice == "Print statement":
-                        print_statement(id, first, last, email, (balance + "💲"), current_date)
-                    else:
-                        cash = operation(client_choice)
-                        return cash
-                elif again == "n":
-                    sys.exit("Thank you")
-            except ValueError:
-                print("Invalid input")
+    while True:
+        try:
+            again = input("Do you want to do anything else? (y/n)")
+            if again == "y":
+                client_choice = options()
+                if client_choice == "Print statement":
+                    print_statement(id, first, last, email, (balance + "💲"), current_date)
+                else:
+                    cash = operation(client_choice)
+                    return cash
+            elif again == "n":
+                sys.exit("Thank you")
+        except ValueError:
+            print("Invalid input")
+
 # Read the file containing clients' data
 def read_file():
     clients = []
