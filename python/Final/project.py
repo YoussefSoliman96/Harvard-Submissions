@@ -10,6 +10,7 @@ def main():
     # Get the requested client's data
     client_data = get_data(clients_data)
     # Get the requested client's first name, last name, email and balance
+    id = (client_data["id"])
     first = (client_data["first_name"])
     last = (client_data["last_name"])
     email = (client_data["email"])
@@ -21,7 +22,8 @@ def main():
 
 
     class Client:
-        def __init__(self, first_name, last_name, email, balance: int) -> None:
+        def __init__(self, id, first_name, last_name, email, balance: float) -> None:
+            self.id = id
             self.first_name = first_name
             self.last_name = last_name
             self.email = email
@@ -31,24 +33,24 @@ def main():
             amount = self.balance + "💲"
             return amount
 
-        def deposit(self, cash: int) -> None:
-            self._balance = int(self._balance) + int(cash)
+        def deposit(self, cash: float) -> None:
+            self._balance = float(self._balance) + float(cash)
             new_balance = self._balance
             print(f"New blanace = {new_balance}")
             client.balance = new_balance
 
 
-        def withdraw(self, cash: int) -> None:
-            if int(cash) > int(self._balance):
+        def withdraw(self, cash: float) -> None:
+            if float(cash) > float(self._balance):
                 raise ValueError("Unavailable balance")
             else:
-                self._balance = int(self._balance) - int(cash)
+                self._balance = float(self._balance) - float(cash)
                 new_balance = self._balance
                 print(f"New blanace = {new_balance}")
                 client.balance = new_balance
 
 
-    client = Client(first, last, email, balance)
+    client = Client(id, first, last, email, balance)
 
     if client_choice == "Deposit":
         client.deposit(cash)
@@ -57,7 +59,7 @@ def main():
         client.withdraw(cash)
 
     print(client.balance)
-    update_balance(balance, client.balance)
+    update_balance(client.id, client.balance)
 
 # Read the file containing clients' data
 def read_file():
@@ -68,17 +70,17 @@ def read_file():
             csv_reader = csv.DictReader(csv_file)
             # Loop through the file and append data to the clients stack
             for line in csv_reader:
-                clients.append({'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
+                clients.append({'id': line["id"],'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
         return clients
     except FileNotFoundError:
         sys.exit("File not found")
 
-def update_balance(balance, new_balance):
+def update_balance(id, new_balance):
     # reading the csv file
     df = pd.read_csv("clients.csv")
 
     # updating the column value/data
-    df['balance'] = df['balance'].replace({balance: new_balance})
+    df.loc[id, 'Name'] = new_balance
 
     # writing into the file
     df.to_csv("clients.csv", index=False)
