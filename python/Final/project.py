@@ -18,6 +18,7 @@ def main():
     balance = (client_data["balance"])
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
+    if client_choice
     # The upcoming operation depending on what the user chose
     cash = operation(client_choice)
 
@@ -58,9 +59,6 @@ def main():
 
     if client_choice == "Withdraw":
         client.withdraw(cash)
-
-    if client_choice == "Print_statement":
-        print_statement(id, first, last, email, balance)
 
     update_balance(int(client.id), client.balance)
 
@@ -129,9 +127,9 @@ def get_data(client_data):
         except EOFError:
             sys.exit("User input invalid")
 
-def operation(choice):
+def operation(choice, id, first, last, email, balance):
     if choice == "Print statement":
-        print_statement()
+        print_statement(id, first, last, email, balance)
     else:
         # Store the cash the user wants to deposit or withdraw into a variable
         cash = input(f"How much cash do you want to {choice}? ")
@@ -151,8 +149,6 @@ def print_statement(id, first, last, email, balance):
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
-
-
 
 
 
