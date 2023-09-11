@@ -140,7 +140,7 @@ def get_date():
 
 
 def print_statement(id, first, last, email, balance):
-    data = [id, first, last, email, balance]
+    data = [[id, first, last, email, balance]]
     #define header names
     col_names = ["Id", "First Name", "Last Name", "Email", "Current Balance"]
 
