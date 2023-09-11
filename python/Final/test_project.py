@@ -1,4 +1,4 @@
-from project import Client
+from project import deposit
 
 
 def test_init():
