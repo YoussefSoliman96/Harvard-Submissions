@@ -152,8 +152,8 @@ def print_statement(id, first, last, email, balance, date):
 
 def operation(choice):
         # Store the cash the user wants to deposit or withdraw into a variable
-        cash = input(f"How much cash do you want to {choice}? ")
-        return cash
+        money = input(f"How much cash do you want to {choice}? ")
+        return money
 
 
 
