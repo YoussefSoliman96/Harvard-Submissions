@@ -54,6 +54,9 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File not found")
 
+# Display options of what the client can do
+def options():
+    print("What do you want to do?")
 
 # Get the a certain client's data
 def get_data(client_data):
