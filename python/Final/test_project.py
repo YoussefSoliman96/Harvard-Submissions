@@ -1,15 +1,15 @@
-from project import get_data
+from project import operation
 import pytest
 
 
 def main():
-    test_get_data()
+    test_operation()
 
 
 
 
-def test_get_data():
-    assert get_data("Harry Potter") == "{'id': '0', 'first_name': 'Harry', 'last_name': 'Potter', 'email': 'harry.potter@hogwarts.com', 'balance': '9500'}"
+def test_operation():
+    assert operation("Deposit") == cash
 
 
 
