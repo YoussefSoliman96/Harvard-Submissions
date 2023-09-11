@@ -56,7 +56,7 @@ def read_file():
 
 # Display options of what the client can do
 def options():
-    print("What do you want to do?")
+    input("What do you want to do?")
 
 # Get the a certain client's data
 def get_data(client_data):
