@@ -107,10 +107,6 @@ def get_data(client_data):
         except EOFError:
             sys.exit("User input invalid")
 
-def get_date():
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    return(dt_string)
 
 def update_balance(id, new_balance):
     # Reading the CSV file and set the index to the "ID" column
@@ -141,6 +137,18 @@ def options():
             pass
 
 
+
+def operation(choice):
+        # Store the cash the user wants to deposit or withdraw into a variable
+        cash = input(f"How much cash do you want to {choice}? ")
+        return cash
+
+def get_date():
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    return(dt_string)
+
+
 def print_statement(id, first, last, email, balance, date):
     data = [[id, first, last, email, balance, date]]
     #define header names
@@ -148,12 +156,6 @@ def print_statement(id, first, last, email, balance, date):
 
     #display table
     print(tabulate(data, headers=col_names, tablefmt="fancy_grid", showindex="always"))
-
-
-def operation(choice):
-        # Store the cash the user wants to deposit or withdraw into a variable
-        money = input(f"How much cash do you want to {choice}? ")
-        return money
 
 
 
