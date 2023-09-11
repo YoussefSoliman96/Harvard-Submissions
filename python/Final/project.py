@@ -78,8 +78,8 @@ def main():
 
 def more_inputs(first, last, email, balance, current_date):
     while True:
-        again = input("Do you want to do anything else? (y/n)")
         try:
+            again = input("Do you want to do anything else? (y/n)")
             if again == "y":
                 client_choice = options()
                 if client_choice == "Print statement":
