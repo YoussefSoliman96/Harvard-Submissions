@@ -46,10 +46,9 @@ def main():
 
 
         def withdraw(self, cash: float) -> None:
-            while True:
                 try:
                     if float(cash) > float(self._balance):
-                        sys.exit(cash)
+                        raise ValueError("Unavailable balance")
                     else:
                         self._balance = float(self._balance) - float(cash)
                         new_balance = self._balance
