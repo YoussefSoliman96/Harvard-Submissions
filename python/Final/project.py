@@ -58,8 +58,8 @@ def main():
     if client_choice == "Withdraw":
         client.withdraw(cash)
 
-    print(client.balance)
-    update_balance(client.id, client.balance)
+    print(client.id)
+    update_balance(int(client.id), client.balance)
 
 # Read the file containing clients' data
 def read_file():
