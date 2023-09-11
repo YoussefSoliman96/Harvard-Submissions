@@ -9,7 +9,9 @@ def main():
 
 
 def test_options():
-    assert options() == True
+    Options = options()
+    Options.get = Mock(return_value = 1)
+    assert options() == "Deposit"
 """
 def test_get_data()
     assert
