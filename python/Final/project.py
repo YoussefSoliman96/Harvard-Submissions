@@ -40,6 +40,7 @@ def main():
                     sys.exit("Thank you")
             except ValueError:
                 print("Invalid input")
+        return True
 
 
 
