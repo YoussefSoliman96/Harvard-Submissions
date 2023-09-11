@@ -1,6 +1,6 @@
 from project import Client
 
-def main():
+
 def test_init():
     client = Client()
     assert client.balance == 500
@@ -9,26 +9,22 @@ def test_init():
 
 
 def test_str():
-    jar = Jar()
-    assert str(jar) == ""
+    client = Client()
+    assert str(client) == ""
     jar.deposit(1)
-    assert str(jar) == "🍪"
+    assert str(jar) == 1 + "🍪"
 
 def test_deposit():
-    jar = Jar()
+    client = Client()
     jar.deposit(2)
     assert jar.size == 2
     jar.deposit(3)
     assert jar.size == 5
 
 def test_withdraw():
-    jar = Jar()
+    client = Client()
     jar.deposit(5)
     assert jar.size == 5
     jar.withdraw(3)
     assert jar.size == 2
 
-
-
-if __name__ == "__main__":
-    main()
