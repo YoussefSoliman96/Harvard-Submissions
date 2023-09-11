@@ -24,6 +24,7 @@ def main():
         print_statement(id, first, last, email, (balance + "💲"), current_date)
         more_inputs(first, last, email, balance, current_date)
     else:
+        print(f"Balance: {balance}")
         cash = operation(client_choice)
         more_inputs(first, last, email, balance, current_date)
 
