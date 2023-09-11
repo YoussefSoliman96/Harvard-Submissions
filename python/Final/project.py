@@ -12,6 +12,8 @@ def main():
     client_data = get_data(clients_data)
     # Get the requested client's balance
     client_balance = (client_data["balance"])
+    print(client_balance)
+    """
     class Client:
         def __init__(self, first_name, last_name, email, balance):
             self.first_name = first_name
@@ -22,7 +24,7 @@ def main():
         def __str__(self)
             amount = self.balance + " "
 
-
+"""
 
 # Read the file containing clients' data
 def read_file():
@@ -50,9 +52,10 @@ def get_data(client_data):
         try:
             # Take user's input of a certain client's name
             client_search = input("Client name: ")
+            print(client_search[0])
             # Loop through all the client names untill you find the client then return the data
             for name in client_data:
-                if name["first_name"] == client_search:
+                if name["first_name"] == client_search[0]:
                     return(name)
         except EOFError:
             sys.exit("User input invalid")
