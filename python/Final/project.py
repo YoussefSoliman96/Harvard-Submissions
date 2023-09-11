@@ -17,7 +17,7 @@ def main():
     # Display the list of options to the current client and store the client's choice
     client_choice = options()
     # The upcoming operation depending on what the user chose
-    operation(client_choice)
+    cash = operation(client_choice)
 
 
     class Client:
