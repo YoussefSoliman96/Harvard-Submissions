@@ -34,10 +34,14 @@ def main():
             self._balance += cash
 
         def withdraw(self, cash):
-            self._balance -= cash
+            if cash > self.balance:
+                raise ValueError("Unavailable balance")
+            else:
+                self._balance -= cash
 
 
     client = Client(first, last, email, balance)
+    
 
 
 
