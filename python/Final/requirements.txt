@@ -1,5 +1,4 @@
 pip-installable libraries:
 
-1- pandas
-2- tabulate
-3- datetime
+1- pandas (https://pandas.pydata.org/)
+2- tabulate (https://pypi.org/project/tabulate/)
