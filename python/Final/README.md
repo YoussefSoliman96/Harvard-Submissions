@@ -25,3 +25,6 @@ Install as you would normally install a normal module. For further information, 
 2- [https://pypi.org/project/tabulate/]
 
 ## Project
+# Functions included:
+- read_file(): Reads the file containing clients' data by opening the file containing clients' data then looping through the file and append data to the clients stack then returning it
+- get_data(client_data): Gets the a certain client's data by looping forever untill the user inputs a valid name or (Control-d), 
