@@ -159,7 +159,7 @@ def update_balance(id, new_balance):
     # updating a cell based on the index (ID) and column.
     df.at[id, 'balance'] =  int(new_balance)
 
-    # Reset inde to 0,1,2,...
+    # Reset index to 0,1,2,...
     df = df.reset_index()
 
     # writing the changes into the file.

@@ -25,6 +25,16 @@ Install as you would normally install a normal module. For further information, 
 2- [https://pypi.org/project/tabulate/]
 
 ## Project
-# Functions included:
+# Course
+CS50P, Harvard's CS50's Introduction to Programming with Python.
+# Purpose
+This project was made for the purpose of applying all the skills acquired from CS50P and putting them into practice.
+# Overview
+This project was developed using only python.
+# Important Functions:
 - read_file(): Reads the file containing clients' data by opening the file containing clients' data then looping through the file and append data to the clients stack then returning it
-- get_data(client_data): Gets the a certain client's data by looping forever untill the user inputs a valid name or (Control-d), 
+- get_data(client_data): Gets the a certain client's data by looping forever untill the user inputs a valid name or (Control-d), inside that loop, the program loops through all the client names untill you find the client then return the data
+- options(): Displays options of what the client can do and returns his choice
+- operation(choice): Decides which operation will be done on depending on the user's input
+- print_statement(id, first, last, email, balance, date): Display a table containing all the user's data, (id, first name, last name, email, balance, time when the statement was printed)
+- update_balance(id, new_balance): Reads the CSV file and set the index to the "ID" column, then updates a cell based on the index (ID) and column then writes the changes into the file.
