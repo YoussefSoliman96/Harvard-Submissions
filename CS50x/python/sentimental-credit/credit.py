@@ -13,18 +13,22 @@ def main():
 
 def validate(number):
     multiply = []
+    summed = 0
     every_other_number_reversed = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
 
-    multiplied = ([(lambda b: b * 2, range(len(every_other_number_reversed)))])
+    for j in range(len(every_other_number_reversed)):
+        every_other_number_reversed[j]
+        multiply.append(int((every_other_number_reversed[j])) * 2)
 
-    print(multiplied)
+    for k in len(multiply):
+        summed += multiply[k]
 
-
+    print(summed)
 
 
 if __name__ == "__main__":
     main()
 
     """
-    multiplied = (every_other_number_reversed[i] for i in (lambda a: int(a) * 2, range(len(ever_other_number_reversed))))
+
     """
