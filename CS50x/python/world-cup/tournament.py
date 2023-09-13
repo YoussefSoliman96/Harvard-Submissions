@@ -23,14 +23,13 @@ def main():
                 teams.append(line)
     except FileNotFoundError:
         print("File not found")
-    print(teams)
+    print(teams[0])
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    teams
 
-    print(game)
-    return game
+
+    return
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
