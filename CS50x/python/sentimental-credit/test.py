@@ -21,6 +21,7 @@ def validate(number):
         multiplied.append(int((even_positions[j])) * 2)
     print("Reversed", reversed)
     print("even positions", even_positions)
+    print("Multiplied", multiplied)
 
     # Modified multiplied with single digits only
     modified = []
