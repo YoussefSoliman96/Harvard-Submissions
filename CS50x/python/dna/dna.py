@@ -24,7 +24,7 @@ def main():
     # TODO: Read DNA sequence file into a variable
     dna_sequence = open(sys.argv[2], "r")
     # TODO: Find longest match of each STR in DNA sequence
-
+    for 
     # TODO: Check database for matching profiles
 
     return
