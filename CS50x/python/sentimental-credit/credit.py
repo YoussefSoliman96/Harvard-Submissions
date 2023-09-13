@@ -36,13 +36,20 @@ def validate(number):
 
     # Identifying every other number that was not multiplied and adding them together
     odd_positions = ([number[i] for i in filter(lambda a: a % 2 == 1, range(len(number)))])
-    odd_positions = [int(i)*2 for i in odd_positions]
+    odd_positions = [int(i) for i in odd_positions]
     odd_summed = sum(odd_positions)
 
     # Adding the 2 sums together
     sum_all = even_summed + odd_summed
 
-    print(odd_positions)
+    # Getting the last digit
+    number_of_digits = len(str(sum_all))
+    last_digit = sum_all[int(number_of_digits) - 1]
+
+    if last_digit == 0:
+        return "Valid"
+    else:
+        return "Invalid"
 
 
 
