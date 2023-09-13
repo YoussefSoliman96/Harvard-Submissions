@@ -13,8 +13,6 @@ def main():
                 elif (len(card_number)) == 16:
                     if card_number[0] == "4":
                         print("VISA")
-                    elif card_number[1] in range(1, 5, 1):
-                        print("MASTERCARD")
                     else:
                         print("INVALID")
                 else:
