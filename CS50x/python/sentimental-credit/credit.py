@@ -23,7 +23,7 @@ def validate(number):
     print(even_summed)
 
     odd_positions = ([number[i] for i in filter(lambda a: a % 2 == 1, range(len(number)))])
-    odd_positions = [int(i) for i in odd_positions]
+    odd_positions = [int(i)*2 for i in odd_positions]
     print(odd_positions)
 
 
