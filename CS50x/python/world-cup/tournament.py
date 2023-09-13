@@ -21,6 +21,9 @@ def main():
             csv_reader = csv.DictReader(csv_file)
             for line in csv_reader:
                 teams.append(line)
+    except FileNotFoundError:
+        print("File not found")
+    print(teams)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
