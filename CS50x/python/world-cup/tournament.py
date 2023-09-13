@@ -7,8 +7,8 @@ import random
 # Number of simluations to run
 N = 1000
 
-def main():
 
+def main():
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
@@ -33,7 +33,6 @@ def main():
             counts[winner] += 1
         else:
             counts[winner] = 1
-
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -68,8 +67,7 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     winner = teams[0]["team"]
-    return(winner)
-
+    return winner
 
 
 if __name__ == "__main__":
