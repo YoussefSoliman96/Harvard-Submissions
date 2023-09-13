@@ -33,11 +33,14 @@ def main():
     # TODO: Check database for matching profiles
     for name in database:
         match = 0
-        for key in list(database[0].keys) [1:]:
+        subsequences = list(database[0].keys)[1:]
+        for key in subsequences:
             if int(name[key]) == subsequence_count[key]:
                 match += 1
-            if match == len(list(database[0].keys) [1:]):
-    return
+            if match == len(subsequences):
+                print(name["name"])
+                return
+    print("Not Found")
 
 def read_database(n):
     database = []
