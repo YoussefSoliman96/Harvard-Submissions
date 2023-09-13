@@ -16,7 +16,10 @@ def validate(number):
     for i in range(len(number)):
         if i % 2 == 0:
             every_other_number.append(number[i])
-    
+    every_other_number_reversed = every_other_number [::-1]
+    for j in every_other_number_reversed:
+        every_other_number_reversed[j]
+        print (every_other_number_reversed[j])
 
 
 
