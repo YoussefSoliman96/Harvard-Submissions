@@ -4,6 +4,7 @@ def main():
         try:
             card_number = str(input("Number: "))
             validate(card_number)
+            break
         except ValueError:
             print("Invalid input")
 
@@ -15,7 +16,7 @@ def validate(number):
     for i in range(len(number)):
         if i % 2 == 0:
             every_other_number.append(number[i])
-    print (every_other_number)
+    
 
 
 
