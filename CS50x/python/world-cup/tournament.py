@@ -20,7 +20,9 @@ def main():
         with open(sys.argv[1], "r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
             for line in csv_reader:
+                line["rating"] = int(line["rating"])
                 teams.append(line)
+
     except FileNotFoundError:
         print("File not found")
 
@@ -36,8 +38,8 @@ def main():
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
-    rating1 = int(team1["rating"])
-    rating2 = int(team2["rating"])
+    rating1 = team1["rating"]
+    rating2 = team2["rating"]
     probability = 1 / (1 + 10 ** ((rating2 - rating1) / 600))
     return random.random() < probability
 
