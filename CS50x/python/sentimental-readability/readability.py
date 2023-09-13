@@ -7,6 +7,7 @@ def main():
     L = float(letters) / float(words) * 100
     S = float(words) / float(sentences) * 100
     index = 0.0588 * L - 0.296 * S - 15.8
+    print(index)
     get_grade(index)
 
 
