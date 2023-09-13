@@ -6,7 +6,7 @@ def main():
     sentences = get_sentences(text)
     L = letters / words * 100
     S = words / sentences * 100
-    index = int((0.0588 * L) - (0.296 * S) - (15.8))
+    index = round(0.0588 * L - 0.296 * S - 15.8)
     print(index)
     print(letters)
     print(words)
