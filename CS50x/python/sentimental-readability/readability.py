@@ -12,7 +12,9 @@ def main():
 
 
 
-
+def get_words(text):
+    count = 0
+    
 
 
 
