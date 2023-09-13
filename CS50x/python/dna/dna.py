@@ -31,7 +31,9 @@ def main():
     print(subsequence_count)
 
     # TODO: Check database for matching profiles
-
+    for name in database:
+        match = 0
+        for subsequence in in database
     return
 
 def read_database(n):
