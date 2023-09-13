@@ -7,17 +7,16 @@ def main():
     # TODO: Check for command-line usage
     while True:
         try:
-            for arg in range(len(sys.argv)):
-                if arg < 3:
-                    print("Too few command-line arguments")
-                elif arg > 3:
-                    print("Too many command-line arguments")
+            if len(sys.argv) < 3:
+                print("Too few command-line arguments")
+            elif len(sys.argv) > 3:
+                print("Too many command-line arguments")
+            else:
+                if not ".csv" in sys.argv[1] or not ".csv" in sys.argv[2]:
+                    print("Not a csv file")
                 else:
-                    if not ".csv" in sys.argv[1] or not ".csv" in sys.argv[2]:
-                        print("Not a csv file")
-                    else:
-                        break
-        except ValueError:
+                    break
+        except EOFError:
             print("Program stopped")
 
     # TODO: Read database file into a variable
