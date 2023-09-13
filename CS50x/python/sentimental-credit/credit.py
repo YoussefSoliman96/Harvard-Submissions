@@ -13,19 +13,18 @@ def main():
 
 def validate(number):
     multiplied = []
-    even_numbers = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
+    even_positions = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
 
-    for j in range(len(even_numbers)):
-        multiplied.append(int((even_numbers[j])) * 2)
+    for j in range(len(even_positions)):
+        multiplied.append(int((even_positions[j])) * 2)
 
 
     even_summed = sum(multiplied)
     print(even_summed)
 
-    odd_numbers = ([number[i] for i in filter(lambda a: a % 1 == 0, range(len(number)))])
+    odd_positions = ([number[i] for i in filter(lambda a: a % 2 == 1, range(len(number)))])
 
-    odd_summed = sum(odd_numbers)
-    print(odd_summed)
+    print(multiplied)
 
 
 
