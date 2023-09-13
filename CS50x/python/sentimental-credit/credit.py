@@ -1,7 +1,19 @@
+def main():
+
+    while True:
+        try:
+            card_number = int(input("Number: "))
+            validate(card_number)
+        except ValueError:
+            print("Invalid input")
 
 
-while True:
-    try:
-        card_number = int(input("Number: "))
-    except ValueError:
-        print("Invalid input")
+
+
+def validate():
+
+
+
+
+if __name__ == "__main__":
+    main()
