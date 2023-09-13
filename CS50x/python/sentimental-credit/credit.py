@@ -13,7 +13,7 @@ def main():
                         print("VISA")
                     else:
                         print("MASTERCARD")
-
+            break
         except ValueError:
             print("Invalid input")
 
