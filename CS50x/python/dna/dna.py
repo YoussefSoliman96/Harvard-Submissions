@@ -47,7 +47,7 @@ def read_sequence(n):
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as txt_file:
-            txt_reader = txt_reader.read()
+            txt_reader = txt_file.read()
             for line in txt_reader:
                 sequence.append(line)
         return sequence
