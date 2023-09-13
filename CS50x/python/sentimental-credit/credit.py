@@ -12,18 +12,17 @@ def main():
 
 
 def validate(number):
-    multiply = []
+    multiplied = []
     summed = 0
     every_other_number_reversed = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
 
     for j in range(len(every_other_number_reversed)):
-        multiply.append(int((every_other_number_reversed[j])) * 2)
+        multiplied.append(int((every_other_number_reversed[j])) * 2)
 
 
-    for k in str(len(multiply)):
-        summed += multiply[k]
+    for k in range(len(multiplied)):
+        summed += multiplied[int(k)]
 
-    print(summed)
 
 
 if __name__ == "__main__":
