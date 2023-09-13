@@ -20,7 +20,8 @@ def get_words(text):
             count += 1
     return count
 
-def get_letters()
+def get_letters(text):
+    
 
 
 if __name__ == "__main__":
