@@ -1,5 +1,7 @@
 
 
-
 while True:
-card_number = input("Number: ")
+    try:
+        card_number = int(input("Number: "))
+    except ValueError:
+        print("Invalid input")
