@@ -48,13 +48,10 @@ def read_database(n):
 
 
 def read_sequence(n):
-    sequence = []
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as txt_file:
-            txt_reader = txt_file.read()
-            for line in txt_reader:
-                sequence.append(line)
+            sequence = txt_file.read()
         return sequence
     except FileNotFoundError:
         sys.exit("File not found")
