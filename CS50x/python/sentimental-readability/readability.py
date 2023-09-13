@@ -4,9 +4,9 @@ def main():
     letters = get_letters(text)
     words = get_words(text)
     sentences = get_sentences(text)
-    L = float(letters) / float(words) * 100
-    S = float(words) / float(sentences) * 100
-    index = 0.0588 * L - 0.296 * S - 15.8
+    L = letters / words * 100
+    S = words / sentences * 100
+    index = int((0.0588 * L) - (0.296 * S) - (15.8))
     print(index)
     print(letters)
     print(words)
@@ -24,7 +24,7 @@ def get_letters(text):
     return count
 
 def get_words(text):
-    count = 0
+    count = 1
     for c in text:
         if c == " ":
             count += 1
