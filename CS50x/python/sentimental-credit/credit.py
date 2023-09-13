@@ -26,7 +26,7 @@ def main():
 
 def validate(number):
     multiplied = []
-    reversed = number [::-1]
+    reversed = number[::-1]
     # Identify every other number starting from index 0 then reversing them
     even_positions = [
         reversed[i] for i in filter(lambda a: a % 2 != 0, range(len(reversed)))
