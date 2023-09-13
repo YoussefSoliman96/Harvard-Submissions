@@ -20,21 +20,34 @@ def main():
             print("Program stopped")
 
     # TODO: Read database file into a variable
-    database = read_file(1)
+    database = read_database(1)
     # TODO: Read DNA sequence file into a variable
     dna_sequence = open(sys.argv[2], "r")
     # TODO: Find longest match of each STR in DNA sequence
-    for
+
     # TODO: Check database for matching profiles
 
     return
 
-def read_file(n):
+def read_database(n):
     database = []
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
+            for line in csv_reader:
+                database.append(line)
+        return database
+    except FileNotFoundError:
+        sys.exit("File not found")
+
+
+def read_sequence(n):
+    database = []
+    try:
+        # Open the file containing clients' data
+        with open(sys.argv[n], "r") as txt_file:
+            txt_reader = txt_reader.read()
             for line in csv_reader:
                 database.append({'id': line["id"],'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
         return database
