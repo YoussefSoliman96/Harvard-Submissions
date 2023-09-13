@@ -3,7 +3,7 @@ def main():
     while True:
         try:
             card_number = str(input("Number: "))
-            validate(card_number)
+            print(validate(card_number))
             break
         except ValueError:
             print("Invalid input")
@@ -43,9 +43,10 @@ def validate(number):
     sum_all = even_summed + odd_summed
 
     # Getting the last digit
-    sum_all = [int(i) for i in sum_all]
-    last_digit = sum_all[int(number_of_digits) - 1]
+    sum_all = [int(i) for i in str(sum_all)]
+    last_digit = sum_all[-1]
 
+    # Return Valid if last digit is "0", otherwise, return Invalid
     if last_digit == 0:
         return "Valid"
     else:
