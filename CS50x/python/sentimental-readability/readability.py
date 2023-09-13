@@ -5,7 +5,7 @@ def main():
     words = get_words(text)
     sentences = get_sentences(text)
     L = letters / words * 100
-    S = words / sentences * 100
+    S = sentences / words * 100
     index = round(0.0588 * L - 0.296 * S - 15.8)
     print(index)
     print(L)
@@ -33,7 +33,7 @@ def get_words(text):
 def get_sentences(text):
     count = 0
     for c in text:
-        if c == "," or c == "." or c == "?":
+        if c == "!" or c == "." or c == "?":
             count += 1
     return count
 
