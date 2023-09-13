@@ -31,7 +31,6 @@ def main():
             else:
                 modified.append(multiplied[i])
 
-
         # Adding the numbers in the multiplied list together
         even_summed = sum(modified)
 
