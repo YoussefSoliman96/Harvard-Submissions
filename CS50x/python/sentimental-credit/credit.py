@@ -17,11 +17,11 @@ def validate(number):
     every_other_number_reversed = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
 
     for j in range(len(every_other_number_reversed)):
-        every_other_number_reversed[j]
         multiply.append(int((every_other_number_reversed[j])) * 2)
 
-    for k in len(multiply):
-        summed += multiply[k]
+
+    for k in str(len(multiply)):
+        summed += multiply[intk]
 
     print(summed)
 
