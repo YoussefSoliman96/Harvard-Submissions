@@ -6,7 +6,10 @@ def main():
             if (validate(card_number)) == "Invalid":
                 print("INVALID")
             else:
-                if (len(card_number)) == 
+                if (len(card_number)) == 15:
+                    print("AMEX")
+                elif if (len(card_number)) == 16:
+                    print("")
         except ValueError:
             print("Invalid input")
 
