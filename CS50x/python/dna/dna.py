@@ -17,7 +17,7 @@ def main():
                         print("Not a csv file")
                     else:
                         break
-        except EOFError:
+        except ValueError:
             print("Program stopped")
 
     # TODO: Read database file into a variable
