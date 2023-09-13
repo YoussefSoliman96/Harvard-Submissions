@@ -22,7 +22,7 @@ def main():
     # TODO: Read database file into a variable
     database = read_database(1)
     # TODO: Read DNA sequence file into a variable
-    dna_sequence = open(sys.argv[2], "r")
+    dna_sequence = read_sequence(2)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
@@ -43,14 +43,14 @@ def read_database(n):
 
 
 def read_sequence(n):
-    database = []
+    sequence = []
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as txt_file:
             txt_reader = txt_reader.read()
-            for line in csv_reader:
-                database.append({'id': line["id"],'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
-        return database
+            for line in txt_reader:
+                sequence.append(line)
+        return sequence
     except FileNotFoundError:
         sys.exit("File not found")
 
