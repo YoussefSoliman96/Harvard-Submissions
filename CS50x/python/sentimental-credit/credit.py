@@ -15,7 +15,7 @@ def validate(number):
     multiply = []
     every_other_number_reversed = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
 
-    multiplied = ([every_other_number_reversed[j] for j in (lambda b: int(b) * 2, range(len(every_other_number_reversed)))])
+    multiplied = ([every_other_number_reversed[j] for j in filter(lambda b: int(b) * 2, range(len(every_other_number_reversed)))])
 
     print(multiplied)
 
