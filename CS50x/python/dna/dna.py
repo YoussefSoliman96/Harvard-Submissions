@@ -21,9 +21,16 @@ def main():
 
     # TODO: Read database file into a variable
     database = read_database(1)
+    print(database)
+    print(database[0])
     # TODO: Read DNA sequence file into a variable
     dna_sequence = read_sequence(2)
     # TODO: Find longest match of each STR in DNA sequence
+    str_count = {}
+    for key in database[0].keys():
+        if key != "name":
+            str_count[key] = longest_match(dna_sequence, key)
+    print(str_count)
 
     # TODO: Check database for matching profiles
 
