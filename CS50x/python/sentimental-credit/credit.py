@@ -1,1 +1,1 @@
-# TODO
+card_number = input("Number: ")
