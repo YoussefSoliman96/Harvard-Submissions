@@ -24,7 +24,10 @@ def main():
         except ValueError:
             print("Invalid input")
 
+
 # A function that checks whether the user's input is valid or not
+
+
 def validate(number):
     multiplied = []
     reversed = number[::-1]
@@ -70,7 +73,10 @@ def validate(number):
     else:
         return "Invalid"
 
+
 # A function that adds all items in a list and returns the sum
+
+
 def sum(number):
     summed = 0
     for k in range(len(number)):
