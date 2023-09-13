@@ -7,6 +7,5 @@ while True:
 
 for i in range(height):
     print("#" * int(i+1))
-
-for i in range(height):
-    print("#" * int(i+1))
+    for i in range(height):
+        print("#" * int(i+1))
