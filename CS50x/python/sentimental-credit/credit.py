@@ -13,6 +13,7 @@ def main():
 
 def validate(number):
     every_other_number = []
+    multiply = []
     for i in range(len(number)):
         if i % 2 == 0:
             every_other_number.append(number[i])
@@ -20,7 +21,8 @@ def validate(number):
 
     for j in range(len(every_other_number_reversed)):
         every_other_number_reversed[j]
-            multiply.append = (int((every_other_number_reversed[j])) * 2)
+        multiply.append(int((every_other_number_reversed[j])) * 2)
+    print(multiply)
 
 
 
