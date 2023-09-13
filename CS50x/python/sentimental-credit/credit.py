@@ -17,10 +17,11 @@ def validate(number):
     even_positions = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
     # multiply every other number by 2
     for j in range(len(even_positions)):
-        if len(even_positions[j]) == 1:
+        if len(even_positions[j]) <= 1:
             multiplied.append(int((even_positions[j])) * 2)
         elif len(even_positions) > 1:
-            
+            split = [int(i) for i in even_positions[j]]
+            multiplied.append(int((split)) * 2)
 
 
     # Adding the numbers in the multiplied list together
