@@ -21,7 +21,7 @@ def validate(number):
 
 
     for k in str(len(multiply)):
-        summed += multiply[intk]
+        summed += multiply[k]
 
     print(summed)
 
