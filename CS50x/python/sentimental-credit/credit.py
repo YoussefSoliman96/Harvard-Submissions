@@ -13,7 +13,8 @@ def main():
 def validate(number):
     every_other_number = []
     for i in range(len(number)):
-        every_other_number.append(number)
+        if i % 2 == 0:
+            
     print (every_other_number)
 
 
