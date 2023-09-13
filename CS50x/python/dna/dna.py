@@ -12,17 +12,17 @@ def main():
             elif len(sys.argv) > 3:
                 print("Too many command-line arguments")
             else:
-                if not ".csv" in sys.argv[1] or not ".csv" in sys.argv[2]:
-                    print("Not a csv file")
+                if not ".csv" in sys.argv[1] or not ".txt" in sys.argv[2]:
+                    print("Invalid file format")
                 else:
                     break
         except EOFError:
             print("Program stopped")
 
     # TODO: Read database file into a variable
-
+    database = read_file(1)
     # TODO: Read DNA sequence file into a variable
-
+    dna_sequence = open(sys.argv[2], "r")
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
@@ -30,15 +30,11 @@ def main():
     return
 
 def read_file(n):
-
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            # Loop through the file and append data to the clients stack
-            for line in csv_reader:
-                clients.append({'id': line["id"],'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
-        return clients
+        return csv_reader
     except FileNotFoundError:
         sys.exit("File not found")
 
