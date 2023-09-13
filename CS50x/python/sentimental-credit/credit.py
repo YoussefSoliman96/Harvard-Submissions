@@ -11,7 +11,10 @@ def main():
 
 
 def validate(number):
-    
+    every_other_number = []
+    for i in range(len(number)):
+        every_other_number.append(i)
+    print (every_other_number)
 
 
 
