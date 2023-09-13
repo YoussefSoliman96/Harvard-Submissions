@@ -33,7 +33,7 @@ def main():
     # TODO: Check database for matching profiles
     for name in database:
         match = 0
-        subsequences = list(database[0].keys)[1:]
+        subsequences = list(database[0].keys())[1:]
         for key in subsequences:
             if int(name[key]) == subsequence_count[key]:
                 match += 1
