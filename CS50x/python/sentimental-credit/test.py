@@ -4,6 +4,7 @@ def main():
         try:
             card_number = str(input("Number: "))
             validate(card_number)
+            break
         except ValueError:
             print("Invalid input")
 
@@ -14,11 +15,12 @@ def validate(number):
     multiplied = []
     reversed = number [::-1]
     # Identify every other number starting from index 0 then reversing them
-    even_positions = ([reversed[i] for i in filter(lambda a: a % 2 == 0, range(len(reversed)))]) [::-1]
+    even_positions = ([reversed[i] for i in filter(lambda a: a % 2 == 0, range(len(reversed)))])
     # multiply every other number by 2
     for j in range(len(even_positions)):
         multiplied.append(int((even_positions[j])) * 2)
-    print(even_positions)
+    print("Reversed", reversed)
+    print("even positions", even_positions)
 
     # Modified multiplied with single digits only
     modified = []
