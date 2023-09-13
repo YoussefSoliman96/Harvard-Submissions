@@ -56,10 +56,6 @@ def validate(number):
     print(sum_all)
     print(last_digit)
 
-"""
-378282246310005
-    0034227
-"""
 def sum(number):
     summed = 0
     for k in range(len(number)):
