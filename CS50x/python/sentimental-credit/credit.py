@@ -17,16 +17,20 @@ def validate(number):
     even_positions = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
     # multiply every other number by 2
     for j in range(len(even_positions)):
-        if len(even_positions[j]) <= 1:
-            multiplied.append(int((even_positions[j])) * 2)
-        elif len(even_positions[j]) > 1:
-            split = divmod(even_positions[j], 10)
-            multiplied.append(int((split)) * 2)
-            print(split)
+        multiplied.append(int((even_positions[j])) * 2)
+
+    # Modified multiplied with single digits only
+    modified = []
+
+    for i in range(len(multiplied)):
+        if len(str(multiplied[i])) > 1:
+            modified.append([(divmod(multiplied[i], 10))])
+        else:
+            modified.append(multiplied[i])
 
 
     # Adding the numbers in the multiplied list together
-    even_summed = sum(multiplied)
+    even_summed = sum(modified)
     print(even_summed)
 
     # Identifying every other number that was not multiplied and adding them together
@@ -36,8 +40,6 @@ def validate(number):
 
     # Adding the 2 sums together
     sum_all = even_summed + odd_summed
-
-
 
     print(sum_all)
 
