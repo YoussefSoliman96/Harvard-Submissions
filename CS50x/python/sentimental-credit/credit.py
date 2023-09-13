@@ -8,6 +8,8 @@ def main():
             else:
                 if (len(card_number)) == 15:
                     print("AMEX")
+                if (len(card_number)) == 13:
+                    print("VISA")
                 elif (len(card_number)) == 16:
                     if card_number[0] == "4":
                         print("VISA")
