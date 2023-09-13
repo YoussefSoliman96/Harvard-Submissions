@@ -14,7 +14,6 @@ def main():
 def validate(number):
     every_other_number = []
     multiply = []
-    
     for i in range(len(number)):
         if i % 2 == 0:
             every_other_number.append(number[i])
@@ -29,3 +28,7 @@ def validate(number):
 
 if __name__ == "__main__":
     main()
+
+    """
+    one = (every_other_number[i] for i in (lambda a:a))
+    """
