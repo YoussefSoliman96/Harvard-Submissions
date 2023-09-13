@@ -27,7 +27,6 @@ def main():
     str_count = {}
     for key in database[0].keys():
         if key != "name":
-            print(key)
             str_count[key] = longest_match(dna_sequence, key)
     print(str_count)
 
