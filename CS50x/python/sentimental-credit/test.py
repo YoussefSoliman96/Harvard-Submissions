@@ -49,6 +49,8 @@ def validate(number):
     # Getting the last digit
     sum_all = [int(i) for i in str(sum_all)]
     last_digit = sum_all[-1]
+    print("Modified", modified)
+    print("odd_positions", odd_positions)
     print(even_summed)
     print(odd_summed)
     print(sum_all)
