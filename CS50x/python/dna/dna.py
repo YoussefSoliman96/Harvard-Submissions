@@ -24,17 +24,20 @@ def main():
     # TODO: Read DNA sequence file into a variable
     dna_sequence = open(sys.argv[2], "r")
     # TODO: Find longest match of each STR in DNA sequence
-    for 
+    for
     # TODO: Check database for matching profiles
 
     return
 
 def read_file(n):
+    database = []
     try:
         # Open the file containing clients' data
         with open(sys.argv[n], "r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
-        return csv_reader
+            for line in csv_reader:
+                database.append({'id': line["id"],'first_name': line["first_name"], 'last_name': line["last_name"], 'email': line["email"], 'balance': line["balance"]})
+        return database
     except FileNotFoundError:
         sys.exit("File not found")
 
