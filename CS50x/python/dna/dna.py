@@ -39,7 +39,7 @@ def main():
             if match == len(subsequences):
                 print(name["name"])
                 return
-    print("Not Found")
+    print("No match")
 
 def read_database(n):
     database = []
