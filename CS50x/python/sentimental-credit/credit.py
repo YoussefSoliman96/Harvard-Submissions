@@ -19,9 +19,10 @@ def validate(number):
     for j in range(len(even_positions)):
         if len(even_positions[j]) <= 1:
             multiplied.append(int((even_positions[j])) * 2)
-        elif len(even_positions) > 1:
+        elif len(even_positions[j]) > 1:
             split = [int(i) for i in even_positions[j]]
             multiplied.append(int((split)) * 2)
+            print(split)
 
 
     # Adding the numbers in the multiplied list together
