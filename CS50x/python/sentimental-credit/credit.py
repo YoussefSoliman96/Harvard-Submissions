@@ -24,14 +24,15 @@ def validate(number):
 
     for i in range(len(multiplied)):
         if len(str(multiplied[i])) > 1:
-            modified.append([(divmod(multiplied[i], 10))])
+            split = divmod(multiplied[i], 10)
+            modified.append(split[0])
+            modified.append(split[1])
         else:
             modified.append(multiplied[i])
 
 
     # Adding the numbers in the multiplied list together
     even_summed = sum(modified)
-    print(even_summed)
 
     # Identifying every other number that was not multiplied and adding them together
     odd_positions = ([number[i] for i in filter(lambda a: a % 2 == 1, range(len(number)))])
