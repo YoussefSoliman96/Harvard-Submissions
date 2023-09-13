@@ -20,7 +20,7 @@ def validate(number):
         if len(even_positions[j]) <= 1:
             multiplied.append(int((even_positions[j])) * 2)
         elif len(even_positions[j]) > 1:
-            split = [int(i) for i in even_positions[j]]
+            split = divmod(even_positions[j], 10)
             multiplied.append(int((split)) * 2)
             print(split)
 
