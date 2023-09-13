@@ -12,6 +12,13 @@ def main():
 
 
 
+def get_letters(text):
+    count = 0
+    for c in text:
+        if c == " ":
+            count += 1
+    return count
+
 
 def get_words(text):
     count = 0
@@ -20,8 +27,8 @@ def get_words(text):
             count += 1
     return count
 
-def get_letters(text):
-    
+
+
 
 
 if __name__ == "__main__":
