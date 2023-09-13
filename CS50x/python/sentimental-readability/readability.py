@@ -1,5 +1,4 @@
 def main():
-
     text = str(input("Text: "))
     letters = get_letters(text)
     words = get_words(text)
@@ -17,6 +16,7 @@ def get_letters(text):
             count += 1
     return count
 
+
 def get_words(text):
     count = 1
     for c in text:
@@ -24,12 +24,14 @@ def get_words(text):
             count += 1
     return count
 
+
 def get_sentences(text):
     count = 0
     for c in text:
         if c == "!" or c == "." or c == "?":
             count += 1
     return count
+
 
 def get_grade(index):
     if index < 1:
