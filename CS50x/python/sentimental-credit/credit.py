@@ -6,11 +6,11 @@ def main():
             if (validate(card_number)) == "Invalid":
                 print("INVALID")
             else:
-                if (len(card_number)) == 15 and card_number[1] in [4, 7]:
+                if (len(card_number)) == 15 and card_number[1] in ["4", "7"]:
                     print("AMEX")
                 elif (len(card_number)) == 13 and card_number[0] == "4":
                     print("VISA")
-                elif (len(card_number)) == 16 and card_number[1] in [1, 2, 3, 4, 5]:
+                elif (len(card_number)) == 16 and int(card_number[1]) in range(1, 5):
                     print("MASTERCARD")
                 else:
                     print("INVALID")
