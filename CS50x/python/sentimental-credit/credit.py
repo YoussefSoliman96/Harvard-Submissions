@@ -8,8 +8,12 @@ def main():
             else:
                 if (len(card_number)) == 15:
                     print("AMEX")
-                elif if (len(card_number)) == 16:
-                    print("")
+                elif (len(card_number)) == 16:
+                    if card_number[0] == "4":
+                        print("VISA")
+                    else:
+                        print("MASTERCARD")
+
         except ValueError:
             print("Invalid input")
 
