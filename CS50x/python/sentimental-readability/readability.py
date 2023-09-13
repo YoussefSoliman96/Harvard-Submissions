@@ -8,8 +8,8 @@ def main():
     S = words / sentences * 100
     index = round(0.0588 * L - 0.296 * S - 15.8)
     print(index)
-    print(letters)
-    print(words)
+    print(L)
+    print(S)
     print(sentences)
     get_grade(index)
 
