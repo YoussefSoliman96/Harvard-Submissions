@@ -31,6 +31,8 @@ def validate(number):
     # Adding the 2 sums together
     sum_all = even_summed + odd_summed
 
+    
+
     print(sum_all)
 
 
