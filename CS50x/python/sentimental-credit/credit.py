@@ -24,7 +24,7 @@ def validate(number):
     multiplied = []
     reversed = number [::-1]
     # Identify every other number starting from index 0 then reversing them
-    even_positions = ([reversed[i] for i in filter(lambda a: a % 2 == 0, range(len(reversed)))]) 
+    even_positions = ([reversed[i] for i in filter(lambda a: a % 2 != 0, range(len(reversed)))])
     # multiply every other number by 2
     for j in range(len(even_positions)):
         multiplied.append(int((even_positions[j])) * 2)
@@ -45,7 +45,7 @@ def validate(number):
     even_summed = sum(modified)
 
     # Identifying every other number that was not multiplied and adding them together
-    odd_positions = ([reversed[i] for i in filter(lambda a: a % 2 == 1, range(len(reversed)))])
+    odd_positions = ([reversed[i] for i in filter(lambda a: a % 2 == 0, range(len(reversed)))])
     odd_positions = [int(i) for i in odd_positions]
     odd_summed = sum(odd_positions)
 

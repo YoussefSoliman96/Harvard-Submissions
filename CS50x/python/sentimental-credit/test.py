@@ -50,6 +50,8 @@ def validate(number):
     sum_all = [int(i) for i in str(sum_all)]
     last_digit = sum_all[-1]
 
+    print(last_digit)
+
 """
 378282246310005
     0034227
