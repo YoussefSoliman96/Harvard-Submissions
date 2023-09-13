@@ -28,7 +28,6 @@ def main():
     for key in database[0].keys():
         if key != "name":
             subsequence_count[key] = longest_match(dna_sequence, key)
-    print(subsequence_count)
 
     # TODO: Check database for matching profiles
     for name in database:
