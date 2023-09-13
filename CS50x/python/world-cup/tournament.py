@@ -23,8 +23,10 @@ def main():
                 teams.append(line)
     except FileNotFoundError:
         print("File not found")
-    print(teams[0])
+    team1 = (teams[0])
+    team2 = (teams[1])
 
+    print(simulate_game(team1, team2))
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
@@ -37,8 +39,8 @@ def main():
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
-    rating1 = team1["rating"]
-    rating2 = team2["rating"]
+    rating1 = int(team1["rating"])
+    rating2 = int(team2["rating"])
     probability = 1 / (1 + 10 ** ((rating2 - rating1) / 600))
     return random.random() < probability
 
