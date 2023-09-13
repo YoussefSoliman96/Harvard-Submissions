@@ -10,8 +10,14 @@ def main():
                     print("AMEX")
                 elif (len(card_number)) == 13 and card_number[0] == "4":
                     print("VISA")
-                elif (len(card_number)) == 16 and int(card_number[1]) in range(1, 5):
-                    print("MASTERCARD")
+                elif (len(card_number)) == 16:
+                    if card_number[0] == "4":
+                        print("VISA")
+                    else:
+                        if int(card_number[1]) in range(1, 5, 1):
+                            print("MASTERCARD")
+                        else:
+                            print("INVALID")
                 else:
                     print("INVALID")
             break
