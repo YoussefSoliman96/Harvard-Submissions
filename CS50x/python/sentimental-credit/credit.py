@@ -2,7 +2,7 @@ def main():
 
     while True:
         try:
-            card_number = int(input("Number: "))
+            card_number = str(input("Number: "))
             validate(card_number)
         except ValueError:
             print("Invalid input")
