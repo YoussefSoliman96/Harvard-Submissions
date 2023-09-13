@@ -32,7 +32,7 @@ def main():
         winner = simulate_tournament(teams)
         if winner in counts:
             counts[winner] += 1
-            print(counts)
+            print(counts[0])
         else:
             counts[winner] = 1
 
