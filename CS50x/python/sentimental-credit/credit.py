@@ -14,7 +14,7 @@ def main():
 def validate(number):
     every_other_number = []
     multiply = []
-    every_other_number = (number[i] for i in filter(lambda a: a % 2 == 0, range(len(number))))
+    print(number[i] for i in filter(lambda a: a % 2 == 0, range(len(number))))
     print(every_other_number)
 
 """
