@@ -23,13 +23,13 @@ def main():
                 teams.append(line)
     except FileNotFoundError:
         print("File not found")
+
+    counts = {}
+    # TODO: Simulate N tournaments and keep track of win counts
     team1 = (teams[0])
     team2 = (teams[1])
 
     print(simulate_game(team1, team2))
-    counts = {}
-    # TODO: Simulate N tournaments and keep track of win counts
-
 
     return
     # Print each team's chances of winning, according to simulation
