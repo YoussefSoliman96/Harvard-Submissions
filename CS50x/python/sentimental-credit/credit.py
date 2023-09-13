@@ -1,6 +1,7 @@
 def main():
     while True:
         try:
+            # Get the user's input and run the validate function on it
             card_number = str(input("Number: "))
             if (validate(card_number)) == "Invalid":
                 print("INVALID")
@@ -23,6 +24,7 @@ def main():
         except ValueError:
             print("Invalid input")
 
+    # A function that checks whether the user's input is valid or not
     def validate(number):
         multiplied = []
         reversed = number[::-1]
@@ -68,7 +70,7 @@ def main():
         else:
             return "Invalid"
 
-
+# A function that adds all items in a list and returns the sum
 def sum(number):
     summed = 0
     for k in range(len(number)):
