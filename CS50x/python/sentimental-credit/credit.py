@@ -14,7 +14,7 @@ def validate(number):
     every_other_number = []
     for i in range(len(number)):
         if i % 2 == 0:
-            
+            every_other_number.append(number[i])
     print (every_other_number)
 
 
