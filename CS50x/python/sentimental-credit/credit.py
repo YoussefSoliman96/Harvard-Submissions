@@ -3,8 +3,10 @@ def main():
     while True:
         try:
             card_number = str(input("Number: "))
-            print(validate(card_number))
-            break
+            if (validate(card_number)) == "Invalid":
+                print("INVALID")
+            else:
+                if (len(card_number)) == 
         except ValueError:
             print("Invalid input")
 
