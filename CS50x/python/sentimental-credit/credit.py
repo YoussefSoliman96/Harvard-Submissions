@@ -24,7 +24,7 @@ def validate(number):
 
     odd_numbers = ([number[i] for i in filter(lambda a: a % 1 == 0, range(len(number)))])
 
-    odd_summed = sum(int(odd_numbers))
+    odd_summed = sum(odd_numbers)
     print(odd_summed)
 
 
