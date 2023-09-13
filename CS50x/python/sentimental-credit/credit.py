@@ -10,8 +10,8 @@ def main():
 
 
 
-def validate():
-
+def validate(number):
+    
 
 
 
