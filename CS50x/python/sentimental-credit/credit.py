@@ -44,7 +44,6 @@ def validate(number):
 
     # Getting the last digit
     sum_all = [int(i) for i in sum_all]
-    number_of_digits = len(str(sum_all))
     last_digit = sum_all[int(number_of_digits) - 1]
 
     if last_digit == 0:
