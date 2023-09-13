@@ -14,7 +14,7 @@ def main():
                     if card_number[0] == "4":
                         print("VISA")
                     else:
-                        if (card_number[1]) in range(6):
+                        if (card_number[1]) >= 1 and (card_number[1]) <6:
                             print("MASTERCARD")
                         else:
                             print("INVALID")
