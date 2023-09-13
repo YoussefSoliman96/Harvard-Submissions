@@ -30,7 +30,7 @@ def main():
     for key in database[0].keys():
         if key != "name":
             str_count[key] = longest_match(dna_sequence, key)
-    print(str_count)
+            print(str_count)
 
     # TODO: Check database for matching profiles
 
