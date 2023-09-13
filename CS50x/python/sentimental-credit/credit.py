@@ -43,7 +43,9 @@ def validate(number):
     sum_all = even_summed + odd_summed
 
     # Getting the last digit
-    last_digit = sum_all [-1]
+    sum_all = [int(i) for i in sum_all]
+    number_of_digits = len(str(sum_all))
+    last_digit = sum_all[int(number_of_digits) - 1]
 
     if last_digit == 0:
         return "Valid"
