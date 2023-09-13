@@ -17,7 +17,11 @@ def validate(number):
     even_positions = ([number[i] for i in filter(lambda a: a % 2 == 0, range(len(number)))]) [::-1]
     # multiply every other number by 2
     for j in range(len(even_positions)):
-        multiplied.append(int((even_positions[j])) * 2)
+        if len(even_positions[j]) == 1:
+            multiplied.append(int((even_positions[j])) * 2)
+        elif len(even_positions) > 1:
+            
+
 
     # Adding the numbers in the multiplied list together
     even_summed = sum(multiplied)
@@ -31,7 +35,7 @@ def validate(number):
     # Adding the 2 sums together
     sum_all = even_summed + odd_summed
 
-    
+
 
     print(sum_all)
 
