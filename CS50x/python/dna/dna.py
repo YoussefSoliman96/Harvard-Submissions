@@ -7,7 +7,7 @@ def main():
     # TODO: Check for command-line usage
     while True:
         try:
-            for arg in len(sys.argv):
+            for arg in range(len(sys.argv)):
                 if arg < 3:
                     print("Too few command-line arguments")
                 elif arg > 3:
