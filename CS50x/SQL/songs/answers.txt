@@ -9,4 +9,4 @@ Example:
     Low Valence means more negative
     Low Danceability more negative
 
-But, that doesn't mean that this truly indicates the mood of the listener, our sample is only 100 songs which is not enough to 
+But, that doesn't mean that this truly indicates the mood of the listener, our sample is only 100 songs which is not enough.
