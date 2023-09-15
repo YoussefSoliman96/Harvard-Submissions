@@ -36,4 +36,4 @@ SELECT * FROM atm_transactions WHERE account_number = 76054385;
 SELECT person_id FROM bank_accounts WHERE account_number in (26013199, 49610011)
 SELECT name FROM people WHERE id in (SELECT person_id FROM bank_accounts WHERE account_number in (26013199, 49610011)) --> Diana, Bruce
 SELECT phone_number FROM people WHERE name in ("Diana", "Bruce")
-SELECT day FROM phone_calls WHERE caller in (SELECT phone_number FROM people WHERE name = "Bruce")
+SELECT day FROM phone_calls WHERE caller in (SELECT phone_number FROM people WHERE name = "Diana") AND duration < 60
