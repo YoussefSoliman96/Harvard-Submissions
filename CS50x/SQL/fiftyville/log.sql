@@ -24,5 +24,5 @@ SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FRO
 SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street"; --> 76054385 ACCOUNT NUMBER OF RECEIVER
 
 SELECT name FROM people WHERE id = (SELECT person_id FROM bank_accounts WHERE account_number = 76054385) --> Taylor
-
-SELECT receiver FROM phone_calls WHERE caller
+SELECT phone_number FROM people WHERE name = "Taylor"
+SELECT receiver FROM phone_calls WHERE caller = (SELECT phone_number FROM people WHERE name = "Taylor")
