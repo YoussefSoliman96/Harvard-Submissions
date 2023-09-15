@@ -7,3 +7,4 @@ each of their interview transcripts mentions the bakery. |
 Littering took place at 16:36. No known witnesses.
 
 SELECT name FROM people WHERE license_plate = (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10); --> Brandon
+SELECT transcript FROM interviews WHERE name = "Brandon";
