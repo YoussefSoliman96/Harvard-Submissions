@@ -11,3 +11,4 @@ SELECT name FROM people WHERE license_plate = (SELECT license_plate FROM bakery_
 SELECT id FROM people
 JOIN bank_accounts ON bank_accounts.person_id = people.id
 JOIN atm_transactions ON atm_transactions.account_number = bank_account.account_number;
+WHERE name = "Brandon"
