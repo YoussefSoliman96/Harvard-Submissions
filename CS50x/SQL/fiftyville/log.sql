@@ -22,3 +22,5 @@ SELECT caller FROM phone_calls WHERE receiver = "(918) 555-5327" and day = 28;
 
 SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")) AND month = 7 AND day = 28
 SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street";
+
+SELECT 
