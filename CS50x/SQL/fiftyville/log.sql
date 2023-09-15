@@ -18,7 +18,7 @@ SELECT city FROM airports WHERE id = 11 --> San Francisco
 SELECT phone_number FROM people WHERE name = "Brandon" --> Brandon (771) 555-6667
 SELECT receiver, day FROM phone_calls WHERE caller = "(771) 555-6667";
 SELECT name FROM people WHERE phone_number = "(918) 555-5327";
-SELECT receiver FROM phone_calls WHERE caller = "(060) 555-2489" and day = 28;
+SELECT receiver FROM phone_calls WHERE caller = "(204) 555-4136" and day = 28;
 
 SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")) AND month = 7 AND day = 28
 SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street";
