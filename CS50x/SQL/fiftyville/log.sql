@@ -10,3 +10,4 @@ SELECT name FROM people WHERE license_plate = (SELECT license_plate FROM bakery_
 SELECT id FROM people WHERE name = "Brandon" -->
 SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")
 SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")) AND month = 7 AND day = 28
+SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street";
