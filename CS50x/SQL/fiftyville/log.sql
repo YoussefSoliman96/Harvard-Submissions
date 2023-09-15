@@ -8,6 +8,8 @@ Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Inte
 SELECT name FROM people WHERE license_plate = (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10); --> Brandon
 
 SELECT id FROM people WHERE name = "Brandon" --> Brandon id
+SELECT passport_number FROM people WHERE name = "Brandon" --> Brandon passport number
 SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon") --> Brandon account number
+
 SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")) AND month = 7 AND day = 28
 SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street";
