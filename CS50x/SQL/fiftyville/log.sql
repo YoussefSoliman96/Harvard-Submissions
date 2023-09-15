@@ -41,3 +41,5 @@ SELECT day FROM phone_calls WHERE caller in (SELECT phone_number FROM people WHE
 SELECT passport_number FROM people WHERE name = "Bruce"
 SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Diana") --> 36
 SELECT * FROM flights WHERE id = (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Diana"));
+
+SELECT * FROM flights WHERE origin_airport_id = ()
