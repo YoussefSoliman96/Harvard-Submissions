@@ -38,4 +38,3 @@ SELECT name FROM people WHERE id in (SELECT person_id FROM bank_accounts WHERE a
 SELECT phone_number FROM people WHERE name in ("Diana", "Bruce")
 SELECT day FROM phone_calls WHERE caller in (SELECT phone_number FROM people WHERE name = "Diana") AND duration < 60
 
-SELECT licence_plater
