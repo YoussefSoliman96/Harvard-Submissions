@@ -29,3 +29,6 @@ SELECT phone_number FROM people WHERE name = "Taylor"
 SELECT receiver FROM phone_calls WHERE caller = (SELECT phone_number FROM people WHERE name = "Taylor")
 
 SELECT * FROM atm_transactions WHERE account_number = 76054385;
+
+26013199
+49610011
