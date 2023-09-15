@@ -12,7 +12,7 @@ SELECT passport_number FROM people WHERE name = "Brandon" --> Brandon passport n
 SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon") --> Brandon account number
 SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Brandon") --> Brandon passport number)
 SELECT day, month, year FROM flights WHERE id in (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Brandon")) --> Brandon took a flight the next day 29/7
-SELECT id FROM flights WHERE id in (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Brandon")) --> Brandon took a flight the next day 29/7
+SELECT id FROM flights WHERE day = 29;
 
 
 SELECT destination_airport_id FROM flights WHERE
