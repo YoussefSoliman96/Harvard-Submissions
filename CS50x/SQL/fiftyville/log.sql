@@ -15,7 +15,8 @@ SELECT day, month, year FROM flights WHERE id in (SELECT flight_id FROM passenge
 SELECT id FROM flights WHERE day = 29; --> Flight id = 23
 SELECT destination_airport_id FROM flights WHERE id = 23 -- > Destination id = 11
 SELECT city FROM airports WHERE id = 11 --> San Francisco
-SELECT receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND caller = "Brandon";
+SELECT phone_number FROM people WHERE name = "Brandon" --> Brandon (771) 555-6667
+SELECT receiver,  FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND caller = "(771) 555-6667";
 
 SELECT * FROM atm_transactions WHERE account_number = (SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Brandon")) AND month = 7 AND day = 28
 SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street";
