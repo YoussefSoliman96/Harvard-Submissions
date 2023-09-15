@@ -25,3 +25,4 @@ SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND 
 
 SELECT name FROM people WHERE id = (SELECT person_id FROM bank_accounts WHERE account_number = 76054385) --> Taylor
 
+SELECT receiver FROM phone_calls WHERE caller
