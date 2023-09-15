@@ -39,4 +39,5 @@ SELECT phone_number FROM people WHERE name in ("Diana", "Bruce")
 SELECT day FROM phone_calls WHERE caller in (SELECT phone_number FROM people WHERE name = "Diana") AND duration < 60
 
 SELECT passport_number FROM people WHERE name = "Bruce"
-SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Bruce") --> 36
+SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Diana") --> 36
+SELECT * FROM flights WHERE id = (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Diana"));
