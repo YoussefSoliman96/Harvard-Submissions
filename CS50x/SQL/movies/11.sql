@@ -3,6 +3,6 @@ write a SQL query to list the titles of the five highest rated movies (in order)
 SELECT tile FROM movies
 JOIN ratings ON ratings.movie_id = movies.id
 JOIN stars ON stars.movie_id = movies.id
-JOIN people ON people.id = stars.person_id
-WHERE name = "Chadwick Boseman"
+JOIN people ON stars.person_id = people.id
+WHERE people.name = "Chadwick Boseman"
 AND
