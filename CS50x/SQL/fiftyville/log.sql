@@ -43,3 +43,6 @@ SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number
 SELECT * FROM flights WHERE id = (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Diana"));
 
 SELECT * FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE city = "Fiftyville") AND day = 29
+SELECT destination_airport_id FROM flights WHERE id = 36;
+SELECT city FROM airports WHERE id = (SELECT destination_airport_id FROM flights WHERE id = 36)
+SELECT receiver FROM phone_calls WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce") 
