@@ -8,7 +8,7 @@ Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Inte
 SELECT name FROM people WHERE license_plate in (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10); --> Thomas
 
 SELECT id FROM people WHERE name = "Thomas" --> Thomas id 660982
-SELECT passport_number FROM people WHERE name = "Thomas" --> Thomas passport number 6034823042
+SELECT passport_number FROM people WHERE name = "Thomas" --> Thomas passport number 
 SELECT account_number FROM bank_accounts WHERE person_id = (SELECT id FROM people WHERE name = "Thomas") --> Thomas account number
 SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Thomas") --> Thomas passport number)
 SELECT day, month, year FROM flights WHERE id in (SELECT flight_id FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Thomas")) --> Thomas took a flight the next day 29/7
