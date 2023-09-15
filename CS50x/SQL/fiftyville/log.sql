@@ -5,7 +5,7 @@ SELECT transcript FROM interviews WHERE year = 2021 AND month = 7 AND day = 28;
 Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time
  each of their interview transcripts mentions the bakery. Littering took place at 16:36. No known witnesses.
 
-SELECT name FROM people WHERE license_plate in (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10); --> Thomas
+SELECT name FROM people WHERE license_plate in (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND (minute BETWEEN 15 AND 25)); --> Thomas
 SELECT id FROM people WHERE name in (SELECT name FROM people WHERE license_plate in (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10));
 SELECT account_number FROM bank_accounts WHERE person_id in (SELECT id FROM people WHERE name in (SELECT name FROM people WHERE license_plate in (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10)))
 SELECT id FROM people WHERE name = "Thomas" --> Thomas id 660982
