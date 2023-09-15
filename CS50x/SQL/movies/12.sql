@@ -1,6 +1,9 @@
-write a SQL query to list the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred
-
 SELECT title FROM movies
 JOIN stars ON stars.movie_id = movies.id
 JOIN people ON people.id = stars.person_id
-WHERE name 
+WHERE name = "Bradley Cooper"
+AND title in
+(SELECT title FROM movies
+JOIN stars ON stars.movie_id = movies.id
+JOIN people ON people.id = stars.person_id
+WHERE name = "Jennifer Lawrence")
