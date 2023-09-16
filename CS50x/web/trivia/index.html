@@ -16,14 +16,21 @@
                 });
 
                 // Incorrect answer
-                let incorrect = document.querySelectorAll(".incorrect");
-                for (i = 0; i < incorrect.length; i++){
-                    incorrect[i].addEventListener('click', function() {
-                        incorrect[i].style.backgroundColor = 'red';
+                let incorrects = document.querySelectorAll(".incorrect");
+                for (i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
                         document.querySelector("#reaction1").innerHTML = "Incorrect";
                     });
-                }
 
+                }
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i<incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                    incorrects[i].style.backgroundColor = 'red';
+                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    });
+                 }
                 // Free response
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector("input");
