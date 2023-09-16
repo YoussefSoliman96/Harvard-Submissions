@@ -11,7 +11,7 @@
         <title>My Webpage</title>
         <script>
             function greet(){
-                alert('Hello, ')
+                alert('Hello, ');
             }
         </script>
     </head>
@@ -33,10 +33,10 @@
                     <h1>This website is mine<h1>
                     <h2>This website has some subtext that goes here under the main title. It's
                         smaller font and the color is lower contrast</h2>
-                    <div class="form-group" onsubmit="greet(); return false;">
-                        <input class="form-control input-lg" id="inputlg" type="text" placeholder="Name" autofocus style="height:27px">
+                    <form onsubmit="greet(); return false;">
+                        <input type="text" placeholder="Name" autofocus style="height:27px">
                         <button type="submit">Name</button>
-                    </div>
+                    </form>
                 </div>
                 <img src="https://i1.wp.com/www.slntechnologies.com/wp-content/uploads/2017/08/ef3-placeholder-image.jpg?resize=300%2C203&ssl=1" alt="This is an image placeholder" width="500px"
                 height="220px">
