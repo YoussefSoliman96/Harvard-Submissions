@@ -26,17 +26,16 @@
                 }
 
                 // Free response
-                document.querySelector('#check').addEventListener('click', function() {
-                    let input = document.querySelector("input");
-                    if (input.value.ToLowerCase() === "Switzerland"){
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value === 'Switzerland'){
                         input.style.backgroundColor = 'green';
-                        document.querySelector("#reaction2").innerHTML = "Correct";
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    } else {
+                       input.style.backgroundColor = 'red';
+                       document.querySelector('#feedback2').innerHTML = 'Incorrect';
                     }
-                    else {
-                        input.style.backgroundColor = 'red';
-                        document.querySelector("#reaction2").innerHTML = "Incorrect";
-                    }
-                });
+                 });
             })
 
         </script>
