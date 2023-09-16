@@ -18,9 +18,9 @@
                 // Incorrect answer
                 let incorrect = document.querySelectorALL(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
-                    correct.addEventListener('click', function() {
-                        correct.style.backgroundColor = 'green';
-                        document.querySelector("#reaction1").innerHTML = "Correct";
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector("#reaction1").innerHTML = "Incorrect";
                     });
                 }
 
@@ -67,7 +67,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
-                <input type="text">
+                <input type="text" placeholder="Country">
                 <button id="check">Check Answer</button>
 
                 <p id="reaction2">reaction2</p>
