@@ -8,12 +8,13 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                // correct answer
+                // Correct answer
                 let correct = document.querySelector(".correct");
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
                     document.querySelector("#reaction1").innerHTML = "Correct";
                 });
+                // Incorrect answer
                 let incorrect = document.querySelectorALL(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
                 incorrect[i].addEventListener('click', function() {
@@ -21,6 +22,7 @@
                     document.querySelector('#reaction2').innerHTML = "Incorrect";
                 });
                 }
+                
             });
 
         </script>
