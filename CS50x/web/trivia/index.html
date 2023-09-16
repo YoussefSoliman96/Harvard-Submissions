@@ -18,9 +18,9 @@
                 // Incorrect answer
                 let incorrect = document.querySelectorALL(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
-                    incorrect[i].addEventListener('click', function() {
-                        incorrect[i].style.backgroundColor = 'red';
-                        document.querySelector('#reaction1').innerHTML = "Incorrect";
+                    correct.addEventListener('click', function() {
+                        correct.style.backgroundColor = 'green';
+                        document.querySelector("#reaction1").innerHTML = "Correct";
                     });
                 }
 
