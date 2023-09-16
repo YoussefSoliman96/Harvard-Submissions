@@ -17,10 +17,10 @@
                 // Incorrect answer
                 let incorrect = document.querySelectorALL(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
-                incorrect[i].addEventListener('click', function() {
-                    incorrect[i].style.backgroundColor = 'red';
-                    document.querySelector('#reaction1').innerHTML = "Incorrect";
-                });
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#reaction1').innerHTML = "Incorrect";
+                    });
                 }
                 // Free response
                 document.querySelector('check', function() {
