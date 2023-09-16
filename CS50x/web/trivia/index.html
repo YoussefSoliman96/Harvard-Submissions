@@ -14,7 +14,7 @@
                     correct.style.backgroundColor = 'green';
                     document.querySelector("#reaction1").innerHTML = "Correct";
                 });
-                
+
                 // Incorrect answer
                 let incorrect = document.querySelectorALL(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
@@ -24,6 +24,18 @@
                     });
                 }
 
+                // Free response
+                document.querySelector('check', function() {
+                    let input = document.querySelector("input");
+                    if (input === "Switzerland"){
+                        input.style.backgroundColor = 'green'
+                        document.querySelector("#reaction2").innerHTML = "Correct";
+                    }
+                    else {
+                        input.style.backgroundColor = 'red'
+                        document.querySelector("#reaction2").innerHTML = "Incorrect";
+                    }
+                })
             });
 
         </script>
