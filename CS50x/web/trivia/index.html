@@ -27,7 +27,7 @@
                 // Free response
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector("input");
-                    if (input === "Switzerland"){
+                    if (input.value.ToLowerCase() == "Switzerland"){
                         input.style.backgroundColor = 'green';
                         document.querySelector("#reaction2").innerHTML = "Correct";
                     }
