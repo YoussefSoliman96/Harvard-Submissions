@@ -18,8 +18,8 @@
                 // Incorrect answer
                 let incorrect = document.querySelectorAll(".incorrect");
                 for (i = 0; i < incorrect.length; i++){
-                    incorrect.addEventListener('click', function() {
-                        incorrect.style.backgroundColor = 'red';
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
                         document.querySelector("#reaction1").innerHTML = "Incorrect";
                     });
                 }
