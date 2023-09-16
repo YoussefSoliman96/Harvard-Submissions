@@ -36,6 +36,16 @@
                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
                     }
                  });
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector("input");
+                    if (input.value.ToLowerCase() === "Switzerland"){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector("#reaction2").innerHTML = "Correct";
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector("#reaction2").innerHTML = "Incorrect";
+                    }
+                });
             })
 
         </script>
