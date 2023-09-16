@@ -20,7 +20,7 @@
                 for (i = 0; i < incorrect.length; i++){
                     incorrect[i].addEventListener('click', function() {
                         incorrect[i].style.backgroundColor = 'red';
-                        document.querySelector('#reaction2').innerHTML = "Incorrect";
+                        document.querySelector('#reaction1').innerHTML = "Incorrect";
                     });
                 }
 
@@ -29,11 +29,11 @@
                     let input = document.querySelector("input");
                     if (input === "Switzerland"){
                         input.style.backgroundColor = 'green';
-                        document.querySelector("#reaction3").innerHTML = "Correct";
+                        document.querySelector("#reaction2").innerHTML = "Correct";
                     }
                     else {
                         input.style.backgroundColor = 'red';
-                        document.querySelector("#reaction3").innerHTML = "Incorrect";
+                        document.querySelector("#reaction2").innerHTML = "Incorrect";
                     }
                 });
             });
