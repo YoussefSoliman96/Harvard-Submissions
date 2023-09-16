@@ -1,12 +1,164 @@
-ul{
+body{
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 25px;
-}
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
-.container{
+    h1{
+        font-size: 48px;
+        font-weight: 800;
+        color: #F9FAF8;
+        width: 300px;
+        margin: 0;
+    }
+
+    h2{
+        font-size: 18px;
+        color: #e5e7eb;
+        font-weight: 300;
+        width: 400px;
+        margin: 0;
+    }
+
+    h3{
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #F9FAF8;
+    }
+
+    button{
+        background-color: #3882f6;
+        width: 120px;
+        height: 40px;
+        border-radius: 8px;
+        color: #e5e7eb;
+        font-size: large;
+        font-weight: bold;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .header-container {
+    background-color: #1f2937;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header{
     display: flex;
-}
+    justify-content: space-between;
+    padding: 24px;
+    color: #f9faf8;
+    }
 
+    .intro{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 8px;
+    }
+
+    .headerlogo{
+        color: #F9FAF8;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .information-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .block-container{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    }
+
+    .bluebox-container{
+    border: 2px solid blue;
+    border-radius: 8px;
+    height: 150px;
+    width: 150px;
+    }
+
+    .all-blocks-container{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .quote-container{
+        background-color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .quote {
+        font-size: 36px;
+        font-style: italic;
+        color: #1f2937;
+        font-weight: lighter;
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-top: 10px;
+    }
+
+    .author{
+        text-align: end;
+        padding-right: 480px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .register-container{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-top: 70px;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .register-box-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer{
+        background-color: #1f2937;
+        color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 100px;
+        justify-content: center;
+    }
+
+    #register-box{
+        width: 800px;
+        height: 100px;
+        background-color: #3882f6;
+        border: none;
+        padding-left: 50px;
+        padding-top: 50px;
+        padding-right: 50px;
+    }
