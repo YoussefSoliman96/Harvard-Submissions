@@ -61,7 +61,7 @@ def buy():
             return apology("Stock not available")
 
         if int(shares) < 0:
-            return apology("Invalid input for shares")
+            return apology("Invalid input for shares", 400)
 
         transaction_cost= int(shares) * stock["price"]
         user_id = session["user_id"]
