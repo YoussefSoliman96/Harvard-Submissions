@@ -250,8 +250,9 @@ def add_cash():
             return apology("Invalid amount")
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         user_money = user_cash_db[0]["cash"]
-        
 
+        money_after_transaction = user_money - transaction_cost
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
         user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
         current_user_shares = user_shares[0]["shares"]
         if shares > current_user_shares:
