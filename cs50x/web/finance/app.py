@@ -49,7 +49,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = float(request.form.get("shares"))
         if not symbol:
             return apology("Must choose a symbol")
 
@@ -206,7 +206,7 @@ def sell():
         return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol   ])
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = float(request.form.get("shares"))
         if not symbol:
             return apology("Must choose a symbol")
 
@@ -245,7 +245,7 @@ def add_cash():
     """Add Cash"""
     if request.method == "POST":
         user_id = session["user_id"]
-        new_cash = int(request.form.get("new_cash"))
+        new_cash = float(request.form.get("new_cash"))
         if not new_cash:
             return apology("Invalid amount")
 
