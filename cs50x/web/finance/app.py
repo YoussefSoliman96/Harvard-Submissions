@@ -240,6 +240,7 @@ def sell():
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
 
         flash(f"{shares} Shares sold successfully! for {usd(transaction_cost)}")
+        flash(f"Balance: {usd(money_after_transaction)}!")
         return redirect("/")
 
 @app.route("/add_cash", methods = ["GET", "POST"])
