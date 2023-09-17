@@ -129,12 +129,10 @@ def register():
 
         hash_password = generate_password_hash(password)
         # Query database for username
-        rows = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
-
-        # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
-
+        try:
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
+        except:
+            return apology ("Username taken")
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
