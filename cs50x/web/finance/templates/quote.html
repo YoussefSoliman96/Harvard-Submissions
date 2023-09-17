@@ -9,7 +9,10 @@
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
         </div>
-
         <button class="btn btn-primary" type="submit">Quote</button>
     </form>
+    {% if quote %}
+    <h3>{{ quote["name"] }} ({{ quote["symbol"] }})</h3>
+    <p>Price: {{ quote["Price"]|usd}}</p>
+    {% endif %}
 {% endblock %}
