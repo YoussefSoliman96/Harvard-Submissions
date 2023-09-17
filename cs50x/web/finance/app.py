@@ -85,7 +85,7 @@ def login():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        return render_template("login.html")
 
 
 @app.route("/logout")
@@ -110,22 +110,24 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
-        elif not request.form.get("confirm"):
+        elif not confirmation:
             return apology("must confirm password", 403)
 
-        if password != confirm:
+        if password != confirmation:
             return apology("password and confirmation don't match")
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("INSERT INTO users )
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
@@ -139,7 +141,7 @@ def register():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("login.html")
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
