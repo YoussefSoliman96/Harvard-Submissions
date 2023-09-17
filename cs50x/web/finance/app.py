@@ -49,10 +49,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        try:
-            shares = float(request.form.get("shares"))
-        except ValueError:
-            return render_template("/"), 400
+        shares = float(request.form.get("shares"))
         if not symbol:
             return apology("Must choose a symbol")
 
