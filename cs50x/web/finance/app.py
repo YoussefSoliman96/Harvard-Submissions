@@ -37,11 +37,15 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
-    transactions_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+    transactions_db = db.execute(
+        "SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol",
+        user_id,
+    )
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash_db[0]["cash"]
 
-    return render_template("index.html", database = transactions_db, cash = cash)
+    return render_template("index.html", database=transactions_db, cash=cash)
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -72,16 +76,24 @@ def buy():
             return apology("Cash unavailable", 400)
 
         money_after_transaction = user_money - transaction_cost
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id
+        )
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+        db.execute(
+            "INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)",
+            user_id,
+            stock["symbol"],
+            shares,
+            stock["price"],
+            date,
+        )
 
         flash(f"Bought {shares} of {symbol} for {usd(transaction_cost)}!")
         flash(f"Balance: {usd(money_after_transaction)}!")
         return redirect("/")
-
 
     else:
         return render_template("buy.html")
@@ -92,8 +104,10 @@ def buy():
 def history():
     """Show history of transactions"""
     user_id = session["user_id"]
-    transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
-    return render_template("history.html", transactions = transactions_db)
+    transactions_db = db.execute(
+        "SELECT * FROM transactions WHERE user_id = ?", user_id
+    )
+    return render_template("history.html", transactions=transactions_db)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -105,7 +119,6 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 400)
@@ -115,10 +128,14 @@ def login():
             return apology("must provide password", 400)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], request.form.get("password")
+        ):
             return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
@@ -155,7 +172,12 @@ def quote():
         if stock == "None":
             return apology("Stock not available", 400)
         else:
-            return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+            return render_template(
+                "quoted.html",
+                name=stock["name"],
+                price=stock["price"],
+                symbol=stock["symbol"],
+            )
 
     else:
         return render_template("quote.html")
@@ -185,7 +207,11 @@ def register():
         hash_password = generate_password_hash(password)
         # Query database for username
         try:
-            user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
+            user = db.execute(
+                "INSERT INTO users (username, hash) VALUES (?, ?)",
+                username,
+                hash_password,
+            )
         except:
             return apology("Username taken")
         # Remember which user has logged in
@@ -205,8 +231,13 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         user_id = session["user_id"]
-        select_symbol = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", user_id)
-        return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol])
+        select_symbol = db.execute(
+            "SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0",
+            user_id,
+        )
+        return render_template(
+            "sell.html", symbols=[row["symbol"] for row in select_symbol]
+        )
     else:
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
@@ -221,29 +252,42 @@ def sell():
         if shares < 0:
             return apology("Invalid input for shares")
 
-
-        transaction_cost= shares * stock["price"]
+        transaction_cost = shares * stock["price"]
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         user_money = user_cash_db[0]["cash"]
 
-        user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
+        user_shares = db.execute(
+            "SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol",
+            user_id,
+            symbol,
+        )
         current_user_shares = user_shares[0]["shares"]
         if shares > current_user_shares:
             return apology("Shares unavailable")
 
         money_after_transaction = user_money + transaction_cost
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id
+        )
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
+        db.execute(
+            "INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)",
+            user_id,
+            stock["symbol"],
+            (-1) * shares,
+            stock["price"],
+            date,
+        )
 
         flash(f"{shares} Shares sold successfully! for {usd(transaction_cost)}")
         flash(f"Balance: {usd(money_after_transaction)}!")
         return redirect("/")
 
-@app.route("/add_cash", methods = ["GET", "POST"])
+
+@app.route("/add_cash", methods=["GET", "POST"])
 @login_required
 def add_cash():
     """Add Cash"""
@@ -257,7 +301,9 @@ def add_cash():
         user_money = user_cash_db[0]["cash"]
 
         money_after_transaction = user_money + new_cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id
+        )
 
         return redirect("/")
     else:
