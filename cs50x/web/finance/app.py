@@ -130,11 +130,11 @@ def register():
         hash_password = generate_password_hash(password)
         # Query database for username
         try:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
+            user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
         except:
             return apology("Username taken")
         # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        session["user_id"] = user
 
         # Redirect user to home page
         return redirect("/")
