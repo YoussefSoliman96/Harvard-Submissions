@@ -32,7 +32,7 @@ def index():
 
     else:
         # Query for all birthdays
-        birthdays = execute("SELECT * FROM birthdats.db")
+        birthdays = execute("SELECT * FROM birthdays")
 
         # TODO: Display the entries in the database on index.html
 
