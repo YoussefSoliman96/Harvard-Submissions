@@ -111,10 +111,10 @@ def quote():
         if stock == "None":
             return apology("Stock not available")
         else:
-            return render_template("Quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+            return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
 
     else:
-        return apology(render_template(quote))
+        return apology("render_template(quote.html)")
 
 
 @app.route("/register", methods=["GET", "POST"])
