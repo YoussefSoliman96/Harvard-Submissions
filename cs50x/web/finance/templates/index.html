@@ -7,7 +7,16 @@
 {% block main %}
     <table>
         <tr>
-            <th></th>
+            <th>Symbols</th>
+            <th>Shares</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            {% for row in database%}
+                <tr>{{ row["symbol"] }}</tr>
+                <tr>{{ row["shares"] }}</tr>
+                <tr>{{ row["price"] }}</tr>
+            {% endfor %}
         </tr>
     </table>
 {% endblock %}
