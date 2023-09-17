@@ -31,6 +31,8 @@ def index():
         return redirect("/")
 
     else:
+        # Query for all birthdays
+        birthdays = execute("SELECT * FROM birthdats.db")
 
         # TODO: Display the entries in the database on index.html
 
