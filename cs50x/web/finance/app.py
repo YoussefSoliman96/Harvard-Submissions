@@ -66,13 +66,13 @@ def buy():
             return apology("Cash unavailable")
 
         money_after_transaction = user_money - transaction_cost
-        db.execute("UPDATE users SET cash=? WHERE user_id=?", user_id)
+        db.execute("UPDATE users SET cash=? WHERE user_id=?", money_after_transaction, user_id)
 
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
 
-        
+        flash("Shares bought successfully!")
         return redirect("/")
 
 
