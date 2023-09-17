@@ -130,7 +130,7 @@ def register():
         hash_password = generate_password_hash(password)
         # Query database for username
         try:
-            user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
+            user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
         except:
             return apology("Username taken")
         # Remember which user has logged in
