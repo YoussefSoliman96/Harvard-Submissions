@@ -203,5 +203,30 @@ def sell():
         select_symbol = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", user_id)
         return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol   ])
     else:
-        
-        return apology("TODO")
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+        if not symbol:
+            return apology("Must choose a symbol")
+
+        stock = lookup(symbol.upper())
+
+        if stock == "None":
+            return apology("Stock not available")
+
+        if shares < 0:
+            return apology("Invalid input for shares")
+
+        transaction_cost= shares * stock["price"]
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        user_money = user_cash_db[0]["cash"]
+
+        money_after_transaction = user_money + transaction_cost
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
+
+        date = datetime.datetime.now()
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+
+        flash("Shares sold successfully!")
+        return redirect("/")
