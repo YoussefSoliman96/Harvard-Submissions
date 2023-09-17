@@ -132,7 +132,7 @@ def register():
         try:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash )
         except:
-            return apology ("Username taken")
+            return apology("Username taken")
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
