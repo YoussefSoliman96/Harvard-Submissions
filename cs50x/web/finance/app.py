@@ -122,7 +122,8 @@ def register():
         elif not request.form.get("confirm"):
             return apology("must confirm password", 403)
 
-        if 
+        if password != confirm:
+            return apology("password and confirmation don't match")
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
