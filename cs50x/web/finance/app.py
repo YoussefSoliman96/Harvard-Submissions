@@ -244,8 +244,19 @@ def sell():
 def add_cash():
     """Add Cash"""
     if request.method == "POST":
-        user_id = session["user_id"]
-        transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
-        return render_template("history.html", transactions = transactions_db)
+        user_id = session["user_id]
+        new_cash = request.for.get("new_cash")
+        if not new_cash:
+            return apology("Invalid amount")
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        user_money = user_cash_db[0]["cash"]
+
+        user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
+        current_user_shares = user_shares[0]["shares"]
+        if shares > current_user_shares:
+            return apology("Shares unavailable")
+
+        money_after_transaction = user_money + transaction_cost
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
     else:
         return render_template("add.html")
