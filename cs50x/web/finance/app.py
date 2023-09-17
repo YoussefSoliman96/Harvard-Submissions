@@ -59,7 +59,7 @@ def buy():
         transaction_cost= shares * stock["price"]
         user_id = session["user_id"]
         user_money = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        return jsonify(user_money)
+        
 
     else:
         return render_template("buy.html")
