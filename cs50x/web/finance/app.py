@@ -114,7 +114,7 @@ def quote():
             return render_template("Quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
 
     else:
-        return apology("render_template(Quote)")
+        return apology(render_template(quote))
 
 
 @app.route("/register", methods=["GET", "POST"])
