@@ -209,7 +209,7 @@ def sell():
         return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol])
     else:
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
         if not symbol:
             return apology("Must choose a symbol")
 
@@ -218,7 +218,7 @@ def sell():
         if stock == "None":
             return apology("Stock not available")
 
-        if int(shares) < 0:
+        if shares < 0:
             return apology("Invalid input for shares")
 
 
@@ -239,7 +239,7 @@ def sell():
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
 
-        flash(f"{shares}Shares sold successfully!")
+        flash(f"{shares} Shares sold successfully! for {usd(transaction_cost)}")
         return redirect("/")
 
 @app.route("/add_cash", methods = ["GET", "POST"])
