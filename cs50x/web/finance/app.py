@@ -129,7 +129,7 @@ def register():
 
         hash_password = generate_password_hash(password)
         # Query database for username
-        rows = db.execute("INSERT INTO users )
+        rows = db.execute("INSERT INTO users (username, hash, cash) VALUES (username, hash, cash) ")
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
