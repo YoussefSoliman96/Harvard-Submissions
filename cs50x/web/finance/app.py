@@ -58,9 +58,11 @@ def buy():
 
         transaction_cost= shares * stock["price"]
         user_id = session["user_id"]
-        user_money = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        user_money = user_cash_db[0]["cash"]
 
+        if user_money < transaction_cost:
+            return apology("Cash unavailable")
     else:
         return render_template("buy.html")
 
