@@ -57,8 +57,8 @@ def buy():
 
         stock = lookup(symbol.upper())
 
-        if stock == "None":
-            return apology("Stock not available")
+        if stock == None:
+            return apology("Stock not available", 400)
 
         if int(shares) < 0:
             return apology("Invalid input for shares", 400)
@@ -206,7 +206,7 @@ def sell():
     if request.method == "GET":
         user_id = session["user_id"]
         select_symbol = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", user_id)
-        return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol   ])
+        return render_template("sell.html", symbols = [row["symbol"] for row in select_symbol])
     else:
         symbol = request.form.get("symbol")
         shares = float(request.form.get("shares"))
