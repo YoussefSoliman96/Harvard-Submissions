@@ -63,7 +63,7 @@ def buy():
         if int(shares) < 0:
             return apology("Invalid input for shares", 400)
 
-        transaction_cost= int(shares) * stock["price"]
+        transaction_cost = int(shares) * stock["price"]
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         user_money = user_cash_db[0]["cash"]
