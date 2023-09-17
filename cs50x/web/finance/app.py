@@ -111,7 +111,7 @@ def quote():
         if stock == "None":
             return apology("Stock not available")
         else:
-            return render_template("Quoted.html", name = stock["name", "price])
+            return render_template("Quoted.html", name = stock["name"], price = stock["price"])
 
     else:
         return apology("render_template(Quote)")
