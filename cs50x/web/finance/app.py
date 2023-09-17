@@ -57,7 +57,9 @@ def buy():
             return apology("Invalid input for shares")
 
         transaction_cost= shares * stock["price"]
-        session["user_id"] = user
+        user_id = session["user_id"]
+        user_money = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        return jsonify(user_money)
 
     else:
         return render_template("buy.html")
