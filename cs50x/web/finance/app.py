@@ -215,12 +215,14 @@ def sell():
 
         if shares < 0:
             return apology("Invalid input for shares")
-        
+
 
         transaction_cost= shares * stock["price"]
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         user_money = user_cash_db[0]["cash"]
+
+        
 
         money_after_transaction = user_money + transaction_cost
         db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
