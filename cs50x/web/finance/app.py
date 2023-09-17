@@ -238,3 +238,14 @@ def sell():
 
         flash("Shares sold successfully!")
         return redirect("/")
+
+@app.route("/add_cash", methods = ["GET", "POST"])
+@login_required
+def add_cash():
+    """Add Cash"""
+    if request.method == "POST":
+        user_id = session["user_id"]
+        transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
+        return render_template("history.html", transactions = transactions_db)
+    else:
+        return render_template("add.html")
