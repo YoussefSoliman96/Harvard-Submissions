@@ -63,6 +63,8 @@ def buy():
 
         if user_money < transaction_cost:
             return apology("Cash unavailable")
+
+        updt_user_money = user_money - transaction_cost
     else:
         return render_template("buy.html")
 
