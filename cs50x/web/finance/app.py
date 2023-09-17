@@ -171,10 +171,10 @@ def register():
 
         # Ensure password was submitted
         elif not password:
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         elif not confirmation:
-            return apology("must confirm password", 403)
+            return apology("must confirm password", 400)
 
         if password != confirmation:
             return apology("password and confirmation don't match")
