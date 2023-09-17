@@ -66,7 +66,7 @@ def buy():
             return apology("Cash unavailable")
 
         money_after_transaction = user_money - transaction_cost
-        db.execute("UPDATE users SET cash=? WHERE user_id=?", money_after_transaction, user_id)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
 
         date = datetime.datetime.now()
 
