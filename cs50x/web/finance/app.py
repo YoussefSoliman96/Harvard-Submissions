@@ -56,7 +56,8 @@ def buy():
         if shares < 0:
             return apology("Invalid input for shares")
 
-        transaction_cost= shares * stock
+        transaction_cost= shares * stock["price"]
+        user_id = session(")
 
     else:
         return render_template("buy.html")
