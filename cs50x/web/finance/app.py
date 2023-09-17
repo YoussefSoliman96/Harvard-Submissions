@@ -4,6 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
+import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -64,7 +65,17 @@ def buy():
         if user_money < transaction_cost:
             return apology("Cash unavailable")
 
-        updt_user_money = user_money - transaction_cost
+        money_after_transaction = user_money - transaction_cost
+        db.execute("UPDATE users SET cash=? WHERE user_id=?", user_id)
+
+        date = datetime.datetime.now()
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+
+        
+        return redirect("/")
+
+
     else:
         return render_template("buy.html")
 
