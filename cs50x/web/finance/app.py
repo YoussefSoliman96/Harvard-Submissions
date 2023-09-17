@@ -126,6 +126,8 @@ def register():
 
         if password != confirmation:
             return apology("password and confirmation don't match")
+
+        hash_password = generate_password_hash(password)
         # Query database for username
         rows = db.execute("INSERT INTO users )
 
