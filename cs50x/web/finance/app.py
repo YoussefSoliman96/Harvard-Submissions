@@ -51,7 +51,9 @@ def buy():
         symbol = request.form.get("symbol")
         shares = float(request.form.get("shares"))
         if not symbol:
-            return apology("Must choose a symbol")
+            return apology("Must choose a symbol", 400)
+        if not shares:
+            return apology("Must insert amount of shares", 400)
 
         stock = lookup(symbol.upper())
 
