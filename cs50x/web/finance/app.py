@@ -69,7 +69,7 @@ def buy():
         user_money = user_cash_db[0]["cash"]
 
         if user_money < transaction_cost:
-            return apology("Cash unavailable")
+            return apology("Cash unavailable", 400)
 
         money_after_transaction = user_money - transaction_cost
         db.execute("UPDATE users SET cash = ? WHERE id = ?", money_after_transaction, user_id)
