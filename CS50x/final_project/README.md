@@ -2,6 +2,7 @@
 Video Demo:  <https://youtu.be/00JRZgQyIpc>
 ## Description:
 # Table of Content
+- Motivation
 - requirements
 - project
 - Course
@@ -18,6 +19,9 @@ Video Demo:  <https://youtu.be/00JRZgQyIpc>
 - script.js --> This file contains all the scripts used to make the website interactive
 - mediaquerries.css --> This file is used to make the website adaptive to multiple screen size so it can be used on bigger screens or phones
 - README.md
+
+# Motivation
+The motivation behind this project was to have something to 
 
 # Requirements:
 This module requires the following no modules
