@@ -43,3 +43,4 @@ This Arrow button is show at the end of every section of the page and it directs
 # Media querries
 This File contains resizing styles to fit the page to whatever screen it's being shown on:
 - Max width: Defines the max width that the style applies on
+- Sections had to be adjusted manually for smaller screen sizes so they wouldn't be cut off
