@@ -30,3 +30,5 @@ This project was developed using only HTML, CSS and Javascript.
 - Experience: This section is not the same as the experience shown in the About section, this one shows more about the programming languages that I use and how familiar I am with each one of them
 - Projects: This section displays my 3 most recent projects with links to their repositories on Github and Live Demos
 - Contact: This section lets the user contace me by providing my email and linkedin profile
+# Assests Folder
+This folder contains all the images imported into the project, containing my pictures and a few icons for buttons, it also includes a pdf example for the resume which is a random one because i don't have one yet
