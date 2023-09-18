@@ -21,7 +21,8 @@ Video Demo:  <https://youtu.be/00JRZgQyIpc>
 - README.md
 
 # Motivation
-The motivation behind this project was to have something to 
+The motivation behind this project was to have something that displays my package to the user's when I'm done with learning, as when I finish all the courses and start doing my own projects, I should havs something like that portfolio so I can easily display my projects on to the recruiters and provide easy access to me and all my links.
+It also shows my styling skills as it's not easy to display good views only using CSS without using any platforms
 
 # Requirements:
 This module requires the following no modules
