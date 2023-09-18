@@ -4,7 +4,13 @@ Video Demo:  <https://youtu.be/00JRZgQyIpc>
 # Table of Content
 - requirements
 - project
-- test_project
+- Course
+- Purpose
+- Overview
+- Page sections
+- Assests
+- Arrows
+- Mediaquerries
 
 # Table of included files
 - index.html --> This file contains all the content on the Portfolio page that appears to the user
@@ -34,3 +40,6 @@ This project was developed using only HTML, CSS and Javascript.
 This folder contains all the images imported into the project, containing my pictures and a few icons for buttons, it also includes a pdf example of my resume.
 # Arrow button
 This Arrow button is show at the end of every section of the page and it directs you to the following section
+# Media querries
+This File contains resizing styles to fit the page to whatever screen it's being shown on:
+- Max width: Defines the max width that the style applies on
