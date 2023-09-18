@@ -31,4 +31,6 @@ This project was developed using only HTML, CSS and Javascript.
 - Projects: This section displays my 3 most recent projects with links to their repositories on Github and Live Demos
 - Contact: This section lets the user contace me by providing my email and linkedin profile
 # Assests Folder
-This folder contains all the images imported into the project, containing my pictures and a few icons for buttons, it also includes a pdf example for the resume which is a random one because i don't have one yet
+This folder contains all the images imported into the project, containing my pictures and a few icons for buttons, it also includes a pdf example of my resume.
+# Arrow button
+This Arrow button is show at the end of every section of the page and it directs you to the following section
